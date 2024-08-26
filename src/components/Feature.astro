@@ -1,15 +1,83 @@
-<section class="py-[70px] bg-gray-50">
+---
+import { Image } from "astro:assets";
+---
+
+<section class="py-[70px] bg-gray-50 text-black font-inter">
     <div class="contain">
-        <div class="text-center  max-w-[825px] mx-auto">
-            <h1 class="text-5xl mb-2 font-bold">All you need, on the dot</h1>
-            <p
-                class="text-[#868c98] text-lg font-semibold"
-                id="feature__section"
+        <div class="text-center max-w-[825px] mx-auto">
+            <h1
+                style="font-family: var(--font-grosek);"
+                class="text-[2.5rem] font-medium mb-2"
             >
+                All you need, on the dot
+            </h1>
+            <p class="text-[#868c98] font-inter text-lg" id="feature__section">
                 No matter your starting point, we have something for you. Our
                 services are here to help you create the life you want now, and
                 for a long time
             </p>
+        </div>
+        <div
+            class="grid md:grid-cols-2 mt-12 grid-cols-1 lg:grid-cols-3 xl:gap-16 items-start"
+        >
+            <div class="flex gap-3 items-center">
+                <Image
+                    src={"/images/affordable3.fd1596f6.svg"}
+                    alt=""
+                    width={100}
+                    height={10}
+                />
+                <div class="flex-1">
+                    <h1
+                        class="mb-1 text-xl font-medium"
+                        style="font-family: var(--font-grosek);"
+                    >
+                        Affordable
+                    </h1>
+                    <p class="text-[#868c98]">
+                        Our products were created with your pocket on our minds.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 items-center">
+                <Image
+                    src={"/images/convenience.b0de36d1.svg"}
+                    alt=""
+                    width={100}
+                    height={10}
+                />
+                <div class="flex-1">
+                    <h1
+                        style="font-family: var(--font-grosek);"
+                        class="mb-1 text-lg font-medium"
+                    >
+                        Convenient
+                    </h1>
+                    <p class="text-[#868c98]">
+                        Our products are easy and simple to use.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-3 items-center">
+                <Image
+                    src={"/images/roundtheclock-blue.795611c5.svg"}
+                    alt=""
+                    width={100}
+                    height={10}
+                />
+                <div class="flex-1">
+                    <h1
+                        style="font-family: var(--font-grosek);"
+                        class="mb-1 text-lg font-medium"
+                    >
+                        On call 24/7
+                    </h1>
+                    <p class="text-[#868c98]">
+                        You can always reach out to us if you have any questions
+                        or run into some problems.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
