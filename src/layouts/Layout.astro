@@ -34,9 +34,21 @@ const { title } = Astro.props;
 
     :root {
         --font-inter: "__Inter_aaf875", "__Inter_Fallback_aaf875";
+        --font-grotesk25: "__grotesk25_0edee8", "__grotesk25_Fallback_0edee8";
     }
 
     .font-inter {
         font-family: var(--font-inter);
+    }
+    .font-grotesk25 {
+        font-family: var(--font-grotesk25);
+    }
+    ::selection {
+        color: #f7f7f7;
+        background: #4f555f;
+    }
+
+    .scroll-none {
+        scrollbar-width: 0;
     }
 </style>

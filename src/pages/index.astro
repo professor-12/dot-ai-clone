@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Feature from "../components/Feature.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <!-- <script>
@@ -38,11 +39,12 @@ import Feature from "../components/Feature.astro";
     observer.observe(document.querySelector("#feature__section") as Element);
 </script> -->
 <Layout title="Do life with Dot">
-    <div class="bg-black">
+    <div class="bg-black text-white">
         <Header />
         <main
-            class="bg-black bg-right-top contain bg-contain bg-no-repeat min-h-[900px] bg-[url('/images/hero-pattern.png')]"
+            class="bg-black bg-right-top contain bg-contain bg-no-repeat min-h-[900px] pt-[11rem] bg-[url('/images/hero-pattern.png')]"
         >
+            <Hero />
         </main>
         <Feature />
     </div>
