@@ -1,0 +1,228 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="bg-white py-[104px] text-black">
+    <div class="text-center font-grosek">
+        <h1 class="text-4xl font-medium">You name it, we've figured it out</h1>
+        <p class="text-muted mt-2 text-lg">
+            Whether it's collecting payments, opening a bank account, or
+            affordable insurance you need, <br /> you'll find it all here.
+        </p>
+    </div>
+    <div class="contain font-grosek">
+        <div class="grid mt-16 grid-cols-2 gap-7">
+            <div
+                class="col-span-2 shadow-sm bg-[#f3fcf1] relative min-h-[32rem] rounded-3xl"
+            >
+                <Image
+                    src={"/images/green-half.webp"}
+                    class="absolute top-0 right-0 z-0"
+                    alt=""
+                    width={309}
+                    height={309}
+                />
+                <Image
+                    src={"/images/green-noise.webp"}
+                    class="absolute left-[50%] bottom-0 -translate-x-[50%] z-0"
+                    alt=""
+                    width={618}
+                    height={306}
+                />
+                <div
+                    class="flex flex-col md:p-12 py-10 px-6 h-full justify-between"
+                >
+                    <div class="ma space-y-5">
+                        <h1 class="font-medium text-3xl">Payments</h1>
+                        <p>
+                            Going to the bank is stressful. Your customers know
+                            this too.
+                        </p>
+                        <p>
+                            Become the go-to bank for all your customers'
+                            payment needs, from buying airtime, paying school
+                            fees, collecting cash, or even opening a bank
+                            account. You can do it all for them.
+                        </p>
+                        <p>
+                            You can accept card and transfer payments with the
+                            Dot POS terminal. Let your customers pay the way
+                            they want and receive instant settlements while at
+                            it.
+                        </p>
+                    </div>
+                    <a href="" class="flex">
+                        <div
+                            class="bg-[#c2f2ba] flex items-center justify-center p-[14px] min-h-5 min-w-5 rounded-full"
+                        >
+                            <svg
+                                width="16"
+                                height="17"
+                                viewBox="0 0 16 17"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                color="black"
+                                ><g id="Outline / Arrows / Arrow Right"
+                                    ><path
+                                        id="Vector (Stroke)"
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
+                                        fill="currentColor"></path></g
+                                ></svg
+                            >
+                        </div>
+                    </a>
+                </div>
+                <div class=""></div>
+                <div
+                    class="absolute bottom-0 right-4 mx-auto h-full w-full bg-[url('/images/home-payments.webp')] bg-cover bg-[center_top] bg-no-repeat md:h-[92%] lg:w-[534px]"
+                >
+                </div>
+            </div>
+            <div
+                class="bg-[#f2f6fe] shadow relative h-[700px] rounded-3xl flex flex-col justify-between"
+            >
+                <div
+                    class="overflow-hidden flex flex-1 flex-col justify-between px-6 py-10 pb-0 md:p-12 md:pb-0"
+                >
+                    <Image
+                        src={"/images/blue-noise.webp"}
+                        class="absolute top-0 right-0 z-0"
+                        alt=""
+                        draggable="false"
+                        width={293}
+                        height={280}
+                    />
+                    <Image
+                        src={"/images/blue-noise.webp"}
+                        class="absolute left-[0] rotate-180 bottom-0 z-0"
+                        alt=""
+                        draggable="false"
+                        width={293}
+                        height={280}
+                    />
+                    <div class="space-y-4">
+                        <h1 class="font-medium text-3xl font-grosek">
+                            Banking
+                        </h1>
+                        <div class="ma space-y-6">
+                            <p>
+                                It's the way banking should be - easy and
+                                simple.
+                            </p>
+                            <p class="">
+                                Open a bank account, get a card delivered at
+                                your doorstep, and receive 24/7 support- all
+                                from your phone. However you choose to use us,
+                                mobile, web, and USSD, we're available.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="" class="flex">
+                        <div class="rounded-full bg-[#c0d2f9] p-[14px]">
+                            <svg
+                                width="16"
+                                height="17"
+                                viewBox="0 0 16 17"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                color="black"
+                                ><g id="Outline / Arrows / Arrow Right"
+                                    ><path
+                                        id="Vector (Stroke)"
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
+                                        fill="currentColor"></path></g
+                                ></svg
+                            >
+                        </div>
+                    </a>
+                </div>
+                <div class="relative w-[85%] h-[340px] mx-auto">
+                    <div
+                        class="relative mx-auto h-full w-[85%] bg-[url('/images/dot-mobile1.webp')] bg-contain bg-[center_bottom] bg-no-repeat"
+                    >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-[#F2FCFE] shadow relative h-[700px] rounded-3xl flex flex-col justify-between"
+            >
+                <Image
+                    src={"/images/sBlue-noise.webp"}
+                    class="absolute top-0 left-0 z-0"
+                    alt=""
+                    draggable="false"
+                    width={293}
+                    height={280}
+                />
+                <Image
+                    src={"/images/sBlue-noise.webp"}
+                    class="absolute right-[0] rotate-180 bottom-0 z-0"
+                    alt=""
+                    draggable="false"
+                    width={293}
+                    height={280}
+                />
+                <div
+                    class="flex flex-1 flex-col justify-between px-6 py-10 pb-0 md:p-12 md:pb-0"
+                >
+                    <div class="space-y-4">
+                        <h1 class="font-medium text-3xl font-grosek">
+                            Insurance
+                        </h1>
+                        <div class="ma space-y-6">
+                            <p class="">
+                                No one plans to get sick. When you have our
+                                health insurance, you don't have to worry about
+                                the medical expenses. You deserve health care
+                                that's accessible and affordable, and that's
+                                exactly what we've created. We've handled the
+                                payment so you can focus on your recovery.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="" class="flex">
+                        <div class="rounded-full bg-[#BCF2F8] p-[14px]">
+                            <svg
+                                width="16"
+                                height="17"
+                                viewBox="0 0 16 17"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                color="black"
+                                ><g id="Outline / Arrows / Arrow Right"
+                                    ><path
+                                        id="Vector (Stroke)"
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
+                                        fill="currentColor"></path></g
+                                ></svg
+                            >
+                        </div>
+                    </a>
+                </div>
+                <div class="relative h-[340px]">
+                    <div
+                        class="relative mx-auto h-full w-[85%] bg-[url('/images/home-insurance.webp')] bg-contain bg-[center_bottom] bg-no-repeat"
+                    >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .ma > p {
+        @apply text-gray-500 font-[1rem] leading-[1.5rem];
+        max-width: 500px;
+        font-family: var(--font-inter);
+    }
+</style>
