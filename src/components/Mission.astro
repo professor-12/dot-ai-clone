@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import InterestingButton from "./UI/InterestingButton.astro";
+---
+
+<section class="bg-[#F9FAFB] text-black">
+    <div class="contain relative">
+        <div class="flex max-md:flex-col gap-8">
+            <div class="flex items-center flex-1">
+                <div
+                    class="flex bg-[#fdf9f4] shadow-sm shadow-gray-300 rounded-3xl h-[390px] flex-1 items-center md:h-[520px] lg:h-[620px]"
+                >
+                    <div class="md:px-[40px] lg:px-[80px] space-y-3 px-6">
+                        <InterestingButton variants="green" text="Impact" />
+                        <div class="space-y-4">
+                            <h1 class="text-5xl font-medium">
+                                Our mission is simple
+                            </h1>
+                            <p class="text-muted text-lg">
+                                The life you've imagined is possible. Dot is how
+                                you create it. And it's built to save your money
+                                and time, so you can do more of the things you
+                                love.
+                            </p>
+                        </div>
+                        <div class="w-full">
+                            <a href="" class="text-black font-medium flex flex-nowrap my-14"
+                                >Read the Dot Story <span
+                                    class="bg-black rounded-full flex h-6 items-center justify-center w-6 ml-2"
+                                    ><svg
+                                        width="16"
+                                        height="17"
+                                        viewBox="0 0 16 17"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-[10px] w-[10px] md:h-[13px] md:w-[13px]"
+                                        color="white"
+                                        ><g id="Outline / Arrows / Arrow Right"
+                                            ><path
+                                                id="Vector (Stroke)"
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
+                                                fill="currentColor"></path></g
+                                        ></svg
+                                    ></span
+                                ></a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 h-full">
+                <Image
+                    src="/images/home-collage.webp"
+                    alt=""
+                    class="w-full h-full bg-cover"
+                    width={300}
+                    height={300}
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    h1,
+    p,
+    a {
+        font-family: var(--font-inter);
+    }
+</style>
