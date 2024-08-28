@@ -1,9 +1,200 @@
 ---
-
+import { Image } from "astro:assets";
+import FooterLink from "./FooterLink.astro";
+import CustomButton from "./CustomButton.astro";
+import Logo from "./Logo.astro";
 ---
 
-
-
-<footer>
-      
+<footer class="bg-black overflow-hidden relative w-full">
+    <div class="text-center space-y-9 my-[8.75rem]">
+        <Image
+            src="/images/noise-ring.webp"
+            width={1258}
+            height={1035}
+            class="absolute -z-1 left-[200px] top-[-5%] rotate-[200deg] md:left-[-400px] md:-top-[20%]"
+            alt=""
+        />
+        <div class="space-y-2 font-medium font-grotesk25 text-5xl">
+            <h1 class="text-[#c0d2f9]">Start Today</h1>
+            <h1>Do life with Dot</h1>
+        </div>
+        <CustomButton id="" text="Open an account" href="/" />
+    </div>
+    <FooterLink />
+    <div class="contain pb-24">
+        <div class="flex justify-between gap-10 mt-20 mb-24">
+            <div class="space-y-3">
+                <div class="flex space-x-3 items-center">
+                    <Logo />
+                    <p class="text-[#6D7280] text-[14px]">
+                        We are making life better <br /> one Dot at a time.
+                    </p>
+                </div>
+                <div class="flex">
+                    <div class="flex space-x-2 items-center">
+                        <p class="text-[7px] font-medium text-[#F5F6F7]">
+                            LICENSED BY <br /> THE CBN
+                        </p>
+                        <div class="relative overflow-hidden">
+                            <Image
+                                src="/images/cbn.webp"
+                                width={20}
+                                height={20}
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="h-[30px] mx-3 w-px bg-slate-600"></div>
+                    <div class="flex space-x-2 items-center">
+                        <p class="text-[8px] font-medium text-[#F5F6F7]">
+                            DEPOSITS <br /> INSURANCE
+                        </p>
+                        <div class="relative">
+                            <Image
+                                class=""
+                                src="/images/ndic-white.webp"
+                                width={60}
+                                height={60}
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="h-[30px] mx-3 w-px bg-slate-600"></div>
+                    <div class="flex space-x-2 items-center">
+                        <p class="text-[8px] font-medium text-[#F5F6F7]">
+                            CERTIFIED <br /> BY THE NIA
+                        </p>
+                        <div class="relative">
+                            <Image
+                                class=""
+                                src="/images/nia.webp"
+                                width={30}
+                                height={30}
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <h1 class="text-white font-grosek text-sm sm:text-xl">
+                    Be up to dot on how we're making life better.
+                </h1>
+                <form class="flex relative mt-4 items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#C0D2F9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="absolute left-4 top-[50%] translate-y-[-50%]"
+                        ><rect x="2" y="4" width="20" height="16" rx="2"
+                        ></rect><path
+                            d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                        ></path></svg
+                    >
+                    <input
+                        type="email"
+                        class="input-bg flex w-full px-3 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 h-[52px] rounded-xl border-[0.5px] border-[#444A53] bg-[#36373A] py-3 pl-12 text-gray-300 focus:ring-pastelBlue-300"
+                        placeholder="you@example.com"
+                        maxlength="256"
+                    />
+                    <button
+                        class="p-3 px-7 ml-3 text-black bg-[#C0D2F9] rounded-xl"
+                        >Subsribe</button
+                    >
+                </form>
+            </div>
+            <div class="flex flex-col lg:items-end gap-[40px]">
+                <div class="flex justify-items-end space-x-8">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                        color="white"
+                        class="h-[32px] w-[32px]"
+                        ><path
+                            d="M24.4482 24.7618H20.8942V19.1927C20.8942 17.8647 20.8672 16.1558 19.0422 16.1558C17.1892 16.1558 16.9062 17.6009 16.9062 19.0947V24.7618H13.3522V13.3098H16.7662V14.8707H16.8122C17.2892 13.9707 18.4492 13.0208 20.1822 13.0208C23.7832 13.0208 24.4492 15.3909 24.4492 18.4758L24.4482 24.7618ZM9.33822 11.7428C8.19422 11.7428 7.27522 10.8168 7.27522 9.67781C7.27522 8.53981 8.19522 7.61481 9.33822 7.61481C10.4782 7.61481 11.4022 8.53981 11.4022 9.67781C11.4022 10.8168 10.4772 11.7428 9.33822 11.7428ZM11.1202 24.7618H7.55622V13.3098H11.1202V24.7618ZM26.2262 4.30981H5.77222C4.79322 4.30981 4.00122 5.08381 4.00122 6.03881V26.5809C4.00122 27.5367 4.79322 28.3098 5.77222 28.3098H26.2232C27.2012 28.3098 28.0012 27.5367 28.0012 26.5809V6.03881C28.0012 5.08381 27.2012 4.30981 26.2232 4.30981H26.2262Z"
+                            fill="currentColor"></path></svg
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                        color="white"
+                        class="h-[32px] w-[32px]"
+                        ><path
+                            d="M20.5365 28.3098V19.0223H23.6463L24.1117 15.4118H20.5365V13.1067C20.5365 12.0613 20.8267 11.3489 22.3257 11.3489L24.2377 11.348V8.11883C23.9069 8.07491 22.7721 7.97656 21.4517 7.97656C18.6951 7.97656 16.808 9.65912 16.808 12.7492V15.4118H13.6903V19.0223H16.808V28.3098H5.33333C4.59696 28.3098 4 27.7129 4 26.9765V5.64315C4 4.90677 4.59696 4.30981 5.33333 4.30981H26.6667C27.4031 4.30981 28 4.90677 28 5.64315V26.9765C28 27.7129 27.4031 28.3098 26.6667 28.3098H20.5365Z"
+                            fill="currentColor"></path></svg
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                        color="white"
+                        class="h-[32px] w-[32px]"
+                        ><path
+                            d="M17.3708 2.97778C18.8713 2.98026 19.6317 2.9882 20.2888 3.00776L20.5476 3.01622C20.8465 3.02685 21.1415 3.04018 21.4971 3.05685C22.9159 3.1224 23.8837 3.34685 24.7337 3.67685C25.6125 4.01573 26.3548 4.47352 27.0959 5.21462C27.8359 5.95573 28.2937 6.70018 28.6337 7.57685C28.9625 8.42573 29.1871 9.39462 29.2537 10.8135C29.2696 11.1691 29.2824 11.464 29.2929 11.763L29.3013 12.0218C29.3208 12.6788 29.3297 13.4393 29.3325 14.9398L29.3336 15.9341C29.3337 16.0555 29.3337 16.1809 29.3337 16.3102L29.3336 16.6863L29.3328 17.6806C29.3303 19.1811 29.3224 19.9415 29.3028 20.5986L29.2943 20.8574C29.2837 21.1563 29.2704 21.4513 29.2537 21.8069C29.1881 23.2257 28.9625 24.1935 28.6337 25.0435C28.2948 25.9223 27.8359 26.6646 27.0959 27.4057C26.3548 28.1457 25.6092 28.6035 24.7337 28.9435C23.8837 29.2723 22.9159 29.4969 21.4971 29.5635C21.1415 29.5794 20.8465 29.5922 20.5476 29.6027L20.2888 29.6111C19.6317 29.6306 18.8713 29.6395 17.3708 29.6423L16.3765 29.6434C16.2551 29.6435 16.1297 29.6435 16.0004 29.6435L15.6243 29.6434L14.63 29.6426C13.1295 29.6401 12.369 29.6322 11.712 29.6126L11.4532 29.6041C11.1542 29.5935 10.8592 29.5802 10.5037 29.5635C9.08481 29.4979 8.11814 29.2723 7.26704 28.9435C6.38925 28.6046 5.64592 28.1457 4.90481 27.4057C4.1637 26.6646 3.70704 25.919 3.36704 25.0435C3.03704 24.1935 2.8137 23.2257 2.74704 21.8069C2.7312 21.4513 2.71828 21.1563 2.70781 20.8574L2.69942 20.5986C2.67992 19.9415 2.67102 19.1811 2.66814 17.6806L2.66797 14.9398C2.67045 13.4393 2.67838 12.6788 2.69794 12.0218L2.70641 11.763C2.71704 11.464 2.73037 11.1691 2.74704 10.8135C2.81258 9.39352 3.03704 8.42685 3.36704 7.57685C3.70592 6.69906 4.1637 5.95573 4.90481 5.21462C5.64592 4.47352 6.39037 4.01685 7.26704 3.67685C8.11704 3.34685 9.0837 3.12352 10.5037 3.05685C10.8592 3.04101 11.1542 3.02809 11.4532 3.01762L11.712 3.00924C12.369 2.98973 13.1295 2.98084 14.63 2.97796L17.3708 2.97778ZM16.0004 9.64352C12.3165 9.64352 9.3337 12.6296 9.3337 16.3102C9.3337 19.9941 12.3197 22.9769 16.0004 22.9769C19.6843 22.9769 22.6671 19.9907 22.6671 16.3102C22.6671 12.6263 19.6809 9.64352 16.0004 9.64352ZM16.0004 12.3102C18.2096 12.3102 20.0004 14.1003 20.0004 16.3102C20.0004 18.5194 18.2101 20.3102 16.0004 20.3102C13.7912 20.3102 12.0004 18.5199 12.0004 16.3102C12.0004 14.101 13.7905 12.3102 16.0004 12.3102ZM23.0004 7.64352C22.0813 7.64352 21.3337 8.39005 21.3337 9.30905C21.3337 10.228 22.0803 10.9757 23.0004 10.9757C23.9193 10.9757 24.6671 10.2292 24.6671 9.30905C24.6671 8.39005 23.9181 7.64236 23.0004 7.64352Z"
+                            fill="currentColor"></path></svg
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                        color="white"
+                        class="h-[32px] w-[32px]"
+                        ><path
+                            d="M24.2732 3.30981H28.6838L19.0478 14.3231L30.3838 29.3098H21.5078L14.5558 20.2205L6.60121 29.3098H2.18787L12.4945 17.5298L1.61987 3.30981H10.7212L17.0052 11.6178L24.2732 3.30981ZM22.7252 26.6698H25.1692L9.39321 5.81115H6.77054L22.7252 26.6698Z"
+                            fill="currentColor"></path></svg
+                    >
+                </div>
+                <p class="text-[#6D7280]">
+                    © 2024 Dot Holdings. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <hr class="relative my-[60px] h-px border-0 bg-[#1E232C]" />
+        <div class="text-[12px] text-[#868C98] space-y-4">
+            <p>
+                This website, including its content, features, and services
+                (collectively, the "Website"), is owned and operated by DotX
+                Technologies Ltd. ("Dot" or the "Company"). All rights, titles,
+                and interests, including but not limited to copyrights,
+                trademarks, and other intellectual property rights in the
+                Website, belong to Dot or its licensors. By accessing or using
+                this Website, you agree to comply with all applicable laws and
+                regulations and acknowledge that you are responsible for your
+                actions and decisions while using our services. Dot provides
+                information on this Website as a convenience to users, but it
+                does not guarantee the accuracy or completeness of the
+                information.
+            </p>
+            <p>
+                While Dot strives to provide secure and uninterrupted service,
+                we cannot guarantee that the Website or its services will be
+                free from errors, omissions, or vulnerabilities. Any financial
+                advice or information provided should be verified with
+                appropriate professionals before any actions or decisions are
+                taken based on such information. All services offered by Dot are
+                subject to specific terms and conditions, and you should read
+                and understand them before availing of any service. Unauthorised
+                use, duplication, or distribution of any content from this
+                Website without Dot's express written permission is strictly
+                prohibited. Dot reserves the right to update or modify this
+                statement at any time without prior notice.
+            </p>
+        </div>
+    </div>
 </footer>
