@@ -1,0 +1,16 @@
+.fade-up {
+    transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    animation: FadeUp 1s forwards;
+}
+
+@keyframes FadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
