@@ -8,12 +8,15 @@ import InterestingButton from "./UI/InterestingButton.astro";
         <div class="flex max-md:flex-col gap-8">
             <div class="flex items-center flex-1">
                 <div
-                    class="flex bg-[#fdf9f4] shadow-sm shadow-gray-300 rounded-3xl h-[390px] flex-1 items-center md:h-[520px] lg:h-[620px]"
+                    data-animate="fade-in"
+                    class="flex bg-[#fdf9f4] shadow-sm shadow-gray-300 rounded-3xl animate-js h-[390px] flex-1 items-center md:h-[520px] lg:h-[620px]"
                 >
                     <div class="md:px-[40px] lg:px-[80px] space-y-3 px-6">
                         <InterestingButton variants="green" text="Impact" />
                         <div class="space-y-4">
-                            <h1 class="md:text-5xl font-grosek text-[32px] font-semibold">
+                            <h1
+                                class="md:text-5xl font-grosek text-[32px] font-semibold"
+                            >
                                 Our mission is simple
                             </h1>
                             <p class="text-muted text-[14px] md:text-lg">
@@ -24,7 +27,9 @@ import InterestingButton from "./UI/InterestingButton.astro";
                             </p>
                         </div>
                         <div class="w-full">
-                            <a href="" class="text-black font-medium flex flex-nowrap my-14"
+                            <a
+                                href=""
+                                class="text-black font-medium flex flex-nowrap my-14"
                                 >Read the Dot Story <span
                                     class="bg-black rounded-full flex h-6 items-center justify-center w-6 ml-2"
                                     ><svg

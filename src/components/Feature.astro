@@ -4,7 +4,10 @@ import { Image } from "astro:assets";
 
 <section class="py-[70px] bg-gray-50 text-black font-inter">
     <div class="contain">
-        <div class="text-center max-w-[825px] mx-auto">
+        <div
+            data-animate="fade-in"
+            class="text-center animate-js max-w-[825px] mx-auto"
+        >
             <h1
                 style="font-family: var(--font-grosek);"
                 class="text-[2.5rem] font-medium mb-2"
@@ -20,7 +23,11 @@ import { Image } from "astro:assets";
         <div
             class="grid md:grid-cols-2 gap-12 mt-12 grid-cols-1 lg:grid-cols-3 xl:gap-16 items-start"
         >
-            <div class="flex gap-3 items-center">
+            <div
+                data-animate="fade-in"
+                data-delay=".3"
+                class="flex animate-js opacity-0 gap-3 items-center"
+            >
                 <Image
                     src={"/images/affordable3.fd1596f6.svg"}
                     alt=""
@@ -39,7 +46,11 @@ import { Image } from "astro:assets";
                     </p>
                 </div>
             </div>
-            <div class="flex gap-3 items-center">
+            <div
+                data-animate="fade-in"
+                data-delay=".4"
+                class="flex gap-3 opacity-0 animate-js items-center"
+            >
                 <Image
                     src={"/images/convenience.b0de36d1.svg"}
                     alt=""
@@ -58,7 +69,11 @@ import { Image } from "astro:assets";
                     </p>
                 </div>
             </div>
-            <div class="flex gap-3 items-center">
+            <div
+                data-animate="fade-in"
+                data-delay=".5"
+                class="flex gap-3 opacity-0 animate-js items-center"
+            >
                 <Image
                     src={"/images/roundtheclock-blue.795611c5.svg"}
                     alt=""

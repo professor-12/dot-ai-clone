@@ -1,6 +1,6 @@
-.fade-up {
+.fade-in {
     transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-    animation: FadeUp 1s forwards;
+    animation: FadeUp 1.4s forwards;
 }
 
 @keyframes FadeUp {

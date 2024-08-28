@@ -6,7 +6,8 @@ import { Image } from "astro:assets";
 
 <div class="mb-12">
     <div
-        class="relative mb-16 w-full flex flex-col justify-between gap-6 xl:flex-row xl:gap-10"
+        data-animate="fade-in"
+        class="relative animate-js mb-16 w-full flex flex-col justify-between gap-6 xl:flex-row xl:gap-10"
     >
         <div class="font-grotesk25 font-medium flex-1 text-[40px] md:text-6xl">
             <h1 class="">
@@ -39,9 +40,11 @@ import { Image } from "astro:assets";
             </div>
         </div>
     </div>
-    <div class="flex h-[400px] gap-5 overflow-x-auto">
+    <div class="flex h-[400px] overflow-y-hidden gap-5 overflow-x-auto">
         <div
-            class="rounded-2xl relative shrink-0 w-[330px] lg:flex-[1.5] overflow-hidden"
+            data-animate="fade-in"
+            data-delay=".3"
+            class="rounded-2xl opacity-0 animate-js relative shrink-0 w-[330px] lg:flex-[1.5] overflow-hidden"
         >
             <Image
                 class="w-full h-full"
@@ -53,7 +56,9 @@ import { Image } from "astro:assets";
             />
         </div>
         <div
-            class="rounded-2xl relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
+            data-animate="fade-in"
+            data-delay=".4"
+            class="rounded-2xl opacity-0 animate-js relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
         >
             <Image
                 class="w-full h-full"
@@ -65,7 +70,9 @@ import { Image } from "astro:assets";
             />
         </div>
         <div
-            class="rounded-2xl relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
+            data-animate="fade-in"
+            data-delay=".5"
+            class="rounded-2xl opacity-0 animate-js relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
         >
             <Image
                 class="w-full h-full"
