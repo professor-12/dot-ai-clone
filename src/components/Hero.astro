@@ -4,23 +4,23 @@ import CaretDown from "./UI/CaretDown.astro";
 import { Image } from "astro:assets";
 ---
 
-<div>
+<div class="mb-12">
     <div
         class="relative mb-16 w-full flex flex-col justify-between gap-6 xl:flex-row xl:gap-10"
     >
-        <div class="font-grotesk25 font-medium flex-1 text-6xl">
+        <div class="font-grotesk25 font-medium flex-1 text-[40px] md:text-6xl">
             <h1>
                 Do <span
-                    class="text-[#8be27c] border border-[#142E0E] px-3 rounded-2xl h-[70px] p-4 bg-[#0B1B07]"
+                    class="text-[#8be27c] border border-[#142E0E] px-3 rounded-2xl lg:h-[70px] p-4 bg-[#0B1B07]"
                     >Banking</span
                 >
             </h1>
-            <h1 class="mt-[3rem]">with Dot</h1>
+            <h1 class="mt-[1rem] md:mt-[3rem]">with Dot</h1>
         </div>
 
         <div class="w-full flex-1">
             <p
-                class="text-wrap mb-7 max-w-[600px] font-inter text-lg text-[#808691]"
+                class="text-wrap mb-7 max-w-[600px] font-inter md:text-lg text-[#808691]"
             >
                 Receive payments, apply for business loans, access
                 wealth-building investments, get insurance and everything you
@@ -41,28 +41,35 @@ import { Image } from "astro:assets";
     </div>
     <div class="flex h-[400px] gap-5 overflow-x-auto">
         <div
-            class="rounded-2xl shrink-0 w-[330px] lg:flex-[1.5] overflow-hidden"
+            class="rounded-2xl relative shrink-0 w-[330px] lg:flex-[1.5] overflow-hidden"
         >
             <Image
                 class="w-full h-full"
                 alt="hero insure guy picture"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
                 src="/images/hero-insure-guy.webp"
                 width={1203}
                 height={2134}
             />
         </div>
-        <div class="rounded-2xl w-[330px] shrink-0 lg:flex-1 overflow-hidden">
+        <div
+            class="rounded-2xl relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
+        >
             <Image
                 class="w-full h-full"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
                 alt="hero insure guy picture"
                 src="/images/.webp"
                 width={1203}
                 height={2134}
             />
         </div>
-        <div class="rounded-2xl w-[330px] shrink-0 lg:flex-1 overflow-hidden">
+        <div
+            class="rounded-2xl relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
+        >
             <Image
                 class="w-full h-full"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
                 alt="hero insure guy picture"
                 src="/images/hero-payments-guy.webp"
                 width={1203}
@@ -72,4 +79,8 @@ import { Image } from "astro:assets";
     </div>
 </div>
 
-<style></style>
+<style>
+    h1 {
+        @apply max-md:font-[40px];
+    }
+</style>
