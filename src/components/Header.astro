@@ -69,6 +69,9 @@ import CaretDown from "./UI/CaretDown.astro";
 </header>
 
 <style>
+    header {
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
     span,
     div {
         @apply max-xl:text-[14px];
@@ -76,4 +79,30 @@ import CaretDown from "./UI/CaretDown.astro";
     ul {
         @apply max-xl:gap-4;
     }
+    .header-up {
+        transform: translateY(-100%);
+        background: transparent;
+    }
+    .bg-white {
+        background: white;
+        color: black;
+        box-shadow: 0 0 1px 0px black;
+    }
 </style>
+
+<script>
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", (el) => {
+        const currentScroll = window.screenTop;
+
+        if (currentScroll > lastScroll) {
+            console.log("scrolling down");
+        } else {
+            console.log("scrolling up");
+        }
+
+        lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+        console.log(lastScroll);
+    });
+</script>
