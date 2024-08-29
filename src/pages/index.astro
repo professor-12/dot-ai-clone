@@ -15,7 +15,7 @@ import MobileViewHeader from "../components/MobileViewHeader.astro";
 <script>
     const header = document.querySelectorAll("header");
     let lastScroll = 0;
-    const checkScrollingDirection = (func1: Function, func2: Function) => {
+    (() => {
         document.addEventListener("scroll", (e) => {
             const currentScroll = window.scrollY;
             console.log(currentScroll);
@@ -32,15 +32,9 @@ import MobileViewHeader from "../components/MobileViewHeader.astro";
                     header.forEach((e) => e.classList.remove("header-up"));
                 }
             }
-
             lastScroll = currentScroll <= 0 ? 0 : currentScroll;
         });
-    };
-
-    checkScrollingDirection(
-        () => console.log("a"),
-        () => console.log("b")
-    );
+    })();
 </script>
 <Layout title="Do life with Dot">
     <div class="bg-black text-white">
