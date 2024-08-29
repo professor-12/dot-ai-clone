@@ -6,7 +6,7 @@ import InterestingButton from "./UI/InterestingButton.astro";
 
 <section class="bg-gray-50 text-black py-[70px]">
     <div class="contain">
-        <div class="text-center space-y-2">
+        <div data-animate="fade-in" class="text-center animate-js space-y-2">
             <h1 class="font-grosek text-4xl font-medium">
                 Trusted by people just like you
             </h1>
@@ -61,9 +61,12 @@ import InterestingButton from "./UI/InterestingButton.astro";
                         variants="green"
                     />
                     <h1
-                        class="font-grosek flex items-baseline text-7xl font-medium"
+                        class="font-grosek flex items-baseline text-5xl md:text-7xl font-medium"
                     >
-                        <span class="text-5xl text-muted font-medium">₦</span> 51Billion
+                        <span
+                            class="text-3xl md:text-5xl text-muted font-medium"
+                            >₦</span
+                        > 51Billion
                     </h1>
                     <p class="text-muted text-center text-base font-inter">
                         Total deposits mobilized and profits paid to customers,
