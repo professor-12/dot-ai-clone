@@ -19,3 +19,6 @@ allAnimationel.forEach((el: any) => {
       el.style.animationDelay = el.getAttribute("data-delay") + "s"
       intersectionOberver.observe(el)
 })
+
+
+

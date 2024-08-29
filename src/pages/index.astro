@@ -12,39 +12,30 @@ import Footer from "../components/Footer.astro";
 import MobileViewHeader from "../components/MobileViewHeader.astro";
 ---
 
-<!-- <script>
+<script>
+    const header = document.querySelectorAll("header");
     let lastScroll = 0;
-    const checkScrollingDirection = (func1: Function, func2: Function) => {
+    (() => {
         document.addEventListener("scroll", (e) => {
             const currentScroll = window.scrollY;
+            console.log(currentScroll);
 
-            if (lastScroll > window.scrollY) {
-                func1();
+            if (lastScroll < window.scrollY) {
+                if (lastScroll > 600) {
+                    header.forEach((e) => e.classList.add("header-up"));
+                }
             } else {
-                func2();
+                if (lastScroll < 600) {
+                    header.forEach((e) => e.classList.remove("bg-white"));
+                } else {
+                    header.forEach((e) => e.classList.add("bg-white"));
+                    header.forEach((e) => e.classList.remove("header-up"));
+                }
             }
-
             lastScroll = currentScroll <= 0 ? 0 : currentScroll;
         });
-    };
-
-    let observer = new IntersectionObserver((e) => {
-        e.forEach((j) => {
-            if (j.isIntersecting) {
-                checkScrollingDirection(
-                    () => {
-                        console.log("a");
-                    },
-                    () => {
-                        console.log("b");
-                    }
-                );
-            }
-        });
-    });
-
-    observer.observe(document.querySelector("#feature__section") as Element);
-</script> -->
+    })();
+</script>
 <Layout title="Do life with Dot">
     <div class="bg-black text-white">
         <Header />
