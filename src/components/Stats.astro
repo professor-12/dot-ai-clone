@@ -16,21 +16,24 @@ import InterestingButton from "./UI/InterestingButton.astro";
             </p>
         </div>
     </div>
-    <section class="flex contain pt-16 gap-5">
-        <div class="lg:w-2/5 h-auto md:w-1/2 rounded-3xl overflow-clip">
+    <section class="flex max-lg:flex-col contain pt-16 gap-5">
+        <div
+            class="lg:w-2/5 relative h-auto md:min-h-[200px] w-full md:w-1/2 rounded-3xl overflow-clip"
+        >
             <Image
                 src={"/images/stats-main.webp"}
                 alt={""}
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
                 width={1024}
                 height={1024}
                 class="w-full h-full bg-contain"
             />
         </div>
-        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 flex-1">
+        <div class="grid xl:grid-cols-2 max-lg:grid-cols-1 gap-5 flex-1">
             <Card>
                 <InterestingButton text="Existing Customers" variants="blue" />
                 <h1
-                    class="font-grosek flex items-baseline xl:text-8xl font-medium"
+                    class="font-grosek flex items-baseline text-7xl font-medium"
                 >
                     650k <span class="text-5xl text-muted font-medium">+</span>
                 </h1>
@@ -42,7 +45,7 @@ import InterestingButton from "./UI/InterestingButton.astro";
             <Card>
                 <InterestingButton text="Existing Customers" variants="red" />
                 <h1
-                    class="font-grosek flex items-baseline xl:text-8xl font-medium"
+                    class="font-grosek flex items-baseline text-7xl font-medium"
                 >
                     50k <span class="text-5xl text-muted font-medium">+</span>
                 </h1>
@@ -58,7 +61,7 @@ import InterestingButton from "./UI/InterestingButton.astro";
                         variants="green"
                     />
                     <h1
-                        class="font-grosek flex items-baseline xl:text-8xl font-medium"
+                        class="font-grosek flex items-baseline text-7xl font-medium"
                     >
                         <span class="text-5xl text-muted font-medium">₦</span> 51Billion
                     </h1>
@@ -72,7 +75,9 @@ import InterestingButton from "./UI/InterestingButton.astro";
         </div>
     </section>
     <div class="text-center font-grosek pt-[70px]">
-        <p class="font-grotesk text-lg text-muted">
+        <p
+            class="font-grotesk text-lg max-w-[90%] text-center mx-auto text-muted"
+        >
             Join top businesses trusting Dot for their growth
         </p>
         <div class="contain">

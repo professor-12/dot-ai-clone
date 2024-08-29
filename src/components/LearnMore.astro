@@ -4,16 +4,20 @@ import { Image } from "astro:assets";
 
 <section class="bg-white py-[104px] text-black">
     <div class="text-center font-grosek">
-        <h1 class="text-4xl font-medium">You name it, we've figured it out</h1>
-        <p class="text-muted mt-2 text-lg">
-            Whether it's collecting payments, opening a bank account, or
-            affordable insurance you need, <br /> you'll find it all here.
-        </p>
+        <div class="contain">
+            <h1 class="text-[32px] font-medium">
+                You name it, we've figured it out
+            </h1>
+            <p class="text-muted mt-2 md:text-lg font-inter">
+                Whether it's collecting payments, opening a bank account, or
+                affordable insurance you need, <br /> you'll find it all here.
+            </p>
+        </div>
     </div>
     <div class="contain font-grosek">
-        <div class="grid mt-16 grid-cols-2 gap-7">
+        <div class="grid mt-16 grid-cols-1 lg:grid-cols-2 gap-7">
             <div
-                class="col-span-2 shadow-sm bg-[#f3fcf1] relative min-h-[32rem] rounded-3xl"
+                class="lg:col-span-2 shadow-sm bg-[#f3fcf1] relative min-h-[32rem] rounded-3xl"
             >
                 <Image
                     src={"/images/green-half.webp"}
@@ -74,11 +78,10 @@ import { Image } from "astro:assets";
                             >
                         </div>
                     </a>
-                </div>
-                <div class=""></div>
-                <div
-                    class="absolute bottom-0 right-4 mx-auto h-full w-full bg-[url('/images/home-payments.webp')] bg-cover bg-[center_top] bg-no-repeat md:h-[92%] lg:w-[534px]"
-                >
+                    <div
+                        class="lg:absolute relative bottom-0 right-4 mx-auto h-[400px] w-full bg-[url('/images/home-payments.webp')] bg-cover bg-[center_top] bg-no-repeat md:h-[92%] lg:w-[534px]"
+                    >
+                    </div>
                 </div>
             </div>
             <div
@@ -217,12 +220,12 @@ import { Image } from "astro:assets";
             </div>
         </div>
     </div>
-</section>
 
-<style>
-    .ma > p {
-        @apply text-gray-500 font-[1rem] leading-[1.5rem];
-        max-width: 500px;
-        font-family: var(--font-inter);
-    }
-</style>
+    <style>
+        .ma > p {
+            @apply text-gray-500 font-[1rem] leading-[1.5rem];
+            max-width: 500px;
+            font-family: var(--font-inter);
+        }
+    </style>
+</section>

@@ -5,13 +5,13 @@ import CaretDown from "./UI/CaretDown.astro";
 ---
 
 <header
-    class="flex py-[22px] font-inter fixed font-medium text-white bg-transparent top-0 z-[40px] w-full"
+    class="flex py-[22px] max-lg:hidden bg-black font-inter fixed font-medium text-white top-0 z-[40] w-full"
 >
     <div class="flex justify-between items-center contain">
         <div class="flex items-center">
             <Logo />
             <nav class="ml-[2.5rem] flex justify-center items-center">
-                <ul class="flex w-full gap-[2.5rem]">
+                <ul class="flex w-full lg:gap-[2.5rem]">
                     <li class="flex gap-[.1rem] items-center">
                         <span>Business</span>
                         <CaretDown />
@@ -22,10 +22,10 @@ import CaretDown from "./UI/CaretDown.astro";
                     </li>
                 </ul>
             </nav>
-            <nav class="ml-[2.5rem] flex justify-center items-center">
+            <nav class="xl:ml-[2.5rem] ml-4 flex justify-center items-center">
                 <ul class="flex w-full gap-[2.5rem]">
                     <li class="flex gap-[.1rem] items-center">
-                        <span>Agents</span>
+                        <span class="">Agents</span>
                         <CaretDown />
                     </li>
                     <li class="flex gap-[.1rem] items-center">
@@ -34,7 +34,7 @@ import CaretDown from "./UI/CaretDown.astro";
                     </li>
                 </ul>
             </nav>
-            <a href="" class="ml-[2.5rem]">
+            <a href="" class="ml-4 xl:ml-[2.5rem]">
                 <div>Developers</div>
             </a>
         </div>
@@ -67,3 +67,13 @@ import CaretDown from "./UI/CaretDown.astro";
         </div>
     </div>
 </header>
+
+<style>
+    span,
+    div {
+        @apply max-xl:text-[14px];
+    }
+    ul {
+        @apply max-xl:gap-4;
+    }
+</style>
