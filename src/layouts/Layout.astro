@@ -1,6 +1,9 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+import "../styles/font.css";
+
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -8,43 +11,52 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <ViewTransitions />
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+    .contain {
+        max-width: 1240px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    :root {
+        --font-inter: "__Inter_aaf875", "__Inter_Fallback_aaf875";
+        --font-grotesk25: "__grotesk25_0edee8", "__grotesk25_Fallback_0edee8";
+        --font-grosek: "__grotesk_2bf059", "__grotesk_Fallback_2bf059";
+    }
+    .font-grosek {
+        font-family: var(--font-grosek);
+    }
+    .font-inter {
+        font-family: var(--font-inter);
+    }
+    .font-grotesk25 {
+        font-family: var(--font-grotesk25);
+    }
+    ::selection {
+        color: #f7f7f7;
+        background: #4f555f;
+    }
+
+    .scroll-none {
+        scrollbar-width: 0;
+    }
+
+    html {
+        padding: 0;
+        margin: 0;
+    }
 </style>

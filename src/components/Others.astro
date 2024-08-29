@@ -1,0 +1,111 @@
+---
+import CaretDown from "./UI/CaretDown.astro";
+import { Image } from "astro:assets";
+import InterestingButton from "./UI/InterestingButton.astro";
+---
+
+<section class="bg-white text-black py-[70px]">
+    <div class="contain">
+        <div class="flex justify-between items-center">
+            <h1 class="text-4xl font-medium">Connecting the Dots</h1>
+            <button
+                class="bg-black text-lg flex items-center text-white p-3 px-5 rounded-xl font-medium"
+                ><span>Read more</span>
+                <span class="-rotate-90 mt-2">
+                    <CaretDown />
+                </span>
+            </button>
+        </div>
+        <div class="grid gap-5 lg:grid-cols-3 mt-8 md:grid-cols-2">
+            <div class="">
+                <div class="h-[280px] relative rounded-3xl overflow-hidden">
+                    <Image
+                        src="/images/799e1161974f53a18aeb45dabcfa1200d6752433-3200x1500.webp"
+                        alt=""
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
+                        class="w-full h-full bg-cover"
+                        width={200}
+                        height={200}
+                    />
+                </div>
+                <div class="">
+                    <InterestingButton text="Insurance" variants="green" />
+                    <div>
+                        <a
+                            href=""
+                            class="hover:underline font-medium my-3 line-clamp-3 font-grosek"
+                            >Dot Partners with Healthily to Provide AI-led
+                            Access to Quality Healthcare</a
+                        >
+                    </div>
+                    <p class="font-inter text-sm line-clamp-2 text-muted">
+                        Dot has revealed a fresh collaboration with Healthily,
+                        an AI led platform providing access to quality
+                        healthcare.
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <div class="h-[280px] relative rounded-3xl overflow-hidden">
+                    <Image
+                        src="/images/e68393228c66b9a4f1dc0affe9988bce7f3845da-1024x480.webp"
+                        class="w-full h-full"
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
+                        alt=""
+                        width={200}
+                        height={200}
+                    />
+                </div>
+                <div class="">
+                    <InterestingButton text="Insurance" variants="blue" />
+                    <div>
+                        <a
+                            href=""
+                            class="hover:underline font-medium my-3 line-clamp-3 font-grosek"
+                            >Dot and roHealth Partnership Marks New Era in
+                            Comprehensive Healthcare Solutions
+                        </a>
+                    </div>
+                    <p class="font-inter text-sm line-clamp-2 text-muted">
+                        Dot, a leading health maintenance organization (HMO)
+                        provider, today announced a strategic partnership with
+                        roHealth.
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <div class="h-[280px] relative rounded-3xl overflow-hidden">
+                    <Image
+                        src="/images/2a8a603b5252e1b9e97b5873ff40288d9310fc75-3200x1535.webp"
+                        class="w-full h-full bg-cover"
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
+                        alt=""
+                        width={200}
+                        height={200}
+                    />
+                </div>
+                <div class="space-y-3">
+                    <InterestingButton text="Payments" variants="red" />
+                    <div>
+                        <a
+                            href=""
+                            class="hover:underline font-medium my-3 line-clamp-3 font-grosek"
+                            >5 Tips to Avoid Fraud as a Dot POS Agent</a
+                        >
+                    </div>
+                    <p class="font-inter text-sm text-muted line-clamp-2">
+                        At Dot, we understand that preventing fraud is a shared
+                        responsibility, and we want to ensure that all our
+                        agents have
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    h1 {
+        font-family: var(--font-grosek);
+    }
+</style>

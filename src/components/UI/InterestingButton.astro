@@ -1,0 +1,53 @@
+---
+interface Props {
+    variants: "blue" | "red" | "green";
+    text: string;
+}
+
+const varaint = {
+    blue: "blue-pill",
+    red: "yellow-pill",
+    green: "green-pill",
+};
+
+const { text, variants } = Astro.props;
+---
+
+<span class={(varaint[variants] + " " + "font-grosek") as string}>{text}</span>
+
+<style>
+    .blue-pill {
+        color: #0d747f;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 6px 16px;
+        background-color: #bcf2f8;
+        border-radius: 8px;
+        position: relative;
+        z-index: 0;
+    }
+    .yellow-pill {
+        color: #9f4b13;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 6px 16px;
+        background-color: #fac394;
+        border-radius: 8px;
+        position: relative;
+        z-index: 0;
+    }
+
+    .green-pill {
+        color: #1f6f15;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 6px 16px;
+        background-color: #c2f2ba;
+        border-radius: 8px;
+        position: relative;
+        z-index: 0;
+    }
+</style>

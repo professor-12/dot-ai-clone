@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets";
+import Card from "./UI/Card.astro";
+import InterestingButton from "./UI/InterestingButton.astro";
+---
+
+<section class="bg-gray-50 text-black py-[70px]">
+    <div class="contain">
+        <div class="text-center space-y-2">
+            <h1 class="font-grosek text-4xl font-medium">
+                Trusted by people just like you
+            </h1>
+            <p class="text-muted text-xl font-normal">
+                Join our community of individuals who are already on their way
+                to create the lives they want
+            </p>
+        </div>
+    </div>
+    <section class="flex contain pt-16 gap-5">
+        <div class="lg:w-2/5 h-auto md:w-1/2 rounded-3xl overflow-clip">
+            <Image
+                src={"/images/stats-main.webp"}
+                alt={""}
+                width={1024}
+                height={1024}
+                class="w-full h-full bg-contain"
+            />
+        </div>
+        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5 flex-1">
+            <Card>
+                <InterestingButton text="Existing Customers" variants="blue" />
+                <h1
+                    class="font-grosek flex items-baseline xl:text-8xl font-medium"
+                >
+                    650k <span class="text-5xl text-muted font-medium">+</span>
+                </h1>
+                <p class="text-muted text-center text-base font-inter">
+                    650,000+ individuals have chosen us as their trusted
+                    partner.
+                </p>
+            </Card>
+            <Card>
+                <InterestingButton text="Existing Customers" variants="red" />
+                <h1
+                    class="font-grosek flex items-baseline xl:text-8xl font-medium"
+                >
+                    50k <span class="text-5xl text-muted font-medium">+</span>
+                </h1>
+                <p class="text-muted text-center text-base font-inter">
+                    Our agents are spread across Nigeria. From Lagos to Lokoja,
+                    we are there.
+                </p>
+            </Card>
+            <div class="lg:col-span-2 h-full">
+                <Card>
+                    <InterestingButton
+                        text="Total Deposit Mobilized"
+                        variants="green"
+                    />
+                    <h1
+                        class="font-grosek flex items-baseline xl:text-8xl font-medium"
+                    >
+                        <span class="text-5xl text-muted font-medium">₦</span> 51Billion
+                    </h1>
+                    <p class="text-muted text-center text-base font-inter">
+                        Total deposits mobilized and profits paid to customers,
+                        reflecting the trust and confidence our customers have
+                        placed in us.
+                    </p>
+                </Card>
+            </div>
+        </div>
+    </section>
+    <div class="text-center font-grosek pt-[70px]">
+        <p class="font-grotesk text-lg text-muted">
+            Join top businesses trusting Dot for their growth
+        </p>
+        <div class="contain">
+            <div
+                class="grid grid-cols-2 mt-8 items-center lg:grid-cols-4 gap-8"
+            >
+                <Image
+                    class="mx-auto"
+                    src="/images/dangote1.6d6f6c9e.svg"
+                    alt=""
+                    width={100}
+                    height={150}
+                />
+                <Image
+                    class="mx-auto"
+                    src="/images/piggyvest.921a060a.svg"
+                    alt=""
+                    width={150}
+                    height={150}
+                />
+                <Image
+                    class="mx-auto"
+                    src="/images/friesland.b722f03b.svg"
+                    alt=""
+                    width={120}
+                    height={150}
+                />
+                <Image
+                    class="mx-auto"
+                    src="/images/olam.33fdeb36.svg"
+                    alt=""
+                    width={120}
+                    height={150}
+                />
+            </div>
+        </div>
+    </div>
+</section>
