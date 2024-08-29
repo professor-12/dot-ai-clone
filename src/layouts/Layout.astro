@@ -27,7 +27,7 @@ const { title } = Astro.props;
 const intersectionOberver = new IntersectionObserver((e) => {
       e.forEach(el => {
             if (el.isIntersecting) {
-                  const animationclassToAdd = el.target.getAttribute("data-animate")
+                  const animationclassToAdd = el.target.getAttribute("data-animate") as string
                   el.target.classList.add(animationclassToAdd)
             }
       })
