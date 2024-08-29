@@ -23,10 +23,8 @@ const { title } = Astro.props;
     </head>
     <body>
         <script>
-            const allAnimationel = document.querySelectorAll(".animate-js") as string
-
-
-const intersectionOberver = new IntersectionObserver(() => {
+            const allAnimationel = document.querySelectorAll(".animate-js") as any
+const intersectionOberver = new IntersectionObserver((e) => {
       e.forEach(el => {
             if (el.isIntersecting) {
                   const animationclassToAdd = el.target.getAttribute("data-animate")
@@ -36,7 +34,7 @@ const intersectionOberver = new IntersectionObserver(() => {
 })
 
 
-allAnimationel.forEach((el) => {
+allAnimationel.forEach((el:any) => {
       el.style.animationDelay = el.getAttribute("data-delay") + "s"
       intersectionOberver.observe(el)
 })
