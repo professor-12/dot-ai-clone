@@ -14,6 +14,7 @@ import MobileViewHeader from "../components/MobileViewHeader.astro";
 
 <script>
     const header = document.querySelectorAll("header");
+    const headerLogo = document.querySelectorAll(".logo-header");
     let lastScroll = 0;
     (() => {
         document.addEventListener("scroll", (e) => {
@@ -25,8 +26,22 @@ import MobileViewHeader from "../components/MobileViewHeader.astro";
                 }
             } else {
                 if (lastScroll < 600) {
+                    headerLogo.forEach((el) => {
+                        if (el.getAttribute("data-color") == "black") {
+                            el.classList.add("hidden");
+                        } else if (el.getAttribute("data-color") == "white") {
+                            el.classList.remove("hidden");
+                        }
+                    });
                     header.forEach((e) => e.classList.remove("bg-white"));
                 } else {
+                    headerLogo.forEach((el) => {
+                        if (el.getAttribute("data-color") == "black") {
+                            el.classList.remove("hidden");
+                        } else if (el.getAttribute("data-color") == "white") {
+                            el.classList.add("hidden");
+                        }
+                    });
                     header.forEach((e) => e.classList.add("bg-white"));
                     header.forEach((e) => e.classList.remove("header-up"));
                 }
