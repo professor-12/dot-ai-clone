@@ -89,20 +89,3 @@ import CaretDown from "./UI/CaretDown.astro";
         box-shadow: 0 0 1px 0px black;
     }
 </style>
-
-<script>
-    let lastScroll = 0;
-
-    window.addEventListener("scroll", (el) => {
-        const currentScroll = window.screenTop;
-
-        if (currentScroll > lastScroll) {
-            console.log("scrolling down");
-        } else {
-            console.log("scrolling up");
-        }
-
-        lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-        console.log(lastScroll);
-    });
-</script>

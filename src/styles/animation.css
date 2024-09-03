@@ -1,4 +1,5 @@
 .fade-in {
+    opacity: 0;
     transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
     animation: FadeUp 1.7s forwards;
 }
@@ -14,6 +15,3 @@
         transform: translateY(0px);
     }
 }
-
-
-
