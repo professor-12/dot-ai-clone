@@ -1,0 +1,25 @@
+---
+import CaretDown from "./CaretDown.astro";
+---
+
+
+<nav class="ml-[2.5rem] flex justify-center items-center">
+    <ul class="flex w-full">
+        <li
+            class="flex relative cursor-pointer hover:bg-white hover:text-black xl:px-4 px-2 p-[6px] rounded-md gap-[.1rem] items-center"
+        >
+            <span>Business</span>
+            <CaretDown />
+        </li>
+        <li class="flex gap-[.1rem] xl:px-4 px-2 p-[6px] items-center">
+            <span>Personal</span>
+            <CaretDown />
+        </li>
+    </ul>
+</nav>
+
+<style>
+    li {
+        @apply hover:bg-white hover:text-black cursor-pointer rounded-md duration-100;
+    }
+</style>

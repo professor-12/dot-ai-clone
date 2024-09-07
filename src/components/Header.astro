@@ -4,6 +4,7 @@ import Logo from "./Logo.astro";
 import CaretDown from "./UI/CaretDown.astro";
 ---
 
+<script></script>
 <header
     class="flex py-[22px] max-lg:hidden bg-black font-inter fixed font-medium text-white top-0 z-[40] w-full"
 >
@@ -11,10 +12,46 @@ import CaretDown from "./UI/CaretDown.astro";
         <div class="flex items-center">
             <Logo />
             <nav class="ml-[2.5rem] flex justify-center items-center">
-                <ul class="flex w-full lg:gap-[2.5rem]">
-                    <li class="flex gap-[.1rem] items-center">
+                <ul class="flex w-full">
+                    <li class="flex group relative gap-[.1rem] items-center">
                         <span>Business</span>
                         <CaretDown />
+                        <div
+                            class="absolute pop-in-animation transition-all hidden group-hover:flex w-full pt-3 top-full"
+                        >
+                            <div
+                                class="bg-white transition-all rounded-xl flex"
+                            >
+                                <div
+                                    class="bg-green-200/20 rounded-l-xl flex flex-col p-4 py-5 pb-12 w-[13rem]"
+                                >
+                                    <div class="links group/s">
+                                        <span>Banking</span>
+                                        <span
+                                            class="-rotate-90 group-hover/s:flex hidden"
+                                            ><CaretDown /></span
+                                        >
+                                    </div>
+                                    <div class="links group/s">
+                                        <span>Payment</span>
+                                        <span
+                                            class="-rotate-90 group-hover/s:flex hidden"
+                                            ><CaretDown /></span
+                                        >
+                                    </div>
+                                    <div class="links group/s">
+                                        <span>Insurance</span>
+                                        <span
+                                            class="-rotate-90 group-hover/s:flex hidden"
+                                            ><CaretDown /></span
+                                        >
+                                    </div>
+                                    <div></div>
+                                </div>
+
+                                <div class="flex-1 w-full p-12"></div>
+                            </div>
+                        </div>
                     </li>
                     <li class="flex gap-[.1rem] items-center">
                         <span>Personal</span>
@@ -22,8 +59,8 @@ import CaretDown from "./UI/CaretDown.astro";
                     </li>
                 </ul>
             </nav>
-            <nav class="xl:ml-[2.5rem] ml-4 flex justify-center items-center">
-                <ul class="flex w-full gap-[2.5rem]">
+            <nav class="flex justify-center items-center">
+                <ul class="flex w-full">
                     <li class="flex gap-[.1rem] items-center">
                         <span class="">Agents</span>
                         <CaretDown />
@@ -34,7 +71,7 @@ import CaretDown from "./UI/CaretDown.astro";
                     </li>
                 </ul>
             </nav>
-            <a href="" class="ml-4 xl:ml-[2.5rem]">
+            <a href="" class="px-[8px] py-[6px] lg:px-[16px];">
                 <div>Developers</div>
             </a>
         </div>
@@ -87,5 +124,29 @@ import CaretDown from "./UI/CaretDown.astro";
         background: white;
         color: black;
         box-shadow: 0 0 1px 0px black;
+    }
+
+    li {
+        @apply px-[8px] py-[6px] lg:px-[16px] hover:text-black hover:bg-white rounded-[0.5rem] cursor-pointer;
+    }
+
+    .pop-in-animation {
+        animation: enterAnimation 0.13s ease-in;
+    }
+
+    @keyframes enterAnimation {
+        0% {
+            opacity: 0;
+            scale: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    .links {
+        @apply hover:bg-white py-4 px-3 flex items-center justify-between rounded-xl font-normal text-black hover:shadow-sm;
     }
 </style>
