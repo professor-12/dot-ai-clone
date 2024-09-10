@@ -4,7 +4,101 @@ import Logo from "./Logo.astro";
 import CaretDown from "./UI/CaretDown.astro";
 ---
 
-<script></script>
+<script>
+    const LinksEl = document.querySelectorAll(".links");
+
+    const LinkComponent = ({
+        title,
+        body,
+        link,
+    }: {
+        title: string;
+        body: string;
+        link: string;
+    }) => {
+        return ` <a  href="${link}" class="p-3 px-5 h-16 flex items-center hover:bg-blue-300/10 rounded-lg">
+                    <div class="flex text-sm">
+                        <div class="flex flex-col">
+                            <h1>${title}</h1>
+                                <p class="text-slate-400 text-xs font-light">
+                                    ${body}
+                                </p>
+                        </div>
+                    </div>
+                </a>`;
+    };
+    let currentActive: "banking" | "payment" | "insurance" = "banking";
+    let data = {
+        banking: [
+            {
+                title: "Corporate Banking",
+                body: "Manage your business",
+                link: "https://www.dot.ai/corporate-banking",
+            },
+            {
+                title: "Investments",
+                body: "Grow your wealth",
+                link: "https://www.dot.ai/investments",
+            },
+            {
+                title: "Loans",
+                body: "Quick loan for business",
+                link: "https://www.dot.ai/loans",
+            },
+        ],
+        payment: [
+            {
+                title: "Dot Collect",
+                body: "POS for your business",
+                link: "https://www.dot.ai/collect",
+            },
+        ],
+        insurance: [
+            {
+                title: "Corporate HMO",
+                body: "Affordable insurance for your employees",
+                link: "https://www.dot.ai/corporate-hmo",
+            },
+            {
+                title: "Micro Insurance",
+                body: "Secure your tommorow today",
+                link: "https://www.dot.ai/micro-insurance",
+            },
+        ],
+    };
+
+    const handleActiveState = () => {
+        LinksEl.forEach((el) => {
+            if (el.textContent?.toLowerCase() == currentActive) {
+                el.classList.add("bg-white");
+            } else {
+                el.classList.remove("bg-white");
+            }
+        });
+    };
+    handleActiveState();
+    const element = document.querySelector("#drop-down-business");
+    if (element) {
+        data[currentActive].forEach((e) => {
+            element.innerHTML += LinkComponent(e);
+        });
+    }
+    LinksEl.forEach((el) => {
+        el.addEventListener("mouseenter", (e) => {
+            handleActiveState();
+            const data_link = el.getAttribute("data-id");
+            if (element) {
+                element.innerHTML = "";
+            }
+            currentActive = data_link as "banking" | "payment" | "insurance";
+            data[currentActive].forEach((e) => {
+                if (element) {
+                    element.innerHTML += LinkComponent(e);
+                }
+            });
+        });
+    });
+</script>
 <header
     class="flex py-[22px] max-lg:hidden bg-black font-inter fixed font-medium text-white top-0 z-[40] w-full"
 >
@@ -17,39 +111,50 @@ import CaretDown from "./UI/CaretDown.astro";
                         <span>Business</span>
                         <CaretDown />
                         <div
-                            class="absolute pop-in-animation transition-all hidden group-hover:flex w-full pt-3 top-full"
+                            class="absolute pop-in-animation transition-all hidden group-hover:flex pt-3 top-full"
                         >
                             <div
-                                class="bg-white transition-all rounded-xl flex"
+                                class="transition-all min-w-full max-w-full bg-white rounded-xl flex"
                             >
                                 <div
-                                    class="bg-green-200/20 rounded-l-xl flex flex-col p-4 py-5 pb-12 w-[13rem]"
+                                    class="bg-green-200/20 rounded-l-xl flex flex-col p-4 py-5 pb-12 min-w-[13rem]"
                                 >
-                                    <div class="links group/s">
+                                    <div
+                                        data-id="banking"
+                                        class="links group/s"
+                                    >
                                         <span>Banking</span>
                                         <span
                                             class="-rotate-90 group-hover/s:flex hidden"
                                             ><CaretDown /></span
                                         >
                                     </div>
-                                    <div class="links group/s">
+                                    <div
+                                        data-id="payment"
+                                        class="links group/s"
+                                    >
                                         <span>Payment</span>
                                         <span
                                             class="-rotate-90 group-hover/s:flex hidden"
                                             ><CaretDown /></span
                                         >
                                     </div>
-                                    <div class="links group/s">
+                                    <div
+                                        data-id="insurance"
+                                        class="links group/s"
+                                    >
                                         <span>Insurance</span>
                                         <span
                                             class="-rotate-90 group-hover/s:flex hidden"
                                             ><CaretDown /></span
                                         >
                                     </div>
-                                    <div></div>
                                 </div>
-
-                                <div class="flex-1 w-full p-12"></div>
+                                <div
+                                    class="min-w-[590px] shrink-0 p-5 gap-6 gap-y-3 grid grid-cols-2"
+                                    id="drop-down-business"
+                                >
+                                </div>
                             </div>
                         </div>
                     </li>
