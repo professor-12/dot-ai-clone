@@ -1,0 +1,91 @@
+---
+interface Props {
+    id: string;
+    className: string;
+}
+import CaretDown from "./CaretDown.astro";
+
+const { id, className } = Astro.props;
+---
+
+<div
+    class="absolute pop-in-animation transition-all hidden group-hover:flex pt-3 top-full"
+>
+    <div class="transition-all duration-300 bg-white rounded-xl flex">
+        <div
+            class="bg-[#F9FBFF] rounded-l-xl flex flex-col p-4 py-5 pb-12 min-w-[13rem]"
+        >
+            <div data-id="banking" class={`links ${className} group/s active`}>
+                <span class="route-link">Banking</span>
+                <span class="-rotate-90 group-hover/s:flex hidden"
+                    ><CaretDown /></span
+                >
+            </div>
+            <div data-id="payment" class={`links ${className} group/s`}>
+                <span class="route-link">Payment</span>
+                <span class="-rotate-90 group-hover/s:flex hidden"
+                    ><CaretDown /></span
+                >
+            </div>
+            <div data-id="insurance" class={`links ${className} group/s`}>
+                <span class="route-link">Insurance</span>
+                <span class="-rotate-90 group-hover/s:flex hidden"
+                    ><CaretDown /></span
+                >
+            </div>
+        </div>
+        <div>
+            <div
+                class="min-w-[590px] shrink-0 p-5 gap-x-6 gap-y-4 grid grid-cols-2"
+                id={id}
+            >
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    header {
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    span,
+    div {
+        @apply max-xl:text-[14px];
+    }
+    ul {
+        @apply max-xl:gap-4;
+    }
+    .header-up {
+        transform: translateY(-100%);
+        background: transparent;
+    }
+    .bg-white {
+        background: white;
+        color: black;
+        box-shadow: 0 0 1px 0px black;
+    }
+
+    li {
+        @apply px-[8px] py-[6px] lg:px-[16px] hover:text-black hover:bg-white rounded-[0.5rem] cursor-pointer;
+    }
+
+    .pop-in-animation {
+        animation: enterAnimation 0.13s ease-in;
+    }
+
+    @keyframes enterAnimation {
+        0% {
+            opacity: 0;
+            scale: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    .links {
+        @apply hover:bg-white py-4 px-3 flex items-center justify-between rounded-xl font-normal text-black hover:shadow-sm;
+    }
+</style>
