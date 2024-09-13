@@ -1,0 +1,69 @@
+---
+import Logo from "./Logo.astro";
+const isOpen = false;
+---
+
+<header
+    class="flex py-[22px] lg:hidden bg-black font-inter fixed font-medium text-white top-0 z-[40] w-full"
+>
+    <div class="contain flex items-center justify-between">
+        <Logo />
+        {
+            isOpen ? (
+                <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="close"
+                    color="white"
+                >
+                    <g id="close (3)">
+                        <path
+                            id="Vector"
+                            d="M21.7627 20L32.1252 9.63749C32.33 9.39836 32.437 9.09077 32.4248 8.77617C32.4127 8.46158 32.2823 8.16315 32.0597 7.94053C31.837 7.71792 31.5386 7.5875 31.224 7.57535C30.9094 7.5632 30.6018 7.6702 30.3627 7.87499L20.0002 18.2375L9.63771 7.86249C9.40233 7.62711 9.08309 7.49487 8.75021 7.49487C8.41733 7.49487 8.09809 7.62711 7.86271 7.86249C7.62733 8.09787 7.4951 8.41711 7.4951 8.74999C7.4951 9.08286 7.62733 9.40211 7.86271 9.63749L18.2377 20L7.86271 30.3625C7.73186 30.4745 7.62558 30.6124 7.55055 30.7675C7.47552 30.9226 7.43336 31.0915 7.42671 31.2637C7.42006 31.4358 7.44907 31.6075 7.51191 31.7679C7.57476 31.9283 7.67008 32.074 7.7919 32.1958C7.91372 32.3176 8.0594 32.4129 8.21981 32.4758C8.38021 32.5386 8.55188 32.5676 8.72403 32.561C8.89618 32.5543 9.06509 32.5122 9.22017 32.4371C9.37525 32.3621 9.51315 32.2558 9.62521 32.125L20.0002 21.7625L30.3627 32.125C30.6018 32.3298 30.9094 32.4368 31.224 32.4246C31.5386 32.4125 31.837 32.2821 32.0597 32.0594C32.2823 31.8368 32.4127 31.5384 32.4248 31.2238C32.437 30.9092 32.33 30.6016 32.1252 30.3625L21.7627 20Z"
+                            fill="currentColor"
+                        />
+                    </g>
+                </svg>
+            ) : (
+                <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="hamburger"
+                    color="white"
+                >
+                    <g id="Linear / Essentional, UI / Hamburger Menu">
+                        <>
+                            <path
+                                id="Vector"
+                                d="M33.3333 11.6667L6.66659 11.6667"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                            />
+                            <path
+                                id="Vector_2"
+                                d="M33.3333 20L6.66659 20"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                            />
+                            <path
+                                id="Vector_3"
+                                d="M33.3333 28.3333L6.66659 28.3333"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                            />
+                        </>
+                    </g>
+                </svg>
+            )
+        }
+    </div>
+</header>

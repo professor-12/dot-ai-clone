@@ -5,10 +5,15 @@ import { Image } from "astro:assets";
 <section class="bg-white py-[70px] font-grosek text-black">
     <div class="contain">
         <div class="space-y-16">
-            <h1 class="text-4xl font-medium">Customers' Story</h1>
-            <div class="grid md:grid-cols-3 gap-5">
+            <h1
+                data-animate="fade-in"
+                class="text-3xl md:text-4xl font-medium animate-js"
+            >
+                Customers' Story
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div
-                    class="py-10 px-7 flex flex-col justify-between row-span-2 bg-[#f9fafb] shadow-gray-300 rounded-3xl shadow-sm"
+                    class="py-10 px-7 flex flex-col max-md:space-y-4 justify-between md:row-span-2 bg-[#f9fafb] shadow-gray-300 rounded-3xl shadow-sm"
                 >
                     <p class="text-2xl lg:text-[28px] lg:leading-10">
                         The future of finance is here, and its name is Dot! They
@@ -20,9 +25,7 @@ import { Image } from "astro:assets";
                         </span>
                     </p>
                     <div class="flex space-x-5">
-                        <div
-                            class="h-12 shrink-0 w-12 overflow-hidden rounded-full bg-gray-400"
-                        >
+                        <div class="h-12 shrink-0 w-12 overflow-hidden">
                             <Image
                                 src="/images/profile4.webp"
                                 width={100}
@@ -99,7 +102,7 @@ import { Image } from "astro:assets";
                     </div>
                 </div>
                 <div
-                    class="py-10 px-7 col-span-2 bg-[#f9fafb] min-h-[280px] flex flex-col justify-between shadow-gray-300 rounded-3xl shadow-sm"
+                    class="py-10 px-7 md:col-span-2 bg-[#f9fafb] min-h-[280px] flex flex-col justify-between shadow-gray-300 rounded-3xl shadow-sm"
                 >
                     <p class="text-lg lg:text-xl text-gray-400 lg:leading-7">
                         The simple process of registration. <span
