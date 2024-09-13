@@ -1,9 +1,295 @@
 ---
+import { Image } from "astro:assets";
 import CustomButton from "./CustomButton.astro";
 import Logo from "./Logo.astro";
 import CaretDown from "./UI/CaretDown.astro";
+import DropDownNav from "./UI/DropDownNav.astro";
+import SmallDropDown from "./UI/SmallDropDown.astro";
 ---
 
+<script>
+    let data = {
+        banking: [
+            {
+                title: "Corporate Banking",
+                body: "Manage your business",
+                link: "https://www.dot.ai/corporate-banking",
+                svg: "/svg/coperate-banking.svg",
+            },
+            {
+                title: "Investments",
+                body: "Grow your wealth",
+                link: "https://www.dot.ai/investments",
+                svg: "/svg/investment.svg",
+            },
+            {
+                title: "Loans",
+                body: "Quick loan for business",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/loan.svg",
+            },
+        ],
+        payment: [
+            {
+                title: "Dot Collect",
+                body: "POS for your business",
+                link: "https://www.dot.ai/collect",
+                svg: "/svg/dot-collect.svg",
+            },
+        ],
+        insurance: [
+            {
+                title: "Corporate HMO",
+                body: "Affordable insurance for your employees",
+                link: "https://www.dot.ai/corporate-hmo",
+                svg: "/svg/hmo.svg",
+            },
+            {
+                title: "Micro Insurance",
+                body: "Secure your tommorow today",
+                link: "https://www.dot.ai/micro-insurance",
+                svg: "/svg/insurance.svg",
+            },
+        ],
+    };
+    let data2 = {
+        banking: [
+            {
+                title: "Mobile and Web Banking",
+                body: "BAnking that works",
+                link: "https://www.dot.ai/corporate-banking",
+                svg: "/svg/mobile-web-banking.svg",
+            },
+            {
+                title: "Instant Bank Transfers",
+                body: "Swift transfers to any bank",
+                link: "https://www.dot.ai/investments",
+                svg: "/svg/instant-bank.svg",
+            },
+            {
+                title: "Pay Bills",
+                body: "Pay your bills from the bank app",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/pay-bills.svg",
+            },
+            {
+                title: "Investments",
+                body: "Grow your wealth",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/investment-2.svg",
+            },
+            {
+                title: "Earn Rewards",
+                body: "Gain points you can convert to cash",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/earn-rewards.svg",
+            },
+            {
+                title: "Fixed Deposit Investments",
+                body: "Pay your bilss from the bank app",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/cards.svg",
+            },
+            {
+                title: "Loans",
+                body: "Quick loans for your business",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/loan.svg",
+            },
+            {
+                title: "Cards",
+                body: "Get a Dot Card",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/cards.svg",
+            },
+            {
+                title: "Asset Finance",
+                body: "Get your own ride",
+                link: "https://www.dot.ai/loans",
+                svg: "/svg/assets-finance.svg",
+            },
+        ],
+        payment: [
+            {
+                title: "POS Terminal",
+                body: "Become a Dot agent",
+                link: "https://www.dot.ai/collect",
+                svg: "/svg/pos-terminal.svg",
+            },
+            {
+                title: "Instant Bank Transfers",
+                body: "Swift transfers to any bank",
+                link: "https://www.dot.ai/collect",
+                svg: "/svg/swift-transfers.svg",
+            },
+            {
+                title: "Cash Withdrawals",
+                body: "Give customers cash anytime",
+                link: "https://www.dot.ai/collect",
+                svg: "/svg/cash-withdrawal.svg",
+            },
+            {
+                title: "Pay Bills",
+                body: "Pay any bill from POS",
+                link: "https://www.dot.ai/collect",
+                svg: "/svg/bills.svg",
+            },
+            {
+                title: "Collect Transfers",
+                body: "Accept payments on your POS",
+                link: "https://www.dot.ai/collect",
+                svg: "/svg/transfer.svg",
+            },
+            {
+                title: "Bank Network Status",
+                body: "Know the network status of any bank",
+                link: "https://www.dot.ai/collect",
+                svg: "/svg/network-status.svg",
+            },
+        ],
+        insurance: [
+            {
+                title: "HMO Retail",
+                body: "Insurance for you",
+                link: "https://www.dot.ai/corporate-hmo",
+                svg: "/svg/retail-checker.svg",
+            },
+            {
+                title: "Symptoms Checker",
+                body: "Check your symptoms",
+                link: "https://www.dot.ai/micro-insurance",
+                svg: "/svg/symptom-checker.svg",
+            },
+        ],
+    };
+    const handleHoverEvent = (
+        prentEl: any,
+        data: { [x: string]: any[] },
+        childrenel: any,
+        Component?: any
+    ) => {
+        const LinksEl = document.querySelectorAll(prentEl);
+
+        let currentActive: "banking" | "payment" | "insurance" = "banking";
+
+        const element = document.querySelector(childrenel);
+
+        if (element) {
+            data[currentActive].forEach(
+                (e: {
+                    title: string;
+                    body: string;
+                    link: string;
+                    svg: string;
+                }) => {
+                    element.innerHTML += Component(e);
+                }
+            );
+        }
+        LinksEl.forEach((el) => {
+            el.addEventListener("mouseenter", (e: any) => {
+                const data_link = el.getAttribute("data-id");
+                if (element) {
+                    element.innerHTML = "";
+                }
+                currentActive = data_link as
+                    | "banking"
+                    | "payment"
+                    | "insurance";
+                data[currentActive].forEach(
+                    (e: { title: string; body: string; link: string }) => {
+                        if (element) {
+                            element.innerHTML += Component(e);
+                        }
+                    }
+                );
+            });
+        });
+    };
+
+    // A custom component that is meant to be reusable..
+    const LinkComponent = ({
+        title,
+        body,
+        link,
+        svg,
+    }: {
+        title: string;
+        body: string;
+        link: string;
+        svg?: string;
+    }) => {
+        return ` <a  href="${link}" class="p-3 px-5 h-16 flex items-center hover:bg-blue-300/10 rounded-lg">
+                    <div class="flex text-sm gap-2">
+                        ${svg ? `<image src=${svg} width={40} height={20} alt="An svg"/>` : ""}
+                        <div class="flex flex-col">
+                            <h1>${title}</h1>
+                                <p class="text-slate-400 text-xs font-light">
+                                    ${body}
+                                </p>
+                        </div>
+                    </div>
+                </a>`;
+    };
+
+    // An event to display the corresponding links when the relative element is hovered on
+    handleHoverEvent(".personal", data2, "#drop-down-personal", LinkComponent);
+    handleHoverEvent(".business", data, "#drop-down-business", LinkComponent);
+
+    const data3: any[] = [
+        {
+            title: "POS Terminal",
+            body: "Become a Dot agent",
+            svg: "/svg/pos-terminal.svg",
+        },
+        {
+            title: "Collect Transfers",
+            body: "Accept payments on your POS",
+            svg: "/svg/transfer.svg",
+        },
+        {
+            title: "Bank Network Status",
+            body: "Know the network status of any bank",
+            svg: "/svg/network-status.svg",
+        },
+        {
+            title: "Cash and Terminal Insurance",
+            body: "Protect your money and terminal",
+            svg: "/svg/cash.svg",
+        },
+        {
+            title: "Cards(Issuance)",
+            body: "Give your customers a Dot card",
+            svg: "/svg/cards.svg",
+        },
+    ];
+    const data4: any[] = [
+        {
+            title: "Why Dots?",
+            body: "It starts with you",
+            svg: "/svg/why-dots.svg",
+        },
+        { title: "About us", body: "Read our story", svg: "/svg/about-us.svg" },
+        { title: "Careers", body: "Join the team", svg: "/svg/career.svg" },
+    ];
+
+    const data5 = [
+        { title: "Our Blog", body: "Grow your heaalth", svg: "/svg/cards.svg" },
+    ];
+
+    const addElemttoDom = (data: any, el: string, child: (e: any) => any) => {
+        const parentEl = document.querySelector(el);
+        if (parentEl) {
+            data.forEach((e: any) => {
+                parentEl.innerHTML += child(e);
+            });
+        }
+    };
+
+    addElemttoDom(data3, "#drop-down-agents", LinkComponent);
+    addElemttoDom(data4, "#drop-down-dots", LinkComponent);
+    addElemttoDom(data5, "#drop-down-resources", LinkComponent);
+</script>
 <header
     class="flex py-[22px] max-lg:hidden bg-black font-inter fixed font-medium text-white top-0 z-[40] w-full"
 >
@@ -11,38 +297,51 @@ import CaretDown from "./UI/CaretDown.astro";
         <div class="flex items-center">
             <Logo />
             <nav class="ml-[2.5rem] flex justify-center items-center">
-                <ul class="flex w-full lg:gap-[2.5rem]">
-                    <li class="flex gap-[.1rem] items-center">
+                <ul class="flex w-full">
+                    <li class="flex group relative gap-[.1rem] items-center">
                         <span>Business</span>
                         <CaretDown />
+                        <DropDownNav
+                            id="drop-down-business"
+                            className="business"
+                        />
                     </li>
-                    <li class="flex gap-[.1rem] items-center">
+                    <li class="flex group relative gap-[.1rem] items-center">
                         <span>Personal</span>
                         <CaretDown />
+                        <DropDownNav
+                            id="drop-down-personal"
+                            className="personal"
+                        />
                     </li>
                 </ul>
             </nav>
-            <nav class="xl:ml-[2.5rem] ml-4 flex justify-center items-center">
-                <ul class="flex w-full gap-[2.5rem]">
-                    <li class="flex gap-[.1rem] items-center">
+            <nav class="flex justify-center items-center">
+                <ul class="flex w-full">
+                    <li class="flex relative group gap-[.1rem] items-center">
                         <span class="">Agents</span>
                         <CaretDown />
+                        <SmallDropDown id="drop-down-agents" />
                     </li>
-                    <li class="flex gap-[.1rem] items-center">
+                    <li class="flex relative group gap-[.1rem] items-center">
                         <span>Why Dots?</span>
                         <CaretDown />
+                        <SmallDropDown id="drop-down-dots" />
                     </li>
                 </ul>
             </nav>
-            <a href="" class="ml-4 xl:ml-[2.5rem]">
+            <a href="" class="px-[8px] py-[6px] lg:px-[16px];">
                 <div>Developers</div>
             </a>
         </div>
 
         <div class="flex items-center font-semibold md:space-x-6 space-x-4">
-            <div class="flex gap-[.1rem] items-center">
+            <div
+                class="flex gap-[.1rem] relative group hover:bg-white rounded-md cursor-pointer hover:text-black py-1 px-2 items-center"
+            >
                 <span>Resources</span>
                 <CaretDown />
+                <SmallDropDown id="drop-down-resources" />
             </div>
             <div class="flex items-center gap-[.1rem]">
                 <span>Login</span>
@@ -69,11 +368,47 @@ import CaretDown from "./UI/CaretDown.astro";
 </header>
 
 <style>
+    header {
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
     span,
     div {
         @apply max-xl:text-[14px];
     }
     ul {
         @apply max-xl:gap-4;
+    }
+    .header-up {
+        transform: translateY(-100%);
+        background: transparent;
+    }
+    .bg-white {
+        background: white;
+        color: black;
+        box-shadow: 0 0 1px 0px black;
+    }
+
+    li {
+        @apply px-[8px] py-[6px] lg:px-[16px] hover:text-black hover:bg-white rounded-[0.5rem] cursor-pointer;
+    }
+
+    .pop-in-animation {
+        animation: enterAnimation 0.13s ease-in;
+    }
+
+    @keyframes enterAnimation {
+        0% {
+            opacity: 0;
+            scale: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    .links {
+        @apply hover:bg-white py-4 px-3 flex items-center justify-between rounded-xl font-normal text-black hover:shadow-sm;
     }
 </style>

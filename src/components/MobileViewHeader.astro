@@ -67,3 +67,25 @@ const isOpen = false;
         }
     </div>
 </header>
+
+<style>
+    header {
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    span,
+    div {
+        @apply max-xl:text-[14px];
+    }
+    ul {
+        @apply max-xl:gap-4;
+    }
+    .header-up {
+        transform: translateY(-100%);
+        background: transparent;
+    }
+    .bg-white {
+        background: white;
+        color: black;
+        box-shadow: 0 0 1px 0px black;
+    }
+</style>

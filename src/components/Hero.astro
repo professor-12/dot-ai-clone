@@ -28,11 +28,15 @@ import { Image } from "astro:assets";
                 need to create the life you want.
             </p>
             <div class="flex gap-8">
-                <CustomButton id="_sac-" text="Create an Account" href="/" />
+                <CustomButton
+                    id="_sac-"
+                    text="Create an Account"
+                    href="https://retail.dot.ai/signup"
+                />
                 <h1
                     class="font-inter flex items-center space-x-2 justify-center"
                 >
-                    <span>Learn More</span>
+                    <span><a href="/#learn-more">Learn More</a></span>
                     <span class="-rotate-90 mt-1">
                         <CaretDown />
                     </span>
@@ -44,7 +48,7 @@ import { Image } from "astro:assets";
         <div
             data-animate="fade-in"
             data-delay=".3"
-            class="rounded-2xl opacity-0 animate-js relative shrink-0 w-[330px] lg:flex-[1.5] overflow-hidden"
+            class="rounded-2xl animate-js relative shrink-0 w-[330px] lg:flex-[1.5] overflow-hidden"
         >
             <Image
                 class="w-full h-full"
@@ -58,13 +62,13 @@ import { Image } from "astro:assets";
         <div
             data-animate="fade-in"
             data-delay=".4"
-            class="rounded-2xl opacity-0 animate-js relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
+            class="rounded-2xl animate-js relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
         >
             <Image
                 class="w-full h-full"
                 style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
                 alt="hero insure guy picture"
-                src="/images/.webp"
+                src="/images/a.webp"
                 width={1203}
                 height={2134}
             />
@@ -72,7 +76,7 @@ import { Image } from "astro:assets";
         <div
             data-animate="fade-in"
             data-delay=".5"
-            class="rounded-2xl opacity-0 animate-js relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
+            class="rounded-2xl animate-js relative w-[330px] shrink-0 lg:flex-1 overflow-hidden"
         >
             <Image
                 class="w-full h-full"
@@ -89,5 +93,9 @@ import { Image } from "astro:assets";
 <style>
     h1 {
         @apply max-md:font-[40px];
+    }
+
+    .flex::-webkit-scrollbar {
+        display: none;
     }
 </style>
