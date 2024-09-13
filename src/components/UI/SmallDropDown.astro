@@ -1,0 +1,57 @@
+---
+interface Props {
+    id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div
+    class="absolute pop-in-animation transition-all hidden group-hover:flex pt-3 top-full small-drop-down"
+>
+    <div
+        class={`transition-all duration-300 ${id == "drop-down-agents" ? "min-w-[310px]" : "min-w-[200px]"} px-3 py-7 bg-white rounded-xl`}
+    >
+        <div
+            class="flex flex-col space-y-3 w-full flex-shrink-0 text-nowrap"
+            id={id}
+        >
+        </div>
+    </div>
+</div>
+<style>
+    header {
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    span,
+    div {
+        @apply max-xl:text-[14px];
+    }
+    ul {
+        @apply max-xl:gap-4;
+    }
+    .header-up {
+        transform: translateY(-100%);
+        background: transparent;
+    }
+
+    .pop-in-animation {
+        animation: enterAnimation 0.13s ease-in;
+    }
+
+    @keyframes enterAnimation {
+        0% {
+            opacity: 0;
+            scale: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    .links {
+        @apply hover:bg-white py-4 px-3 flex items-center justify-between rounded-xl font-normal text-black hover:shadow-sm;
+    }
+</style>
