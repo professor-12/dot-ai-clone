@@ -330,7 +330,10 @@ import SmallDropDown from "./UI/SmallDropDown.astro";
                     </li>
                 </ul>
             </nav>
-            <a href="" class="px-[8px] py-[6px] lg:px-[16px];">
+            <a
+                href="https://www.dot.ai/developers"
+                class="px-[8px] py-[6px] lg:px-[16px];"
+            >
                 <div>Developers</div>
             </a>
         </div>
@@ -343,26 +346,33 @@ import SmallDropDown from "./UI/SmallDropDown.astro";
                 <CaretDown />
                 <SmallDropDown id="drop-down-resources" />
             </div>
-            <div class="flex items-center gap-[.1rem]">
-                <span>Login</span>
-                <svg
-                    width="16"
-                    height="17"
-                    viewBox="0 0 16 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="transition-all group-hover:translate-x-1"
-                    ><g id="Outline / Arrows / Arrow Right"
-                        ><path
-                            id="Vector (Stroke)"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
-                            fill="currentColor"></path></g
-                    ></svg
-                >
-            </div>
-            <CustomButton id="header_open_an_account" text="Open an account" />
+            <a href="https://retail.dot.ai/login" target="_blank">
+                <div class="flex group cursor-pointer items-center gap-[.1rem]">
+                    <span>Login</span>
+                    <svg
+                        width="16"
+                        height="17"
+                        viewBox="0 0 16 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-all group-hover:translate-x-1"
+                        ><g id="Outline / Arrows / Arrow Right"
+                            ><path
+                                id="Vector (Stroke)"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
+                                fill="currentColor"></path></g
+                        ></svg
+                    >
+                </div>
+            </a>
+
+            <CustomButton
+                id="header_open_an_account"
+                text="Open an account"
+                href="https://retail.dot.ai/signup"
+            />
         </div>
     </div>
 </header>
