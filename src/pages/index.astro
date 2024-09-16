@@ -10,49 +10,24 @@ import CustomersStory from "../components/CustomersStory.astro";
 import Others from "../components/Others.astro";
 import Footer from "../components/Footer.astro";
 import MobileViewHeader from "../components/MobileViewHeader.astro";
+import CustomButton from "../components/CustomButton.astro";
+import Logo from "../components/Logo.astro";
 ---
 
-<script>
-    const header = document.querySelectorAll("header");
-    const headerLogo = document.querySelectorAll(".logo-header");
-    let lastScroll = 0;
-    (() => {
-        document.addEventListener("scroll", (e) => {
-            const currentScroll = window.scrollY;
-
-            if (lastScroll < window.scrollY) {
-                if (lastScroll > 600) {
-                    header.forEach((e) => e.classList.add("header-up"));
-                }
-            } else {
-                if (lastScroll < 600) {
-                    headerLogo.forEach((el) => {
-                        if (el.getAttribute("data-color") == "black") {
-                            el.classList.add("hidden");
-                        } else if (el.getAttribute("data-color") == "white") {
-                            el.classList.remove("hidden");
-                        }
-                    });
-                    header.forEach((e) => e.classList.remove("bg-white"));
-                } else {
-                    headerLogo.forEach((el) => {
-                        if (el.getAttribute("data-color") == "black") {
-                            el.classList.remove("hidden");
-                        } else if (el.getAttribute("data-color") == "white") {
-                            el.classList.add("hidden");
-                        }
-                    });
-                    header.forEach((e) => e.classList.add("bg-white"));
-                    header.forEach((e) => e.classList.remove("header-up"));
-                }
-            }
-            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-        });
-    })();
-</script>
 <Layout title="Do life with Dot">
     <div class="bg-black text-white">
-        <Header />
+        <Header id="index-page-header" styles="bg-black">
+            <Fragment slot="button">
+                <CustomButton
+                    id="header_open_an_account"
+                    text="Open an account"
+                    href="https://retail.dot.ai/signup"
+                />
+            </Fragment>
+            <Fragment slot="logo">
+                <Logo />
+            </Fragment>
+        </Header>
         <MobileViewHeader />
         <main
             class="bg-black bg-right-top contain bg-contain bg-no-repeat min-h-[900px] pt-[11rem] bg-[url('/images/hero-pattern.png')]"

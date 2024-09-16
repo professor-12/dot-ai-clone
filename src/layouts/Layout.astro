@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 import "../styles/font.css";
 import "../styles/animation.css";
 interface Props {
@@ -18,7 +18,7 @@ const { title } = Astro.props;
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-        <ViewTransitions />
+        <!-- <ViewTransitions /> -->
     </head>
     <body>
         <script>
@@ -40,6 +40,56 @@ const { title } = Astro.props;
                 el.style.animationDelay = el.getAttribute("data-delay") + "s";
                 intersectionOberver.observe(el);
             });
+        </script>
+        <script>
+            const header = document.querySelectorAll("header");
+            const headerLogo = document.querySelectorAll(".logo-header");
+            let lastScroll = 0;
+            (() => {
+                document.addEventListener("scroll", (e) => {
+                    const currentScroll = window.scrollY;
+                    if (lastScroll < window.scrollY) {
+                        if (lastScroll > 600) {
+                            header.forEach((e) => e.classList.add("header-up"));
+                        }
+                    } else {
+                        if (lastScroll < 600) {
+                            headerLogo.forEach((el) => {
+                                if (el.getAttribute("data-color") == "black") {
+                                    el.classList.add("hidden");
+                                } else if (
+                                    el.getAttribute("data-color") == "white"
+                                ) {
+                                    el.classList.remove("hidden");
+                                }
+                            });
+
+                            header.forEach((e) => {
+                                if (e.id !== "index-page-header") return;
+                                e.classList.remove("bg-white");
+                            });
+                        } else {
+                            headerLogo.forEach((el) => {
+                                if (el.getAttribute("data-color") == "black") {
+                                    el.classList.remove("hidden");
+                                } else if (
+                                    el.getAttribute("data-color") == "white"
+                                ) {
+                                    el.classList.add("hidden");
+                                }
+                            });
+                            header.forEach((e) => {
+                                if (e.id !== "index-page-header") return;
+                                e.classList.add("bg-white");
+                            });
+                            header.forEach((e) =>
+                                e.classList.remove("header-up")
+                            );
+                        }
+                    }
+                    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+                });
+            })();
         </script>
         <slot />
     </body>
