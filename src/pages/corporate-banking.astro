@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import CustomButton from "../components/CustomButton.astro";
+import Logo from "../components/Logo.astro";
+
+import HeroSection from "../components/coporatePage/HeroSection.astro";
+import Card from "../components/coporatePage/Card.astro";
+---
+
+<Layout title="Banking made easy for your business - Banking">
+    <Header id="corporate-page-header" styles="bg-white text-black">
+        <Fragment slot="button">
+            <CustomButton
+                id="header_open_an_account"
+                text="Open an account"
+                href="https://retail.dot.ai/signup"
+            />
+        </Fragment>
+        <Fragment slot="logo">
+            <Logo color="black" />
+        </Fragment>
+    </Header>
+
+    <HeroSection />
+    <section class="py-[104px]">
+        <div class="contain">
+            <div class="text-center">
+                <h1 class="font-grosek mb-2 text-[2.7rem] font-medium">
+                    Created for your global business
+                </h1>
+                <p
+                    class="font-inter mx-auto text-muted text-lg w-[80%] max-w-[900px]"
+                >
+                    Everything you need to grow your business and operate —
+                    without the high fees, documents, and headache of your
+                    regular bank. We help you mind your business.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-6 gap-5 py-14">
+                <Card
+                    className="col-span-3"
+                    title="Bulk transfers"
+                    subtitle="Save time and effort by paying all employees in just a click. Enjoy the flexibility of setting up single or multi-payment methods, however you like."
+                    imageurl="/images/bulk-transfer.webp"
+                />
+                <Card
+                    className="col-span-3"
+                    title="Instant payout"
+                    subtitle='Your recipient receives an instant alert once you click " send. " Send money with high speed and low fees.'
+                    imageurl="/images/confetti.webp"
+                />
+                <Card
+                    className="col-span-2 px-4"
+                    title="Scheduled transfers"
+                    subtitle="Schedule future transfers and recurring payments easily on the bank app or web,"
+                    imageurl="/images/scheduled.webp"
+                />
+                <Card
+                    className="col-span-2 px-4"
+                    title="Bank network status"
+                    subtitle="Know the best times for transferring money to different banks."
+                    imageurl="/images/network2.webp"
+                />
+                <Card
+                    className="col-span-2 "
+                    title="Account statement"
+                    subtitle="Access your account statement when you need it, and track your financial transactions."
+                    imageurl="/images/accnt-statement.webp"
+                />
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style></style>

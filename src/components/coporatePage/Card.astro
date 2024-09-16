@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    className: string;
+    title: string;
+    subtitle: string;
+    imageurl: string;
+}
+
+const props = Astro.props;
+---
+
+<div
+    class={`${props.className} flex flex-col rounded-2xl min-h-[350px] bg-[#F2F6FE] text-center py-7`}
+>
+    <h1 class="font-grosek text-xl font-medium">{props.title}</h1>
+    <p class="font-inter md:max-w-[70%] mt-2 mx-auto text-muted">
+        {props.subtitle}
+    </p>
+    <div class="flex-1 flex justify-center items-end">
+        <Image
+            src={props.imageurl}
+            class={"mt-12 mx-auto"}
+            alt={""}
+            width={400}
+            height={400}
+        />
+    </div>
+</div>
