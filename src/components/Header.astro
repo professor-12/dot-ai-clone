@@ -5,7 +5,97 @@ import Logo from "./Logo.astro";
 import CaretDown from "./UI/CaretDown.astro";
 import DropDownNav from "./UI/DropDownNav.astro";
 import SmallDropDown from "./UI/SmallDropDown.astro";
+
+interface Props {
+    styles?: string;
+    id: string;
+}
+
+const { styles = "", id } = Astro.props;
 ---
+
+<header
+    id={id}
+    class={`${styles} flex py-[22px] max-lg:hidden font-inter fixed font-medium text-white top-0 z-[40] w-full`}
+>
+    <div class="flex justify-between items-center contain">
+        <div class="flex items-center">
+            <slot name="logo" />
+            <nav class="ml-[2.5rem] flex justify-center items-center">
+                <ul class="flex w-full">
+                    <li class="flex group relative gap-[.1rem] items-center">
+                        <span>Business</span>
+                        <CaretDown />
+                        <DropDownNav
+                            id="drop-down-business"
+                            className="business"
+                        />
+                    </li>
+                    <li class="flex group relative gap-[.1rem] items-center">
+                        <span>Personal</span>
+                        <CaretDown />
+                        <DropDownNav
+                            id="drop-down-personal"
+                            className="personal"
+                        />
+                    </li>
+                </ul>
+            </nav>
+            <nav class="flex justify-center items-center">
+                <ul class="flex w-full">
+                    <li class="flex relative group gap-[.1rem] items-center">
+                        <span class="">Agents</span>
+                        <CaretDown />
+                        <SmallDropDown id="drop-down-agents" />
+                    </li>
+                    <li class="flex relative group gap-[.1rem] items-center">
+                        <span>Why Dot?</span>
+                        <CaretDown />
+                        <SmallDropDown id="drop-down-dots" />
+                    </li>
+                </ul>
+            </nav>
+            <a
+                href="https://www.dot.ai/developers"
+                class="px-[8px] py-[6px] lg:px-[16px];"
+            >
+                <div>Developers</div>
+            </a>
+        </div>
+
+        <div class="flex items-center font-semibold md:space-x-6 space-x-4">
+            <div
+                class="flex gap-[.1rem] relative group hover:bg-white rounded-md cursor-pointer hover:text-black py-1 px-2 items-center"
+            >
+                <span>Resources</span>
+                <CaretDown />
+                <SmallDropDown id="drop-down-resources" />
+            </div>
+            <a href="https://retail.dot.ai/login" target="_blank">
+                <div class="flex group cursor-pointer items-center gap-[.1rem]">
+                    <span>Login</span>
+                    <svg
+                        width="16"
+                        height="17"
+                        viewBox="0 0 16 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-all group-hover:translate-x-1"
+                        ><g id="Outline / Arrows / Arrow Right"
+                            ><path
+                                id="Vector (Stroke)"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
+                                fill="currentColor"></path></g
+                        ></svg
+                    >
+                </div>
+            </a>
+            <slot name="button" />
+        </div>
+    </div>
+</header>
 
 <script>
     let data = {
@@ -13,7 +103,7 @@ import SmallDropDown from "./UI/SmallDropDown.astro";
             {
                 title: "Corporate Banking",
                 body: "Manage your business",
-                link: "https://www.dot.ai/corporate-banking",
+                link: "/corporate-banking",
                 svg: "/svg/coperate-banking.svg",
             },
             {
@@ -290,82 +380,6 @@ import SmallDropDown from "./UI/SmallDropDown.astro";
     addElemttoDom(data4, "#drop-down-dots", LinkComponent);
     addElemttoDom(data5, "#drop-down-resources", LinkComponent);
 </script>
-<header
-    class="flex py-[22px] max-lg:hidden bg-black font-inter fixed font-medium text-white top-0 z-[40] w-full"
->
-    <div class="flex justify-between items-center contain">
-        <div class="flex items-center">
-            <Logo />
-            <nav class="ml-[2.5rem] flex justify-center items-center">
-                <ul class="flex w-full">
-                    <li class="flex group relative gap-[.1rem] items-center">
-                        <span>Business</span>
-                        <CaretDown />
-                        <DropDownNav
-                            id="drop-down-business"
-                            className="business"
-                        />
-                    </li>
-                    <li class="flex group relative gap-[.1rem] items-center">
-                        <span>Personal</span>
-                        <CaretDown />
-                        <DropDownNav
-                            id="drop-down-personal"
-                            className="personal"
-                        />
-                    </li>
-                </ul>
-            </nav>
-            <nav class="flex justify-center items-center">
-                <ul class="flex w-full">
-                    <li class="flex relative group gap-[.1rem] items-center">
-                        <span class="">Agents</span>
-                        <CaretDown />
-                        <SmallDropDown id="drop-down-agents" />
-                    </li>
-                    <li class="flex relative group gap-[.1rem] items-center">
-                        <span>Why Dots?</span>
-                        <CaretDown />
-                        <SmallDropDown id="drop-down-dots" />
-                    </li>
-                </ul>
-            </nav>
-            <a href="" class="px-[8px] py-[6px] lg:px-[16px];">
-                <div>Developers</div>
-            </a>
-        </div>
-
-        <div class="flex items-center font-semibold md:space-x-6 space-x-4">
-            <div
-                class="flex gap-[.1rem] relative group hover:bg-white rounded-md cursor-pointer hover:text-black py-1 px-2 items-center"
-            >
-                <span>Resources</span>
-                <CaretDown />
-                <SmallDropDown id="drop-down-resources" />
-            </div>
-            <div class="flex items-center gap-[.1rem]">
-                <span>Login</span>
-                <svg
-                    width="16"
-                    height="17"
-                    viewBox="0 0 16 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="transition-all group-hover:translate-x-1"
-                    ><g id="Outline / Arrows / Arrow Right"
-                        ><path
-                            id="Vector (Stroke)"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8.98108 4.14645C9.17634 3.95118 9.49293 3.95118 9.68819 4.14645L13.6882 8.14645C13.8835 8.34171 13.8835 8.65829 13.6882 8.85355L9.68819 12.8536C9.49293 13.0488 9.17634 13.0488 8.98108 12.8536C8.78582 12.6583 8.78582 12.3417 8.98108 12.1464L12.1275 9H2.66797C2.39183 9 2.16797 8.77614 2.16797 8.5C2.16797 8.22386 2.39183 8 2.66797 8H12.1275L8.98108 4.85355C8.78582 4.65829 8.78582 4.34171 8.98108 4.14645Z"
-                            fill="currentColor"></path></g
-                    ></svg
-                >
-            </div>
-            <CustomButton id="header_open_an_account" text="Open an account" />
-        </div>
-    </div>
-</header>
 
 <style>
     header {
@@ -385,7 +399,6 @@ import SmallDropDown from "./UI/SmallDropDown.astro";
     .bg-white {
         background: white;
         color: black;
-        box-shadow: 0 0 1px 0px black;
     }
 
     li {
