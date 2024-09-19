@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import CustomButton from "../CustomButton.astro";
+import StatRangeCal from "./StatRangeCal.astro";
+---
+
+<section class="bg-black my-6 text-white md:py-24 p-6">
+    <div class="contain">
+        <div class="grid gap-8 grid-cols-2">
+            <div
+                class="col-span-full bg-[#212225] p-16 pb-0 relative overflow-hidden rounded-2xl"
+            >
+                <div class="flex space-x-5">
+                    <div class="w-1/2">
+                        <h1 class="text-[40px] font-grosek mb-4 font-medium">
+                            Put your money to work <br />
+                        </h1>
+                        <p class="text-lg text-gray-200 text-[1rem]">
+                            Invest a lump sum securely for up to 180 days, and
+                            enjoy a fixed return on investment devoid of
+                            inflation.
+                        </p>
+                        <CustomButton
+                            className="bg-white text-black mt-10"
+                            id=""
+                            text="Start Investing Today"
+                            href=""
+                        />
+                    </div>
+                    <StatRangeCal />
+                </div>
+                <div
+                    class="h-[6rem] mt-6 -bottom-3 bg-[url('/images/calculator-pattern.png')]"
+                >
+                </div>
+            </div>
+            <div class="bg-[#212225] px-[5rem] flex items-center rounded-3xl">
+                <div class="">
+                    <h1 class="text-4xl font-medium font-grosek mb-3">
+                        Get richer each day
+                    </h1>
+                    <p class="font-inter text-gray-200">
+                        If you want to grow wealth daily, our Fixed Deposits
+                        offer the best options for you and your business. Our
+                        interest rates will make your bank account jealous. You
+                        can invest with confidence, knowing the exact amount
+                        you'll receive upon maturity.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <Image
+                    src="/images/loan-collage.webp"
+                    class="w-full max-h-[600px] object-cover"
+                    alt={""}
+                    width={200}
+                    height={200}
+                />
+            </div>
+        </div>
+    </div>
+</section>

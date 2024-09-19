@@ -1,0 +1,144 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="bg-white py-[70px] font-grosek text-black">
+    <div class="contain">
+        <div class="space-y-16">
+            <h1
+                data-animate="fade-in"
+                class="text-3xl md:text-4xl font-medium animate-js"
+            >
+                Customers' Story
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div
+                    class="py-10 px-7 flex flex-col max-md:space-y-4 justify-between md:row-span-2 bg-[#f9fafb] shadow-gray-300 rounded-3xl shadow-sm"
+                >
+                    <p class="text-2xl lg:text-[28px] lg:leading-10">
+                        The future of finance is here, and its name is Dot! They
+                        have transformed my financial journey completely.<span
+                            class="text-[#3fb12c] font-medium"
+                        >
+                            It's more than just admiration; I'm a devoted fan
+                            for life.
+                        </span>
+                    </p>
+                    <div class="flex space-x-5">
+                        <div class="h-12 shrink-0 w-12 overflow-hidden">
+                            <Image
+                                src="/images/profile4.webp"
+                                width={100}
+                                height={100}
+                                alt=""
+                                class="h-full w-full"
+                            />
+                        </div>
+                        <div>
+                            <h2 class="font-medium">Johnson Chukwudi</h2>
+                            <p class="text-gray-400 font-inter text-base">
+                                Spare Parts Dealer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="py-10 px-7 bg-[#f9fafb] min-h-[280px] justify-between flex flex-col shadow-gray-300 rounded-3xl shadow-sm"
+                >
+                    <p class="text-lg xl:text-xl text-gray-400 lg:leading-7">
+                        I had my doubts about using a new fintech for my banking
+                        needs. But Dot exceeded all expectations. <span
+                            class="text-black font-medium"
+                        >
+                            User-friendly & transparent.
+                        </span>
+                    </p>
+                    <div class="flex space-x-5">
+                        <div
+                            class="h-12 shrink-0 w-12 overflow-hidden rounded-full bg-gray-400"
+                        >
+                            <Image
+                                src="/images/profile4.webp"
+                                width={100}
+                                height={100}
+                                alt=""
+                                class="h-full w-full"
+                            />
+                        </div>
+                        <div>
+                            <h2 class="font-medium">Johnson Chukwudi</h2>
+                            <p class="text-gray-400 font-inter text-base">
+                                Spare Parts Dealer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="py-10 px-7 bg-[#f9fafb] flex flex-col justify-between shadow-gray-300 rounded-3xl shadow-sm"
+                >
+                    <p class="text-lg xl:text-xl text-gray-400 lg:leading-7">
+                        Their customer service is so <span class="text-black"
+                            >quick in responding</span
+                        > to someone when the need arise.
+                    </p>
+                    <div class="flex space-x-5">
+                        <div
+                            class="h-12 shrink-0 w-12 overflow-hidden rounded-full bg-gray-400"
+                        >
+                            <Image
+                                src="/images/profile4.webp"
+                                width={100}
+                                height={100}
+                                alt=""
+                                class="h-full w-full"
+                            />
+                        </div>
+                        <div>
+                            <h2 class="font-medium">Johnson Chukwudi</h2>
+                            <p class="text-gray-400 font-inter text-base">
+                                Spare Parts Dealer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="py-10 px-7 md:col-span-2 bg-[#f9fafb] min-h-[280px] flex flex-col justify-between shadow-gray-300 rounded-3xl shadow-sm"
+                >
+                    <p class="text-lg lg:text-xl text-gray-400 lg:leading-7">
+                        The simple process of registration. <span
+                            class="text-black"
+                        >
+                            Not even having to notify the HMO before visiting
+                            the Hospital.
+                        </span>
+                    </p>
+                    <div class="flex space-x-5">
+                        <div
+                            class="h-12 shrink-0 w-12 overflow-hidden rounded-full bg-gray-400"
+                        >
+                            <Image
+                                src="/images/profile4.webp"
+                                width={100}
+                                height={100}
+                                alt=""
+                                class="h-full w-full"
+                            />
+                        </div>
+                        <div>
+                            <h2 class="font-medium">Johnson Chukwudi</h2>
+                            <p class="text-gray-400 font-inter text-base">
+                                Spare Parts Dealer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    span {
+        @apply font-medium;
+    }
+</style>

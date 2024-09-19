@@ -3,6 +3,15 @@ import { Image } from "astro:assets";
 import FooterLink from "./FooterLink.astro";
 import CustomButton from "./CustomButton.astro";
 import Logo from "./Logo.astro";
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = "Start Today",
+    description = "We are making life better one Dot at a time.",
+} = Astro.props;
 ---
 
 <footer class="bg-black overflow-hidden relative w-full">
@@ -17,7 +26,7 @@ import Logo from "./Logo.astro";
         <div
             class="space-y-2 font-medium font-grotesk25 text-[30px] md:text-5xl"
         >
-            <h1 class="text-[#c0d2f9]">Start Today</h1>
+            <h1 class="text-[#c0d2f9]">{title}</h1>
             <h1 class="text-white">Do life with Dot</h1>
         </div>
         <CustomButton id="" text="Open an account" href="/" />
@@ -29,7 +38,7 @@ import Logo from "./Logo.astro";
                 <div class="flex space-x-3 items-center">
                     <Logo />
                     <p class="text-[#6D7280] text-[14px]">
-                        We are making life better <br /> one Dot at a time.
+                        {description}
                     </p>
                 </div>
                 <div class="flex">

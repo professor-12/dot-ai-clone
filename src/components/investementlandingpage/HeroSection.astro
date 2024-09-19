@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import CustomButton from "../CustomButton.astro";
+import InterestingButton from "../UI/InterestingButton.astro";
+---
+
+<main class="bg-[#F2F6FE] pt-24 min-h-screen">
+    <div class="contain relative justify-between py-24 flex">
+        <div class="w-1/2 relative h-[560px] max-w-[480px]">
+            <InterestingButton text="Grow your wealth" variants="blue" />
+            <h1
+                data-animate="fade-in"
+                class="font-grosek mt-6 animate-js font-medium text-5xl leading-[4rem]"
+            >
+                Investments that grow wealth
+            </h1>
+            <p
+                data-animate="fade-in"
+                class="font-inter animate-js mt-4 text-lg text-muted"
+            >
+                The future is the reason we make plans. Take control of it by
+                investing. We put your money in fixed deposits that help you
+                build wealth and achieve your financial goals.
+            </p>
+
+            <CustomButton
+                id="button-corporate"
+                text="Start investing today"
+                href=""
+                className="bg-black text-white mt-10"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right"
+                    ><polyline points="9 18 15 12 9 6"></polyline></svg
+                ></CustomButton
+            >
+
+            <div
+                class="flex absolute bottom-1 gap-5 font-inter text-sm text-slate-500"
+            >
+                <div class="flex items-center gap-2">
+                    <p>Licensed by the CBN</p><Image
+                        src="/images/cbn.webp"
+                        alt=""
+                        width={25}
+                        height={25}
+                    />
+                </div>
+                <div class="flex items-center gap-2">
+                    <p>Deposits insured by</p><Image
+                        src="https://www.dot.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fndic.271c77e2.webp&w=96&q=75"
+                        alt=""
+                        width={67}
+                        height={25}
+                    />
+                </div>
+            </div>
+        </div>
+        <div
+            class="w-1/2 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
+        >
+            <Image
+                src="/images/investments-hero.webp"
+                alt=""
+                width={150}
+                height={150}
+                class="w-full h-full absolute top-0 left-0 bottom-0 right-0"
+            />
+        </div>
+    </div>
+</main>
