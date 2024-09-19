@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="bg-black mt-12">
+    <div class="contain">
+        <div class="flex items-center gap-14">
+            <div class="flex-1">
+                <div
+                    class="bg-[#212225] h-[35rem] rounded-3xl px-24 flex items-center justify-center flex-1"
+                >
+                    <div>
+                        <h1
+                            class="text-white text-[2.5rem] leading-[50px] tracking-wide font-grosek font-medium"
+                        >
+                            Enjoy easy banking with Dot
+                        </h1>
+                        <p class="pt-4 text-gray-200">
+                            Running a business isn't easy, and it can get
+                            lonely. You need resilience, determination, and
+                            someone who believes in your potential. You don't
+                            have to do it alone. We're here for you, from your
+                            first transaction to your one hundredth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 min-h-[500px]">
+                <Image
+                    src="/images/businessbank-collage.webp"
+                    width={700}
+                    height={500}
+                    alt={""}
+                />
+            </div>
+        </div>
+    </div>
+</section>
