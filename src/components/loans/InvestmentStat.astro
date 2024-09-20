@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import CustomButton from "../CustomButton.astro";
+import StatRangeCal from "./StatRangeCal.astro";
+---
+
+<section class="bg-black my-6 text-white md:py-24 p-6">
+    <div class="contain">
+        <div class="grid gap-8 grid-cols-2">
+            <div
+                class="col-span-full bg-[#212225] p-16 pb-0 relative overflow-hidden rounded-2xl"
+            >
+                <div class="flex space-x-5">
+                    <div class="w-1/2">
+                        <h1 class="text-[40px] font-grosek mb-4 font-medium">
+                            Enjoy loans that are fully transparent
+                        </h1>
+                        <p class="text-lg text-gray-200 text-[1rem]">
+                            We believe in full transparency, ensuring that our
+                            customers are well-informed about interest rates,
+                            fees, and any other important detail.
+                        </p>
+                        <CustomButton
+                            className="bg-white text-black mt-10"
+                            id=""
+                            text="Get a loan today"
+                            href=""
+                        />
+                    </div>
+                    <StatRangeCal />
+                </div>
+                <div
+                    class="h-[6rem] mt-6 -bottom-3 bg-[url('/images/calculator-pattern.png')]"
+                >
+                </div>
+            </div>
+            <div class="bg-[#212225] px-[5rem] flex items-center rounded-3xl">
+                <div class="">
+                    <h1 class="text-4xl font-medium font-grosek mb-3">
+                        No hidden interests
+                    </h1>
+                    <p class="font-inter text-gray-200">
+                        Life happens and getting a loan is nothing to be ashamed
+                        of. Know upfront exactly what you'll pay, with any
+                        interest broken down and no hidden costs. And you'll
+                        always have a clear plan to pay back.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <Image
+                    src="/images/loan-collage.webp"
+                    class="w-full max-h-[600px] object-cover"
+                    alt={""}
+                    width={200}
+                    height={200}
+                />
+            </div>
+        </div>
+    </div>
+</section>
