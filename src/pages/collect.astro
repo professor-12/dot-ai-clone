@@ -7,6 +7,9 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/coporatePage/Card.astro";
 import { Image } from "astro:assets";
 import InterestingButton from "../components/UI/InterestingButton.astro";
+import Testimonial from "../components/collect/Testimonial.astro";
+import SectionToggle from "../components/collect/SectionToggle.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Payment made easy for everyone">
@@ -150,4 +153,46 @@ import InterestingButton from "../components/UI/InterestingButton.astro";
             </div>
         </div>
     </section>
+    <SectionToggle />
+    <section class="bg-black py-[104px]">
+        <div class="contain">
+            <div
+                class="bg-[#212225] p-10 rounded-3xl flex items-center justify-between space-x-[6rem]"
+            >
+                <div
+                    class="relative h-[570px] w-1/2 rounded-2xl overflow-hidden"
+                >
+                    <Image
+                        loading="lazy"
+                        src="/images/stats-main.webp"
+                        alt=""
+                        width={500}
+                        height={500}
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
+                    />
+                </div>
+                <div class="w-1/2">
+                    <div class="text-white">
+                        <h1 class="font-medium m4-3 font-grosek text-4xl">
+                            Feel safe with your terminal & cash insured
+                        </h1>
+                        <p class="font-inter text-[#868C98] my-6">
+                            Our POS terminal and cash insurance combine to
+                            provide a robust financial protection package. POS
+                            terminal insurance guards against damage or
+                            malfunction, while cash insurance ensures your
+                            physical money is secure from theft or loss.
+                        </p>
+                    </div>
+                    <CustomButton
+                        id="_"
+                        text="Contact sales"
+                        className="bg-white text-black mt-12"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <Testimonial />
+    <Footer />
 </Layout>
