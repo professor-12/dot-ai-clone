@@ -1,0 +1,86 @@
+---
+import CustomButton from "../components/CustomButton.astro";
+import Header from "../components/Header.astro";
+import Logo from "../components/Logo.astro";
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/micro-insurance/HeroSection.astro";
+import Card from "../components/coporatePage/Card.astro";
+import SectionToggle from "../components/micro-insurance/SectionToggle.astro";
+import InvestmentStat from "../components/loans/InvestmentStat.astro";
+import Footer from "../components/Footer.astro";
+import Testimonials from "../components/loans/Testimonials.astro";
+import { Image } from "astro:assets";
+import FAQ from "../components/micro-insurance/FAQ.astro";
+---
+
+<Layout title="Get instant Loans - Dot">
+    <Header id="micro-insurance-header" styles="bg-white text-black">
+        <Fragment slot="button">
+            <CustomButton
+                id="header"
+                className="header bg-[#F6E1C8]"
+                text="Contact sales"
+                href="https://retail.dot.ai/signup"
+            />
+        </Fragment>
+        <Fragment slot="logo">
+            <Logo color="black" />
+        </Fragment>
+    </Header>
+    <HeroSection />
+    <SectionToggle />
+    <section class="bg-black mt-12">
+        <div class="contain">
+            <div class="flex items-center gap-14">
+                <div class="flex-1">
+                    <div
+                        class="bg-[#212225] h-[35rem] rounded-3xl px-24 flex items-center justify-center flex-1"
+                    >
+                        <div>
+                            <h1
+                                class="text-white text-[2.5rem] leading-[50px] tracking-wide font-grosek font-medium"
+                            >
+                                Seamless Protection In a Digital Age
+                            </h1>
+                            <p class="pt-4 text-gray-200">
+                                Inclusive and affordable micro-insurance
+                                solutions tailored to meet the unique needs of
+                                individuals, businesses, and communities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 min-h-[500px]">
+                    <Image
+                        src="/images/common.webp"
+                        width={700}
+                        height={500}
+                        alt={""}
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="py-[200px]">
+        <div class="contain flex gap-16">
+            <div class="md:w-1/2">
+                <h1 class="md:text-5xl font-grosek">
+                    Frequently asked questions, <span class="font-medium"
+                        >answered.</span
+                    >
+                </h1>
+                <p class="text-[#868C98] text-lg mt-3">
+                    If you have other questions or need assistance, kindly reach
+                    out to <a
+                        href="mailto:support@dot.ai"
+                        class="text-[#5573B3]">support@dot.ai.</a
+                    >
+                </p>
+            </div>
+            <div class="w-1/2">
+                <FAQ />
+            </div>
+        </div>
+    </div>
+    <Footer />
+</Layout>

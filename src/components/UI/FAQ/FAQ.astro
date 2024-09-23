@@ -1,0 +1,152 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="space-y-4">
+    <div
+        class="bg-[#212225] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek md:w-[75%]">
+                Are staff allowed to use out of network hospitals and claim
+                reimbursement?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#B7BBC3] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                Plan members are encouraged to use hospitals on our networks.
+                However, if member decides to use out hospitals outside the
+                network, he/she will be reimbursed based on the cost applicable
+                under the plan. The plan will not process a full refund
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#212225] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek md:w-[75%]">
+                Am I covered for Annual medical/ wellness check-up and how do I
+                access it?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#B7BBC3] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                The annual health check is covered on the plan for principals at
+                our designated diagnostic centres. The Member is advised to send
+                an email to <a href="mailto:hmo@dot.ai">hmo@dot.ai</a> selecting
+                their preferred date and centre. This will enable us pre-book an
+                appointment at the facility.
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#212225] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek md:w-[75%]">
+                What do I do when I am denied care in a partnered DOT hospital?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#B7BBC3] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                Once you encounter any difficulties at any of our hospital,
+                please reach out to our contact centre team with details below.
+                <ul
+                    class="text-sm font-inter text-[#B7BBC3] space-y-1 list-disc"
+                >
+                    <li class="list-disc">Email: hmo@dot.ai</li>
+                    <li>Phone number - 07000368466</li>
+                    <li>WhatsApp - 08170369507</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#212225] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek md:w-[75%]">
+                How do I continue to get the prescribed medications I am
+                currently taking for my medical condition?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#B7BBC3] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                Please send us an email, with your doctor's prescription. The
+                team will contact you accordingly for delivery of your
+                medications.
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#212225] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek md:w-[75%]">
+                How can I access the Gyms on the plan?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#B7BBC3] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                The gym can only be accessed by principals (staff) only and they
+                are entitled to 2 sessions per week. Members are advised to
+                review the list of gyms for the gyms available on their specific
+                plans.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .active {
+        height: max-content;
+    }
+</style>
+
+<script>
+    const containerel = document.querySelectorAll("[data-faq]");
+    const toggleel = [...document.querySelectorAll("[data-state]")];
+
+    containerel.forEach((el, index) => {
+        el.addEventListener("click", (event) => {
+            toggleel.map((e, i) => {
+                if (i == index) {
+                    return;
+                }
+                e.classList.remove("active");
+            });
+            toggleel[index].classList.toggle("active");
+        });
+    });
+</script>

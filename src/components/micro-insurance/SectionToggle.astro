@@ -1,0 +1,189 @@
+---
+import CustomButton from "../CustomButton.astro";
+import CaretDown from "../UI/CaretDown.astro";
+---
+
+<section class="py-20">
+    <div class="contain">
+        <div class="text-center">
+            <h1 class="font-grosek text-[2.8rem] font-medium mb-2">
+                Guarding Your Peace of Mind
+            </h1>
+            <p class="font-inter text-lg text-muted">
+                Explore our range of micro-insurance products designed to
+                safeguard against life's uncertainties
+            </p>
+        </div>
+
+        <div class="flex space-x-5 mt-9">
+            <div class="w-[200px] h-auto">
+                <ul class="font-grosek text-sm font-[410]">
+                    <li class="active" data-list>POS Terminal Insurance</li>
+                    <li class="" data-list>Credit Life insurance</li>
+                    <li class="" data-list>Two and Three-Wheeler Insurance</li>
+                    <li class="" data-list>Low-Income Term Life Insurance</li>
+                </ul>
+            </div>
+            <div class="flex-1 space-x-11 max-md:flex-row flex" id="showcase">
+                <div class="w-1/2">
+                    <div
+                        class="w-full bg-[url('/images/mi-step1bg.webp')] bg-center bg-cover h-full rounded-2xl"
+                    >
+                    </div>
+                </div>
+                <div class="space-y-10 w-1/2">
+                    <div>
+                        <h1 class="font-grosek mb-2 font-medium text-[1.8rem]">
+                            POS Terminal Insurance
+                        </h1>
+                        <p class="text-muted font-">
+                            Created for SMEs, POS agents, retailers, and
+                            financial institutions, this is an insurance
+                            coverage designed to protect businesses that use POS
+                            terminals from financial losses resulting from
+                            damage, theft, and other risks associated with POS
+                            devices.
+                        </p>
+                    </div>
+                    <div>
+                        <ul class="space-y-6 text-[14px]">
+                            <li class="flex items-center gap-x-3">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="#C2F2BA"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="shrink-0"
+                                    ><rect width="24" height="24" rx="12"
+                                    ></rect><g clip-path="url(#clip0_53_3363)"
+                                        ><path
+                                            d="M10.6665 14.1146L16.7945 7.98596L17.7378 8.92863L10.6665 16L6.42383 11.7573L7.3665 10.8146L10.6665 14.1146Z"
+                                            fill="black"></path></g
+                                    ><defs
+                                        ><clipPath id="clip0_53_3363"
+                                            ><rect
+                                                width="16"
+                                                height="16"
+                                                fill="white"
+                                                transform="translate(4 4)"
+                                            ></rect></clipPath
+                                        ></defs
+                                    ></svg
+                                ><span
+                                    ><span class="font-medium"
+                                        >Physical Damage</span
+                                    > - Protection against accidental damage, theft,
+                                    or vandalism & replacement or repair of damaged
+                                    POS devices.</span
+                                >
+                            </li>
+                            <li class="flex items-center gap-x-3">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="#C2F2BA"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="shrink-0"
+                                    ><rect width="24" height="24" rx="12"
+                                    ></rect><g clip-path="url(#clip0_53_3363)"
+                                        ><path
+                                            d="M10.6665 14.1146L16.7945 7.98596L17.7378 8.92863L10.6665 16L6.42383 11.7573L7.3665 10.8146L10.6665 14.1146Z"
+                                            fill="black"></path></g
+                                    ><defs
+                                        ><clipPath id="clip0_53_3363"
+                                            ><rect
+                                                width="16"
+                                                height="16"
+                                                fill="white"
+                                                transform="translate(4 4)"
+                                            ></rect></clipPath
+                                        ></defs
+                                    ></svg
+                                ><span
+                                    ><span class="font-medium"
+                                        >Loss of Use Coverage</span
+                                    > - Compensation for business interruption due
+                                    to POS device unavailability & temporary replacement
+                                    support for uninterrupted operations.</span
+                                >
+                            </li>
+                        </ul>
+                        <CustomButton
+                            href="https://www.dotai/signup"
+                            id="ssd"
+                            text="Get a quote"
+                            className="bg-black text-white mt-28"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-chevron-right"
+                                data-astro-source-file="C:/Users/USER/Desktop/Dot Ai/dot-clone/src/components/coporatePage/HeroSection.astro"
+                                data-astro-source-loc="45:23"
+                                ><polyline
+                                    points="9 18 15 12 9 6"
+                                    data-astro-source-file="C:/Users/USER/Desktop/Dot Ai/dot-clone/src/components/coporatePage/HeroSection.astro"
+                                    data-astro-source-loc="45:23"
+                                ></polyline></svg
+                            ></CustomButton
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let selector = 0;
+    const data = [
+        {
+            imageUrl: "",
+            title: "Start banking with us",
+            body: "Contact our sales team to get started, you will need the documents below",
+            points: [
+                "Valid means of identification",
+                "CAC document",
+                "Passport photograh",
+                "House utility bill",
+                "Your Next of kin passport and house utility bill",
+            ],
+        },
+        {
+            imageUrl: "",
+            title: "Validate your account",
+            body: "After your documents has been reviewed by our team, an email containing your account number will be sent to you, after which you can use this account number to create a profile, the process involves:",
+            points: [
+                "Input account number received via email",
+                "Verify account via OTP sent to email",
+                "Create login info, such as password",
+                "Create transaction PIN, and you're all set!",
+            ],
+        },
+    ];
+    const showcase = document.querySelector("#showcase");
+    const elementsList = [...document.querySelectorAll("[data-list]")];
+</script>
+
+<style>
+    ul.font-grosek > li {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        border-left: 2.3px solid black;
+        cursor: pointer;
+    }
+
+    ul.font-grosek > li:not(.active) {
+        @apply border-muted text-muted;
+    }
+</style>
