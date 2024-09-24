@@ -4,33 +4,29 @@ import CustomButton from "../CustomButton.astro";
 import InterestingButton from "../UI/InterestingButton.astro";
 ---
 
-<main class="bg-[#F2F6FE] md:pt-24 min-h-screen">
-    <div
-        class="contain max-md:space-y-8 relative justify-between py-24 lg:flex"
-    >
-        <div class="lg:w-1/2 relative md:h-[560px] lg:max-w-[480px]">
-            <InterestingButton
-                text="Banking made easy for your business"
-                variants="blue"
-            />
+<main class="bg-[#F2F6FE] pt-24 min-h-screen">
+    <div class="contain relative justify-between py-24 flex">
+        <div class="w-1/2 relative h-[560px] max-w-[480px]">
+            <InterestingButton text="Fund your business" variants="blue" />
             <h1
                 data-animate="fade-in"
-                class="font-grosek mt-6 animate-js font-medium text-3xl md:text-5xl md:leading-[4rem]"
+                class="font-grosek mt-6 animate-js font-medium text-5xl leading-[4rem]"
             >
-                Banking that means business
+                Get the wheel of your choice
             </h1>
             <p
                 data-animate="fade-in"
-                class="font-inter animate-js mt-4 md:text-lg text-muted"
+                class="font-inter animate-js mt-4 text-lg text-muted"
             >
-                We help businesses stay on top of their finances. Less time on
-                finances means more time for the important stuff. Starting at no
-                monthly fees. It just works, so you can too.
+                The ride you've always wanted doesn't have to remain in your
+                imagination. We're here to assist you with financing options,
+                allowing you to make payments at your convenience over an agreed
+                period that suits you
             </p>
 
             <CustomButton
                 id="button-corporate"
-                text="Open a business account"
+                text="Contact sales"
                 href=""
                 className="bg-black text-white mt-10"
                 ><svg
@@ -49,7 +45,7 @@ import InterestingButton from "../UI/InterestingButton.astro";
             >
 
             <div
-                class="flex absolute bottom-1 max-md:hidden gap-5 font-inter text-sm text-slate-500"
+                class="flex absolute bottom-1 gap-5 font-inter text-sm text-slate-500"
             >
                 <div class="flex items-center gap-2">
                     <p>Licensed by the CBN</p><Image
@@ -70,10 +66,10 @@ import InterestingButton from "../UI/InterestingButton.astro";
             </div>
         </div>
         <div
-            class="md:w-1/2 max-md:h-[400px] overflow-hidden rounded-2xl md:max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
+            class="w-1/2 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
         >
             <Image
-                src="/images/corporate-banking-hero.webp"
+                src="/images/asset-finance-hero.webp"
                 alt=""
                 width={150}
                 height={150}

@@ -1,0 +1,198 @@
+---
+import CustomButton from "../components/CustomButton.astro";
+import Header from "../components/Header.astro";
+import HeroSection from "../components/collect/HeroSection.astro";
+import Logo from "../components/Logo.astro";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/coporatePage/Card.astro";
+import { Image } from "astro:assets";
+import InterestingButton from "../components/UI/InterestingButton.astro";
+import Testimonial from "../components/collect/Testimonial.astro";
+import SectionToggle from "../components/collect/SectionToggle.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Payment made easy for everyone">
+    <Header id="corporate-page-header" styles="bg-white text-black">
+        <Fragment slot="button">
+            <CustomButton
+                id="header_open_an_account"
+                text="Contact support"
+                href="https://retail.dot.ai/signup"
+                className="bg-[#C2F2BA]"
+            />
+        </Fragment>
+        <Fragment slot="logo">
+            <Logo color="black" />
+        </Fragment>
+    </Header>
+    <HeroSection />
+    <section class="py-[104px]">
+        <div class="contain">
+            <div class="text-center">
+                <h1
+                    data-animate="fade-in"
+                    class="font-grosek animate-js mb-2 text-[2.7rem] font-medium"
+                >
+                    Created for your global business
+                </h1>
+                <p
+                    data-animate="fade-in"
+                    class="font-inter mx-auto animate-js text-muted text-lg w-[80%] max-w-[900px]"
+                >
+                    Everything you need to grow your business and operate —
+                    without the high fees, documents, and headache of your
+                    regular bank. We help you mind your business.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-6 gap-7 py-14">
+                <Card
+                    className="col-span-2 bg-[#F3FCF1]"
+                    title="Instant notifications"
+                    subtitle="See your balance update instantly when customers send you money in real-time."
+                    imageurl="/images/bulk-transfer.webp"
+                />
+                <Card
+                    className="col-span-2 bg-[#F3FCF1]"
+                    title="Compatible with all cards"
+                    subtitle="Accept your customers' favorite ways to pay as the POS terminal is compatible with all cards."
+                    imageurl="/images/confetti.webp"
+                />
+                <Card
+                    className="col-span-2 px-4 bg-[#F3FCF1]"
+                    title="Terminal & Cash insurance"
+                    subtitle="Don't let uncertainties affect your business. Conduct your business with confidence with the terminal and cash insurance."
+                    imageurl="/images/scheduled.webp"
+                />
+                <Card
+                    className="col-span-3 px-4 bg-[#F3FCF1]"
+                    title="Daily transaction report"
+                    subtitle="Stay in control of your finances with a daily report on transactions at the end of each day."
+                    imageurl="/images/network2.webp"
+                />
+                <Card
+                    className="col-span-3 bg-[#F3FCF1] px-4"
+                    title="Bank network status"
+                    subtitle="Know the best times for transferring money to different banks."
+                    imageurl="/images/network2.webp"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black py-[104px]">
+        <div class="contain text-center text-white">
+            <div>
+                <h1 class="font-grosek text-4xl font-medium mb-3">
+                    Built for businesses. Built for you.
+                </h1>
+                <p class="font-inter max-w-[825px] mx-auto">
+                    Anyone can dream about opening a business, but it takes
+                    passion and determination to make it reality. We're here for
+                    people with a strong vision and the courage to make it
+                    happen.
+                </p>
+            </div>
+            <div class="grid grid-cols-3 gap-6 pt-12">
+                <div
+                    class="col-span-3 relative rounded-3xl overflow-hidden h-[400px]"
+                >
+                    <Image
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;object-position:top center;color:transparent"
+                        alt={""}
+                        src={"/images/collect-hero.webp"}
+                        width={700}
+                        class="w-full"
+                        height={700}
+                    />
+                </div>
+                <div
+                    class="col-span-2 text-black text-left font-grosek text-2xl rounded-3xl bg-white lg:p-10"
+                >
+                    <h1
+                        class="text-[#4F555F] lg:leading-10 text-2xl lg:text-[28px]"
+                    >
+                        Why didn't we find out about Dot sooner? Their
+                        integrated banking, payment, and insurance services have
+                        <span class="text-[#226F15]"
+                            >simplified my life in ways I didn't think possible.</span
+                        >
+                    </h1>
+                    <div class="flex mt-12 items-center gap-3">
+                        <Image
+                            src="/images/image.webp"
+                            alt="profile pics"
+                            class="rounded-full"
+                            width={60}
+                            height={60}
+                        />
+                        <div class="flex flex-col">
+                            <h1 class="text-lg font-medium">Chinasa Abigail</h1>
+                            <p class="text-sm font-inter text-muted">
+                                Store Owner and Entrepreneur
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#212225] items-center rounded-3xl flex flex-col py-6 justify-between"
+                >
+                    <InterestingButton
+                        text="Businesses using Dot Collect"
+                        variants="blue"
+                    />
+                    <h1 class="text-6xl font-medium font-grosek">
+                        50k <span class="text-5xl text-[#868C98]">+</span>
+                    </h1>
+                    <p class="font-inter text-center mx-5">
+                        50,000+ merchants and agents have chosen us as their
+                        partner.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <SectionToggle />
+    <section class="bg-black py-[104px]">
+        <div class="contain">
+            <div
+                class="bg-[#212225] p-10 rounded-3xl flex items-center justify-between space-x-[6rem]"
+            >
+                <div
+                    class="relative h-[570px] w-1/2 rounded-2xl overflow-hidden"
+                >
+                    <Image
+                        loading="lazy"
+                        src="/images/stats-main.webp"
+                        alt=""
+                        width={500}
+                        height={500}
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
+                    />
+                </div>
+                <div class="w-1/2">
+                    <div class="text-white">
+                        <h1 class="font-medium m4-3 font-grosek text-4xl">
+                            Feel safe with your terminal & cash insured
+                        </h1>
+                        <p class="font-inter text-[#868C98] my-6">
+                            Our POS terminal and cash insurance combine to
+                            provide a robust financial protection package. POS
+                            terminal insurance guards against damage or
+                            malfunction, while cash insurance ensures your
+                            physical money is secure from theft or loss.
+                        </p>
+                    </div>
+                    <CustomButton
+                        id="_"
+                        text="Contact sales"
+                        className="bg-white text-black mt-12"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <Testimonial />
+    <Footer />
+</Layout>

@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import CustomButton from "../CustomButton.astro";
+import InterestingButton from "../UI/InterestingButton.astro";
+---
+
+<main class="bg-[#F2F6FE] pt-24 min-h-screen">
+    <div class="contain relative justify-between py-24 flex">
+        <div
+            class="w-1/2 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
+        >
+            <Image
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
+                src="/images/corporate-insure-hero.webp"
+                alt=""
+                width={150}
+                height={300}
+                class="w-full h-full bg-cover absolute top-0 left-0 bottom-0 right-0"
+            />
+        </div>
+        <div class="w-1/2 relative h-[560px] max-w-[480px]">
+            <InterestingButton text="Affordable Insurance" variants="green" />
+            <h1
+                data-animate="fade-in"
+                class="font-grosek mt-6 animate-js font-medium text-5xl leading-[4rem]"
+            >
+                Budget-Friendly Health Insurance for Corporates & SMEs.
+            </h1>
+            <p
+                data-animate="fade-in"
+                class="font-inter animate-js mt-4 text-lg text-muted"
+            >
+                Make your employees happier and healthier on our health
+                insurance plans.
+            </p>
+            <div>
+                <CustomButton
+                    id="button-corporate"
+                    text="Contact us"
+                    href=""
+                    className="bg-black text-white mt-10"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                        ><polyline points="9 18 15 12 9 6"></polyline></svg
+                    ></CustomButton
+                >
+                <a href="https://hmo.dot.ai/#retail-plans" class="ml-3">
+                    <button
+                        class="bg-white p-4 px-5 border rounded-lg text-black"
+                        >View Health Plans</button
+                    >
+                </a>
+                <p class="text-sm font-inter text-gray-700 mt-2">
+                    Access health care under 24 hours
+                </p>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="py-[70px] bg-gray-50 text-black font-inter">
+    <div class="contain">
+        <div
+            data-animate="fade-in"
+            class="text-center animate-js max-w-[825px] mx-auto"
+        >
+            <h1
+                style="font-family: var(--font-grosek);"
+                class="text-[2.5rem] font-medium mb-2"
+            >
+                Register your company in minutes
+            </h1>
+            <p class="text-[#868c98] font-inter text-lg" id="feature__section">
+                We provide tailored insurance solutions for your employees with
+                a focus on customer satisfaction
+            </p>
+        </div>
+        <div
+            class="grid md:grid-cols-2 gap-12 mt-12 grid-cols-1 lg:grid-cols-3 xl:gap-16 items-start"
+        >
+            <div
+                data-animate="fade-in"
+                data-delay=".3"
+                class="flex animate-js opacity-0 gap-3 items-center"
+            >
+                <Image
+                    src={"/svg/stress.2ba74513.svg"}
+                    alt=""
+                    width={100}
+                    height={10}
+                />
+                <div class="flex-1">
+                    <h1
+                        class="mb-1 text-xl font-medium"
+                        style="font-family: var(--font-grosek);"
+                    >
+                        No stress
+                    </h1>
+                    <p class="text-[#868c98]">
+                        Sign up your whole company in minutes with zero stress
+                        so you can go back to your business
+                    </p>
+                </div>
+            </div>
+            <div
+                data-animate="fade-in"
+                data-delay=".4"
+                class="flex gap-3 opacity-0 animate-js items-center"
+            >
+                <Image
+                    src={"/svg/affordable.f687cea2.svg"}
+                    alt=""
+                    width={100}
+                    height={10}
+                />
+                <div class="flex-1">
+                    <h1
+                        style="font-family: var(--font-grosek);"
+                        class="mb-1 text-lg font-medium"
+                    >
+                        Affordable
+                    </h1>
+                    <p class="text-[#868c98]">
+                        We have a plan that works for your business
+                    </p>
+                </div>
+            </div>
+            <div
+                data-animate="fade-in"
+                data-delay=".5"
+                class="flex gap-3 opacity-0 animate-js items-center"
+            >
+                <Image
+                    src={"/svg/roundtheclock.9008b5c4.svg"}
+                    alt=""
+                    width={100}
+                    height={10}
+                />
+                <div class="flex-1">
+                    <h1
+                        style="font-family: var(--font-grosek);"
+                        class="mb-1 text-lg font-medium"
+                    >
+                        On call 24/7
+                    </h1>
+                    <p class="text-[#868c98]">
+                        You can always reach out to us if you have any questions
+                        or run into some problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,7 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import CustomButton from "./CustomButton.astro";
-import Logo from "./Logo.astro";
 import CaretDown from "./UI/CaretDown.astro";
 import DropDownNav from "./UI/DropDownNav.astro";
 import SmallDropDown from "./UI/SmallDropDown.astro";
@@ -123,7 +120,7 @@ const { styles = "", id } = Astro.props;
             {
                 title: "Dot Collect",
                 body: "POS for your business",
-                link: "https://www.dot.ai/collect",
+                link: "/collect",
                 svg: "/svg/dot-collect.svg",
             },
         ],
@@ -131,13 +128,13 @@ const { styles = "", id } = Astro.props;
             {
                 title: "Corporate HMO",
                 body: "Affordable insurance for your employees",
-                link: "https://www.dot.ai/corporate-hmo",
+                link: "/corporate-hmo",
                 svg: "/svg/hmo.svg",
             },
             {
                 title: "Micro Insurance",
                 body: "Secure your tommorow today",
-                link: "https://www.dot.ai/micro-insurance",
+                link: "/micro-insurance",
                 svg: "/svg/insurance.svg",
             },
         ],
@@ -147,55 +144,55 @@ const { styles = "", id } = Astro.props;
             {
                 title: "Mobile and Web Banking",
                 body: "BAnking that works",
-                link: "https://www.dot.ai/corporate-banking",
+                link: "/personal-banking",
                 svg: "/svg/mobile-web-banking.svg",
             },
             {
                 title: "Instant Bank Transfers",
                 body: "Swift transfers to any bank",
-                link: "https://www.dot.ai/investments",
+                link: "/personal-banking#benefits",
                 svg: "/svg/instant-bank.svg",
             },
             {
                 title: "Pay Bills",
                 body: "Pay your bills from the bank app",
-                link: "https://www.dot.ai/loans",
+                link: "/personal-banking#benefits",
                 svg: "/svg/pay-bills.svg",
             },
             {
                 title: "Investments",
                 body: "Grow your wealth",
-                link: "https://www.dot.ai/loans",
+                link: "/personal-banking#benefits",
                 svg: "/svg/investment-2.svg",
             },
             {
                 title: "Earn Rewards",
                 body: "Gain points you can convert to cash",
-                link: "https://www.dot.ai/loans",
+                link: "/personal-banking#benefits",
                 svg: "/svg/earn-rewards.svg",
             },
             {
                 title: "Fixed Deposit Investments",
                 body: "Pay your bilss from the bank app",
-                link: "https://www.dot.ai/loans",
+                link: "/personal-banking#benefits",
                 svg: "/svg/cards.svg",
             },
             {
                 title: "Loans",
                 body: "Quick loans for your business",
-                link: "https://www.dot.ai/loans",
+                link: "/loans",
                 svg: "/svg/loan.svg",
             },
             {
                 title: "Cards",
                 body: "Get a Dot Card",
-                link: "https://www.dot.ai/loans",
+                link: "https://www.dot.ai/dot-card",
                 svg: "/svg/cards.svg",
             },
             {
                 title: "Asset Finance",
                 body: "Get your own ride",
-                link: "https://www.dot.ai/loans",
+                link: "/asset-finance",
                 svg: "/svg/assets-finance.svg",
             },
         ],
@@ -331,26 +328,31 @@ const { styles = "", id } = Astro.props;
             title: "POS Terminal",
             body: "Become a Dot agent",
             svg: "/svg/pos-terminal.svg",
+            link: "/pos-terminal",
         },
         {
             title: "Collect Transfers",
             body: "Accept payments on your POS",
             svg: "/svg/transfer.svg",
+            link: "/pos-terminal#benefits",
         },
         {
             title: "Bank Network Status",
             body: "Know the network status of any bank",
             svg: "/svg/network-status.svg",
+            link: "/pos-terminal#benefits",
         },
         {
             title: "Cash and Terminal Insurance",
             body: "Protect your money and terminal",
             svg: "/svg/cash.svg",
+            link: "/pos-terminal#benefits",
         },
         {
             title: "Cards(Issuance)",
             body: "Give your customers a Dot card",
             svg: "/svg/cards.svg",
+            link: "https://www.dot.ai/dot-card",
         },
     ];
     const data4: any[] = [
@@ -358,13 +360,29 @@ const { styles = "", id } = Astro.props;
             title: "Why Dots?",
             body: "It starts with you",
             svg: "/svg/why-dots.svg",
+            link: "https://www.dot.ai/why-dot",
         },
-        { title: "About us", body: "Read our story", svg: "/svg/about-us.svg" },
-        { title: "Careers", body: "Join the team", svg: "/svg/career.svg" },
+        {
+            title: "About us",
+            body: "Read our story",
+            svg: "/svg/about-us.svg",
+            link: "https://www.dot.ai/about",
+        },
+        {
+            title: "Careers",
+            body: "Join the team",
+            svg: "/svg/career.svg",
+            link: "https://www.dot.ai/careers",
+        },
     ];
 
     const data5 = [
-        { title: "Our Blog", body: "Grow your heaalth", svg: "/svg/cards.svg" },
+        {
+            title: "Our Blog",
+            body: "Grow your heaalth",
+            svg: "/svg/cards.svg",
+            link: "https://www.dot.ai/blogs",
+        },
     ];
 
     const addElemttoDom = (data: any, el: string, child: (e: any) => any) => {

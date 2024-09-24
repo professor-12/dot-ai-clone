@@ -30,34 +30,34 @@ import Footer from "../components/Footer.astro";
             <div class="text-center">
                 <h1
                     data-animate="fade-in"
-                    class="font-grosek animate-js mb-2 text-[2.7rem] font-medium"
+                    class="font-grosek animate-js mb-2 md:text-4xl text-3xl lg:text-[2.7rem] font-medium"
                 >
                     Keeping your money safe is our business
                 </h1>
                 <p
                     data-animate="fade-in"
-                    class="font-inter mx-auto animate-js text-muted text-lg w-[80%] max-w-[900px]"
+                    class="font-inter mx-auto animate-js text-muted lg:text-lg w-[80%] max-w-[900px]"
                 >
                     We use industry-standard encryption technology and
                     two-factor authentication to verify all customer accounts.
                 </p>
             </div>
 
-            <div class="grid grid-cols-6 gap-7 py-14">
+            <div class="grid lg:grid-cols-6 gap-7 py-14">
                 <Card
-                    className="col-span-2"
+                    className="lg:col-span-2"
                     title="Top notch security"
                     subtitle="We use industry-standard encryption technology and two-factor authentication to verify all customer accounts."
                     imageurl="/images/bulk-transfer.webp"
                 />
                 <Card
-                    className="col-span-2"
+                    className="lg:col-span-2"
                     title="Regulatory compliance"
                     subtitle="We're duly registered and your funds are fully insured by the NDIC."
                     imageurl="/images/confetti.webp"
                 />
                 <Card
-                    className="col-span-2 px-4"
+                    className="lg:col-span-2 px-4"
                     title="Unmatched interests"
                     subtitle="Regardless of your investment size, we guarantee the best fixed returns on your money"
                     imageurl="/images/scheduled.webp"
@@ -66,7 +66,7 @@ import Footer from "../components/Footer.astro";
         </div>
     </section>
     <section
-        class="bg-[url('/images/corporate-banking-full.webp')] bg-cover mb-9 w-full h-[28rem] bg-center"
+        class="bg-[url('/images/corporate-banking-full.webp')] bg-cover mb-9 w-full h-[20rem] lg:h-[28rem] bg-center"
     >
     </section>
     <SectionToggle />

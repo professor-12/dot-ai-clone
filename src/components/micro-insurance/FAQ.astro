@@ -1,0 +1,159 @@
+---
+
+---
+
+<div class="space-y-4">
+    <div
+        class="bg-[#F9FAFB] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-3xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek font-medium md:w-[75%]">
+                Who is eligible for Dot's micro-insurance?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#4F555F] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                Our micro insurance plans are available to individuals with
+                limited financial resources, including low-income earners, small
+                business owners, and individuals in rural or remote areas.
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#F9FAFB] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-3xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek font-medium md:w-[75%]">
+                What types of coverage are offered under Dot's micro-insurance?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#4F555F] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                We provide insurance for POS device terminals, mobility which
+                includes 2-wheelers (bikes) and 3-wheelers (keke), and Credit
+                life for loans.
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#F9FAFB] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-3xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek font-medium md:w-[75%]">
+                How is your micro-insurance different from traditional
+                insurance?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#4F555F] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                Dot's micro-insurance is tailored to the unique needs and
+                affordability of everyday individuals, with simplified policies,
+                lower premiums and speed of claims than traditional insurance.
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#F9FAFB] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-3xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek font-medium md:w-[75%]">
+                How can I purchase micro-insurance?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#4F555F] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                You can purchase a plan directly from our website, payment
+                agents or contact us or if you need assistance.
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#F9FAFB] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-3xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek font-medium md:w-[75%]">
+                Can I customize my micro-insurance coverage?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#4F555F] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                Depending on the kind of insurance you would like to purchase,
+                you can customise your coverage based on your needs and
+                preferences.
+            </p>
+        </div>
+    </div>
+    <div
+        class="bg-[#F9FAFB] py-4 w-full active md:py-7 md:px-8 px-5 pb-0 rounded-3xl"
+    >
+        <div
+            data-faq
+            class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+        >
+            <h1 class="font-grosek font-medium md:w-[75%]">
+                How quickly can claims be processed?
+            </h1>
+            <span class="text-2xl">+</span>
+        </div>
+        <div data-state="closed" class="transition-all h-0 overflow-hidden">
+            <p
+                class="text-sm font-inter text-[#4F555F] pb-[16px] transition-all duration-700 overflow-hidden"
+            >
+                If you submit the correct information required to process your
+                claim, we will pay after verification within 48 hours.
+            </p>
+        </div>
+    </div>
+</div>
+<style>
+    .active {
+        height: max-content;
+    }
+</style>
+
+<script>
+    const containerel = document.querySelectorAll("[data-faq]");
+    const toggleel = [...document.querySelectorAll("[data-state]")];
+
+    containerel.forEach((el, index) => {
+        el.addEventListener("click", (event) => {
+            toggleel.map((e, i) => {
+                if (i == index) {
+                    return;
+                }
+                e.classList.remove("active");
+            });
+            toggleel[index].classList.toggle("active");
+        });
+    });
+</script>

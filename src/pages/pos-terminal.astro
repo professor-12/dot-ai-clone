@@ -1,0 +1,189 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import CustomButton from "../components/CustomButton.astro";
+import Logo from "../components/Logo.astro";
+
+import HeroSection from "../components/pos-terminal/HeroSection.astro";
+import Card from "../components/coporatePage/Card.astro";
+import Footer from "../components/Footer.astro";
+import SectionToggleMenu from "../components/pos-terminal/SectionToggleMenu.astro";
+import Section2 from "../components/personalbanking/Section2.astro";
+import Testimonials from "../components/coporatePage/Testimonials.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Payment just got easier - Banking">
+    <Header id="corporate-page-header" styles="bg-white text-black">
+        <Fragment slot="button">
+            <CustomButton
+                id="header_open_an_account"
+                text="Contact support"
+                className=" bg-[#C2F2BA]"
+                href="https://retail.dot.ai/signup"
+            />
+        </Fragment>
+        <Fragment slot="logo">
+            <Logo color="black" />
+        </Fragment>
+    </Header>
+    <HeroSection />
+    <section class="py-[104px]">
+        <div class="contain">
+            <div class="text-center">
+                <h1
+                    data-animate="fade-in"
+                    class="font-grosek animate-js mb-2 text-3xl md:text-[2.7rem] font-medium"
+                >
+                    Everything you need. In a box.
+                </h1>
+                <p
+                    data-animate="fade-in"
+                    class="font-inter mx-auto animate-js text-muted md:text-lg w-[80%] max-w-[900px]"
+                >
+                    With our financial technology solutions, generating wealth
+                    is simplified and more accessible, empowering individuals to
+                    achieve financial success.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-6 gap-7 py-14">
+                <Card
+                    className="md:col-span-2 bg-[#F3FCF1]"
+                    title="Instant bank transfers"
+                    subtitle="Send money online from your phone or web to anyone and they get it in 10 seconds."
+                    imageurl="/images/bulk-transfer.webp"
+                />
+                <Card
+                    className="md:col-span-2 bg-[#F3FCF1]"
+                    title="Cash withdrawals"
+                    subtitle="Be your customers' personal ATM, and allow them to withdraw cash from  your POS whenever they want"
+                    imageurl="/images/confetti.webp"
+                />
+                <Card
+                    className="md:col-span-2 px-4 bg-[#F3FCF1]"
+                    title="Pay bills"
+                    subtitle="Pay for electricity bills, subscriptions, airtime, data, and all other payment needs of your customers right from your terminal."
+                    imageurl="/images/scheduled.webp"
+                />
+                <Card
+                    className="md:col-span-3 px-4 bg-[#F3FCF1]"
+                    title="Accept transfers on your POS"
+                    subtitle="No more fake transfers- collect payments from your customers directly through transfers to your POS terminal"
+                    imageurl="/images/network2.webp"
+                />
+                <Card
+                    className="md:col-span-3 bg-[#F3FCF1]"
+                    title="Bank network status"
+                    subtitle="Keep an eye on the journey of your funds from the moment you click 'send' to when they arrive at their destination bank."
+                    imageurl="/images/accnt-statement.webp"
+                />
+            </div>
+        </div>
+    </section>
+    <section class="py-[104px] bg-black">
+        <div class="contain">
+            <div class="text-center text-white">
+                <h1 class="text-[2.5rem] font-medium font-grosek">
+                    Everything a POS should be —and more
+                </h1>
+                <p
+                    class="font-inter text-[#868C98] mx-auto max-w-[700px] text-lg"
+                >
+                    With our terminal doing the heavy lifting, you have the
+                    freedom to create the life you want and meet your financial
+                    goals.
+                </p>
+            </div>
+
+            <Image
+                src="/images/poswoman-big.webp"
+                alt=""
+                class="w-full mt-6 rounded-3xl"
+                width={400}
+                height={400}
+            />
+        </div>
+    </section>
+
+    <SectionToggleMenu />
+    <section class="bg-black mt-12">
+        <div class="contain">
+            <div class="flex max-md:flex-col items-center gap-7 md:gap-14">
+                <div class="flex-1 max-md:py-12">
+                    <div
+                        class="bg-[#212225] min-h-[25rem] md:h-[35rem] px-8 rounded-3xl md:px-24 flex items-center justify-center flex-1"
+                    >
+                        <div>
+                            <h1
+                                class="text-white text-3xl md:text-[2.5rem] leading-[50px] tracking-wide font-grosek font-medium"
+                            >
+                                Swift and dependable payment processing.
+                            </h1>
+                            <p class="pt-4 max-md:text-sm text-gray-200">
+                                Carry out your transactions with so much peace
+                                of mind. Receive money, pay bills, and make
+                                commission from it. Join the Dot Heroes and
+                                transform into a local banking hub.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 min-h-[500px]">
+                    <Image
+                        src="/images/common.webp"
+                        width={700}
+                        height={500}
+                        alt={""}
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-black py-12">
+        <div class="contain bg-[#212225] p-12 rounded-3xl">
+            <div
+                class="flex flex-row-reverse max-md:flex-col items-center gap-7 md:gap-14"
+            >
+                <div class="flex-1 max-md:py-12">
+                    <div
+                        class="min-h-[25rem] md:h-[35rem] px-8 rounded-3xl md:px-24 flex items-center justify-center flex-1"
+                    >
+                        <div>
+                            <h1
+                                class="text-white text-3xl md:text-[2.5rem] leading-[50px] tracking-wide font-grosek font-medium"
+                            >
+                                Feel safe with your terminal & cash insured
+                            </h1>
+                            <p class="pt-4 max-md:text-sm text-gray-200">
+                                Our POS terminal and cash insurance combine to
+                                provide a robust financial protection package.
+                                POS terminal insurance guards against damage or
+                                malfunction, while cash insurance ensures your
+                                physical money is secure from theft or loss.
+                            </p>
+                            <CustomButton
+                                id=""
+                                text="Contact support"
+                                className="bg-white mt-8 text-black"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 min-h-[500px]">
+                    <Image
+                        src="/images/collect-insurance.webp"
+                        width={700}
+                        height={500}
+                        alt={""}
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Testimonials />
+    <Footer title="Ready to accept payments?" />
+</Layout>
+
+<style></style>

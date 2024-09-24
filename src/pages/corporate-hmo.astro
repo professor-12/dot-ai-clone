@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import CustomButton from "../components/CustomButton.astro";
+import Logo from "../components/Logo.astro";
+
+import HeroSection from "../components/corporateHmo/HeroSection.astro";
+import Card from "../components/UI/FAQ/Card.astro";
+import Footer from "../components/Footer.astro";
+import SectionToggleMenu from "../components/coporatePage/SectionToggleMenu.astro";
+import Section2 from "../components/coporatePage/Section2.astro";
+import Testimonials from "../components/coporatePage/Testimonials.astro";
+import Feature from "../components/corporateHmo/Feature.astro";
+import InterestingButton from "../components/UI/InterestingButton.astro";
+import { Image } from "astro:assets";
+import HowItWorks from "../components/corporateHmo/HowItWorks.astro";
+import FAQ from "../components/UI/FAQ/FAQ.astro";
+---
+
+<Layout title="Afordable insurance - Dot">
+    <Header id="corporate-hmo-page-header" styles="bg-white text-black">
+        <Fragment slot="button">
+            <CustomButton
+                className=" bg-[#C2F2BA] text-black"
+                id="header_open_an_account"
+                text="Buy HMO Plan"
+                href="https://retail.dot.ai/signup"
+            />
+        </Fragment>
+        <Fragment slot="logo">
+            <Logo color="black" />
+        </Fragment>
+    </Header>
+    <HeroSection />
+    <Feature />
+    <div class="contain py-7">
+        <h1 class="text-center font-grosek font-medium my-7 text-4xl">
+            What are businesses saying about us?
+        </h1>
+        <div class="grid grid-cols-3 gap-6 pt-12">
+            <div
+                class="bg-[#F9FAFB] items-center rounded-3xl flex flex-col py-6 justify-between"
+            >
+                <InterestingButton text="Lives covered" variants="green" />
+                <h1 class="text-6xl font-medium font-grosek">
+                    50k <span class="text-5xl text-[#868C98]">+</span>
+                </h1>
+                <p class="font-inter text-[#868C98] text-center mx-5">
+                    24,000+ individuals have chosen us as their trusted health
+                    partner.
+                </p>
+            </div>
+            <div
+                class="col-span-2 relative rounded-3xl overflow-hidden h-[400px]"
+            >
+                <Image
+                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;object-position:top center;color:transparent"
+                    alt={""}
+                    src={"/images/hero-insure-guy.webp"}
+                    width={700}
+                    class="w-full"
+                    height={700}
+                />
+            </div>
+            <div
+                class="col-span-2 text-black text-left font-grosek text-2xl rounded-3xl bg-[#F3FCF1] lg:p-10"
+            >
+                <h1 class="text-[#4F555F] lg:leading-10 text-[2.3rem]">
+                    Your quick response to costumers when they need attention, I
+                    love that,
+                    <span class="text-[#3FB12C]"
+                        >your service are in front of line in term of your
+                        costumer service.</span
+                    >
+                </h1>
+                <div class="flex justify-between w-full items-center mt-28">
+                    <div class="flex items-center gap-3">
+                        <Image
+                            src="/images/image.webp"
+                            alt="profile pics"
+                            class="rounded-full"
+                            width={60}
+                            height={60}
+                        />
+                        <div class="flex flex-col">
+                            <h1 class="text-lg font-medium">Abdu Madu</h1>
+                            <p class="text-sm font-inter text-muted">
+                                Supervisor, Dangote
+                            </p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <Image
+                            src={"/images/dangote1.6d6f6c9e (1).svg"}
+                            width={70}
+                            height={70}
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-[#F2F6FE] items-center rounded-3xl flex flex-col py-6 justify-between"
+            >
+                <InterestingButton text="Companies Insured" variants="blue" />
+                <h1 class="text-6xl font-medium font-grosek">
+                    60 <span class="text-5xl text-[#868C98]">+</span>
+                </h1>
+                <p class="font-inter text-[#868C98] text-center mx-5">
+                    Over 60+ companies have chosen us as their trusted partner.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <HowItWorks />
+    <section class="bg-[black]">
+        <div class="contain items-center flex gap-8">
+            <div
+                class="bg-[#212225] h-[550px] w-1/2 px-[5rem] flex items-center rounded-3xl"
+            >
+                <div class="">
+                    <h1
+                        class="text-4xl text-white leading-[3rem] font-medium font-grosek mb-3"
+                    >
+                        Take care of your employees
+                    </h1>
+                    <p class="font-inter text-[#868C98]">
+                        When you care for your employees, they care for your
+                        business. Providing health insurance shows genuine
+                        concern for employees' welfare. It sets the stage for
+                        increased productivity, fewer sick days, and a generally
+                        more content and motivated workforce.
+                    </p>
+                </div>
+            </div>
+            <div class="w-1/2 h-[700px]">
+                <Image
+                    src="/images/corporatehmo-collage.webp"
+                    class="w-full object-cover"
+                    alt={""}
+                    width={200}
+                    height={200}
+                />
+            </div>
+        </div>
+    </section>
+    <div class="bg-black text-white py-[200px]">
+        <div class="contain flex">
+            <div class="md:w-1/2">
+                <h1 class="md:text-5xl font-grosek">
+                    Frequently asked questions, <span class="font-medium"
+                        >answered.</span
+                    >
+                </h1>
+                <p class="text-[#868C98] text-lg mt-3">
+                    If you have other questions or need assistance, kindly reach
+                    out to <a
+                        href="mailto:support@dot.ai"
+                        class="text-[#5573B3]">support@dot.ai.</a
+                    >
+                </p>
+            </div>
+            <div class="w-1/2">
+                <FAQ />
+            </div>
+        </div>
+    </div>
+    <Footer />
+</Layout>

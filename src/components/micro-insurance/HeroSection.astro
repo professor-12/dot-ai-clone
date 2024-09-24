@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import CustomButton from "../CustomButton.astro";
+import InterestingButton from "../UI/InterestingButton.astro";
+---
+
+<main class="bg-[#FDF9F4] pt-24 min-h-screen">
+    <div class="contain flex flex-col justify-center py-[60px]">
+        <div class="flex justify-center">
+            <InterestingButton text="Business made easy" variants="red" />
+        </div>
+        <div class="my-4 text-center space-y-4">
+            <h1
+                class="font-grosek text-5xl text-balance font-medium leading-[3.8rem]"
+            >
+                Discover Tailored Micro Insurance Plans for Comprehensive
+                Coverage
+            </h1>
+            <p class="text-lg font-inter text-gray-500">
+                Secure your tomorrow, today! Discover Micro-Insurance solutions
+                for every need.
+            </p>
+        </div>
+        <div class="flex justify-center my-4">
+            <CustomButton
+                href="https://www.dotai/signup"
+                id="ssd"
+                text="Get a quote"
+                className="bg-black text-white"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right"
+                    data-astro-source-file="C:/Users/USER/Desktop/Dot Ai/dot-clone/src/components/coporatePage/HeroSection.astro"
+                    data-astro-source-loc="45:23"
+                    ><polyline
+                        points="9 18 15 12 9 6"
+                        data-astro-source-file="C:/Users/USER/Desktop/Dot Ai/dot-clone/src/components/coporatePage/HeroSection.astro"
+                        data-astro-source-loc="45:23"></polyline></svg
+                ></CustomButton
+            >
+        </div>
+        <div
+            class="h-[150px] my-12 overflow-hidden mx-auto w-[70%] min-w-[200px] rounded-3xl relative"
+        >
+            <Image
+                src="/images/brokerage-hero.webp"
+                width={400}
+                class="object-cover w-full h-full absolute"
+                height={400}
+                alt=""
+            />
+        </div>
+    </div>
+</main>
