@@ -6,24 +6,29 @@ import CaretDown from "../UI/CaretDown.astro";
 <section class="py-20">
     <div class="contain">
         <div class="text-center">
-            <h1 class="font-grosek text-[2.8rem] font-medium mb-2">
+            <h1
+                class="font-grosek md:text-4xl text-3xl lg:text-[2.8rem] font-medium mb-2"
+            >
                 Leave the hard work to us
             </h1>
-            <p class="font-inter text-lg text-muted">
+            <p class="font-inter lg:text-lg text-muted">
                 We make your money work harder. Grow your wealth with daily
                 interest at attractive rates and immediate access when you need
                 it.
             </p>
         </div>
 
-        <div class="flex space-x-5 mt-9">
+        <div class="lg:flex gap-5 mt-9">
             <div class="w-[200px] h-auto">
                 <ul class="font-grosek text-sm font-[410]">
                     <li class="active" data-list>Getting Started</li>
                 </ul>
             </div>
-            <div class="flex-1 space-x-11 max-md:flex-row flex" id="showcase">
-                <div class="w-1/2">
+            <div
+                class="flex-1 space-x-11 flex-row flex max-md:flex-col"
+                id="showcase"
+            >
+                <div class="lg:w-1/2">
                     <div
                         class="w-full max-w-[600px] bg-[url('/images/investments-step1.webp')] bg-center bg-cover h-full rounded-2xl"
                     >

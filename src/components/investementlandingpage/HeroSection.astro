@@ -5,18 +5,20 @@ import InterestingButton from "../UI/InterestingButton.astro";
 ---
 
 <main class="bg-[#F2F6FE] pt-24 min-h-screen">
-    <div class="contain relative justify-between py-24 flex">
-        <div class="w-1/2 relative h-[560px] max-w-[480px]">
+    <div
+        class="contain relative lg:justify-between gap-10 py-24 flex max-md:flex-col"
+    >
+        <div class="lg:w-1/2 relative lg:h-[560px] max-w-[480px]">
             <InterestingButton text="Grow your wealth" variants="blue" />
             <h1
                 data-animate="fade-in"
-                class="font-grosek mt-6 animate-js font-medium text-5xl leading-[4rem]"
+                class="font-grosek mt-6 animate-js font-medium md:text-4xl max-sm:text-3xl text-5xl leading-[4rem]"
             >
                 Investments that grow wealth
             </h1>
             <p
                 data-animate="fade-in"
-                class="font-inter animate-js mt-4 text-lg text-muted"
+                class="font-inter animate-js mt-4 md:text-lg text-muted"
             >
                 The future is the reason we make plans. Take control of it by
                 investing. We put your money in fixed deposits that help you
@@ -44,7 +46,7 @@ import InterestingButton from "../UI/InterestingButton.astro";
             >
 
             <div
-                class="flex absolute bottom-1 gap-5 font-inter text-sm text-slate-500"
+                class="flex absolute max-md:hidden bottom-1 gap-5 font-inter text-sm text-slate-500"
             >
                 <div class="flex items-center gap-2">
                     <p>Licensed by the CBN</p><Image
@@ -65,7 +67,7 @@ import InterestingButton from "../UI/InterestingButton.astro";
             </div>
         </div>
         <div
-            class="w-1/2 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
+            class="lg:w-1/2 w-full max-md:h-[20rem] overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
         >
             <Image
                 src="/images/investments-hero.webp"
