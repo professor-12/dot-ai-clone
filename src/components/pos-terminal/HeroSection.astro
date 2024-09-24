@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import CustomButton from "../CustomButton.astro";
+import InterestingButton from "../UI/InterestingButton.astro";
+---
+
+<main class="bg-[#F3FCF1] md:pt-24 min-h-screen">
+    <div class="flex flex-col contain space-y-5 pt-16 justify-center">
+        <div class="flex justify-center">
+            <InterestingButton text="Payment just got easier" variants="red" />
+        </div>
+        <h1
+            class="max-md:text-3xl text-5xl font-grosek text-balance font-medium text-center"
+        >
+            Your partner for customer <br /> payments
+        </h1>
+        <p class="font-inter text-lg text-center text-[#868C98]">
+            Register today and start accepting card and transfer payments with
+            the Dot <br /> POS terminal.
+        </p>
+
+        <div class="flex space-x-2 pt-12 justify-center">
+            <CustomButton
+                id=""
+                text="Go to your payment account"
+                className="text-white bg-black"
+            />
+            <button class="bg-white border rounded-xl px-5 text-black"
+                >Learn more</button
+            >
+        </div>
+        <p class="text-sm text-center text-gray-500">
+            Create an account under 10 minutes.
+        </p>
+    </div>
+</main>

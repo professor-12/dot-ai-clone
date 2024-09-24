@@ -12,7 +12,7 @@ const { text, id, href = "/", className } = Astro.props;
 <a
     id={id}
     href={href}
-    class={"" +
+    class={" " +
         className +
         " " +
         "inline-flex items-center gap-[6px] justify-center rounded-xl body-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-gray-200 text-black bg-[#c0d2f9] hover:bg-secondary/80 py-2 md:py-3.5 px-6 md:h-[52px] h-[48px] body-sm xl:body-md border-none"}

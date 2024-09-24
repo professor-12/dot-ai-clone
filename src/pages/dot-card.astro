@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Feature from "../components/Feature.astro";
+import Hero from "../components/Hero.astro";
+import Stats from "../components/Stats.astro";
+import LearnMore from "../components/LearnMore.astro";
+import Mission from "../components/Mission.astro";
+import CustomersStory from "../components/CustomersStory.astro";
+import Others from "../components/Others.astro";
+import Footer from "../components/Footer.astro";
+import MobileViewHeader from "../components/MobileViewHeader.astro";
+import CustomButton from "../components/CustomButton.astro";
+import Logo from "../components/Logo.astro";
+---
+
+<Layout title="Do life with Dot">
+    <div class="bg-black text-white">
+        <Header id="index-page-header" styles="bg-black">
+            <Fragment slot="button">
+                <CustomButton
+                    id="header_open_an_account"
+                    text="Open an account"
+                    href="https://retail.dot.ai/signup"
+                />
+            </Fragment>
+            <Fragment slot="logo">
+                <Logo />
+            </Fragment>
+        </Header>
+        <MobileViewHeader />
+        <main
+            class="bg-black bg-right-top contain bg-contain bg-no-repeat min-h-[900px] pt-[11rem] bg-[url('/images/hero-pattern.png')]"
+        >
+            <Hero />
+        </main>
+        <Feature />
+        <Stats />
+        <LearnMore />
+        <Mission />
+        <CustomersStory />
+        <Others />
+        <Footer />
+    </div>
+</Layout>

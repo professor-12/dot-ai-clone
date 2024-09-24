@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import CustomButton from "../CustomButton.astro";
+import InterestingButton from "../UI/InterestingButton.astro";
+---
+
+<main class="bg-[#F2F6FE] md:pt-24 min-h-screen">
+    <div
+        class="contain max-md:space-y-8 relative justify-between py-24 lg:flex"
+    >
+        <div class="lg:w-1/2 relative md:h-[560px] lg:max-w-[500px]">
+            <InterestingButton
+                text="Banking made easy for you"
+                variants="blue"
+            />
+            <h1
+                data-animate="fade-in"
+                class="font-grosek mt-6 animate-js font-medium text-3xl md:text-5xl md:leading-[4rem]"
+            >
+                Bank the way you want
+            </h1>
+            <p
+                data-animate="fade-in"
+                class="font-inter animate-js mt-4 md:text-lg text-muted"
+            >
+                Banking should not frustrate you.Whether it's online, phone, or
+                smartphone banking, we're here around the clock, every single
+                day, to make your banking sweet.
+            </p>
+            <div class="md:space-x-1">
+                <CustomButton
+                    id="button-corporate"
+                    text="Open an account"
+                    href=""
+                    className="bg-black text-white mt-10"
+                />
+
+                <button
+                    class="inline-flex rounded-xl space-x-2 items-center bg-white p-4 px-5"
+                >
+                    <span>Download our app</span>
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        ><g id="vuesax/bulk/google-play"
+                            ><g id="google-play"
+                                ><g id="Group 35"
+                                    ><path
+                                        id="Vector"
+                                        opacity="0.4"
+                                        d="M21.4 12.9508L16.89 15.2108L13.7 12.0208L16.92 8.80078L21.4 11.0508C22.19 11.4408 22.19 12.5608 21.4 12.9508Z"
+                                        fill="black"></path><path
+                                        id="Vector_2"
+                                        d="M16.92 8.79961L13.7 12.0196L4.03003 2.34961L16.92 8.79961Z"
+                                        fill="black"></path><path
+                                        id="Vector_3"
+                                        opacity="0.4"
+                                        d="M13.7 12.0202L4.12 21.6003L3.55 21.8902C2.83 22.2402 2 21.7302 2 20.9302V3.07025C2 2.27025 2.83 1.76024 3.55 2.11024L4.03 2.35025L13.7 12.0202Z"
+                                        fill="black"></path><path
+                                        id="Vector_4"
+                                        d="M16.89 15.2095L4.12 21.5995L13.7 12.0195L16.89 15.2095Z"
+                                        fill="black"></path></g
+                                ></g
+                            ></g
+                        ></svg
+                    ><div class="h-[19px] border-l border-gray-300"></div><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        ><g id="vuesax/bulk/apple"
+                            ><g id="apple"
+                                ><g id="Group 4"
+                                    ><g id="Group"
+                                        ><path
+                                            id="Vector"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M19.1 19.16C19.69 18.26 19.91 17.8 20.36 16.79C17.04 15.53 16.51 10.8 19.79 8.99C18.79 7.73 17.38 7 16.05 7C15.09 7 14.43 7.25 13.84 7.48C13.34 7.67 12.89 7.84 12.33 7.84C11.73 7.84 11.2 7.65 10.64 7.45C10.04 7.23 9.39995 7 8.59995 7C7.10995 7 5.51996 7.91 4.50996 9.47C3.08996 11.67 3.33995 15.79 5.62995 19.31C6.44995 20.57 7.54996 21.98 8.97996 22C9.57996 22.01 9.96996 21.83 10.4 21.64C10.89 21.42 11.42 21.18 12.35 21.18C13.28 21.17 13.8 21.42 14.29 21.64C14.71 21.83 15.09 22.01 15.68 22C17.12 21.98 18.28 20.42 19.1 19.16Z"
+                                            fill="black"></path></g
+                                    ><path
+                                        id="Vector_2"
+                                        opacity="0.4"
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M15.8399 2C15.9999 3.1 15.5499 4.19 14.9599 4.95C14.3299 5.77 13.2299 6.41 12.1699 6.37C11.9799 5.31 12.4699 4.22 13.0699 3.49C13.7399 2.69 14.8699 2.07 15.8399 2Z"
+                                        fill="black"></path></g
+                                ></g
+                            ></g
+                        ></svg
+                    ></button
+                >
+            </div>
+
+            <div
+                class="flex absolute bottom-1 max-md:hidden gap-5 font-inter text-sm text-slate-500"
+            >
+                <div class="flex items-center gap-2">
+                    <p>Licensed by the CBN</p><Image
+                        src="/images/cbn.webp"
+                        alt=""
+                        width={25}
+                        height={25}
+                    />
+                </div>
+                <div class="flex items-center gap-2">
+                    <p>Deposits insured by</p><Image
+                        src="https://www.dot.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fndic.271c77e2.webp&w=96&q=75"
+                        alt=""
+                        width={67}
+                        height={25}
+                    />
+                </div>
+            </div>
+        </div>
+        <div
+            class="md:w-1/2 max-md:h-[400px] overflow-hidden rounded-2xl md:max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
+        >
+            <Image
+                src="/images/corporate-banking-hero.webp"
+                alt=""
+                width={150}
+                height={150}
+                class="w-full h-full absolute top-0 left-0 bottom-0 right-0"
+            />
+        </div>
+    </div>
+</main>

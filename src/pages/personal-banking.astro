@@ -4,16 +4,17 @@ import Header from "../components/Header.astro";
 import CustomButton from "../components/CustomButton.astro";
 import Logo from "../components/Logo.astro";
 
-import HeroSection from "../components/coporatePage/HeroSection.astro";
+import HeroSection from "../components/personalbanking/HeroSection.astro";
 import Card from "../components/coporatePage/Card.astro";
 import Footer from "../components/Footer.astro";
-import SectionToggleMenu from "../components/coporatePage/SectionToggleMenu.astro";
-import Section2 from "../components/coporatePage/Section2.astro";
+import SectionToggleMenu from "../components/personalbanking/SectionToggleMenu.astro";
+import Section2 from "../components/personalbanking/Section2.astro";
 import Testimonials from "../components/coporatePage/Testimonials.astro";
 ---
 
 <Layout title="Banking made easy for your business - Banking">
-    <Header id="corporate-page-header" styles="bg-white text-black">
+    <Header id="corporate-page-header" styles="bg-white text-black"> 
+                        
         <Fragment slot="button">
             <CustomButton
                 id="header_open_an_account"
@@ -33,54 +34,53 @@ import Testimonials from "../components/coporatePage/Testimonials.astro";
                     data-animate="fade-in"
                     class="font-grosek animate-js mb-2 text-3xl md:text-[2.7rem] font-medium"
                 >
-                    Created for your global business
+                    Enjoy banking on the Dot
                 </h1>
                 <p
                     data-animate="fade-in"
                     class="font-inter mx-auto animate-js text-muted md:text-lg w-[80%] max-w-[900px]"
                 >
-                    Everything you need to grow your business and operate —
-                    without the high fees, documents, and headache of your
-                    regular bank. We help you mind your business.
+                    However you choose to bank, we have what you need to make
+                    your experience easy
                 </p>
             </div>
 
             <div class="grid lg:grid-cols-6 gap-7 py-14">
                 <Card
                     className="md:col-span-3"
-                    title="Bulk transfers"
-                    subtitle="Save time and effort by paying all employees in just a click. Enjoy the flexibility of setting up single or multi-payment methods, however you like."
+                    title="Instant banking"
+                    subtitle="Send money online from your phone or web to anyone and they get it in 10 seconds."
                     imageurl="/images/bulk-transfer.webp"
                 />
                 <Card
                     className="md:col-span-3"
-                    title="Instant payout"
+                    title="Earn rewards"
                     subtitle='Your recipient receives an instant alert once you click " send. " Send money with high speed and low fees.'
                     imageurl="/images/confetti.webp"
                 />
                 <Card
                     className="md:col-span-2 px-4"
-                    title="Scheduled transfers"
-                    subtitle="Schedule future transfers and recurring payments easily on the bank app or web,"
+                    title="Investments"
+                    subtitle="Make your money, make money with our fixed deposits investments that help you build wealth."
                     imageurl="/images/scheduled.webp"
                 />
                 <Card
                     className="md:col-span-2 px-4"
-                    title="Bank network status"
-                    subtitle="Know the best times for transferring money to different banks."
+                    title="Pay bills"
+                    subtitle="Enjoy your favorite things without interruption; pay for your electricity, airtime, data, and more."
                     imageurl="/images/network2.webp"
                 />
                 <Card
                     className="md:col-span-2"
-                    title="Account statement"
-                    subtitle="Access your account statement when you need it, and track your financial transactions."
+                    title="Get a Dot card"
+                    subtitle="Open a bank account and request a Dot card. We'll deliver it to you anywhere in Nigeria."
                     imageurl="/images/accnt-statement.webp"
                 />
             </div>
         </div>
     </section>
     <section
-        class="bg-[url('/images/corporate-banking-full.webp')] bg-cover mb-9 w-full h-[12rem] md:h-[28rem] bg-center"
+        class="bg-[url('/images/personal-bank.webp')] bg-cover mb-9 w-full h-[12rem] md:h-[28rem] bg-center"
     >
     </section>
 
