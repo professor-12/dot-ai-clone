@@ -89,19 +89,108 @@ const isOpen = !false;
 </header>
 <div
     data-link
-    class="fixed hide w-full transition-all duration-300 left-0 top-0 z-50 mt-3 max-w-[40rem] h-full bg-white"
+    class="fixed hide overflow-y-auto w-full transition-all duration-300 left-0 top-0 z-50 mt-3 md:max-w-[20rem] h-full bg-white"
 >
-    <div class="mt-[5rem]">
+    <div class="mt-[5rem] divide-y divide-y-reverse">
         <div
-            class="text-black border py-2 w-full active   px-5 pb-0"
+            class="text-black nav border-t-0 border py-2 w-full active px-5 pb-0"
         >
             <div
-                data-faq
+                data-navLink
                 class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
             >
                 <h1 class="font-grosek text-black md:w-[75%]">Business</h1>
                 <CaretDown />
             </div>
+            <div class="link overflow-hidden">
+                <select name="" class="w-full border rounded-xl p-3" id="">
+                    <option value="Banking">Banking</option>
+                    <option value="Payment">Payment</option>
+                    <option value="Insurance">Insurance</option>
+                </select>
+                <ul class="p-3">
+                    <li>d</li>
+                    <li>d</li>
+                    <li>d</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-black border py-2 w-full active px-5 pb-0">
+            <div
+                data-navLink
+                class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+            >
+                <h1 class="font-grosek text-black md:w-[75%]">Personal</h1>
+                <CaretDown />
+            </div>
+            <div class="link overflow-hidden">
+                <select name="" class="w-full border rounded-xl p-3" id="">
+                    <option value="Banking">Banking</option>
+                    <option value="Payment">Payment</option>
+                    <option value="Insurance">Insurance</option>
+                </select>
+                <ul class="p-3">
+                    <li>d</li>
+                    <li>d</li>
+                    <li>d</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-black border py-2 w-full active px-5 pb-0">
+            <div
+                data-navLink
+                class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+            >
+                <h1 class="font-grosek text-black md:w-[75%]">Agents</h1>
+                <CaretDown />
+            </div>
+            <div class="link overflow-hidden">
+                <ul id="agents" class="p-3"></ul>
+            </div>
+        </div>
+        <div class="text-black border py-2 w-full active px-5 pb-0">
+            <div
+                data-navLink
+                class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+            >
+                <h1 class="font-grosek text-black md:w-[75%]">Why Dots?</h1>
+                <CaretDown />
+            </div>
+            <div class="link overflow-hidden">
+                <ul id="why-dot" class="p-3"></ul>
+            </div>
+        </div>
+        <div class="text-black border py-2 w-full active px-5 pb-0">
+            <a href="https://www.dot.ai/developers">
+                <div
+                    data-faq
+                    class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+                >
+                    <h1 class="font-grosek text-black md:w-[75%]">Develpoer</h1>
+                </div>
+            </a>
+        </div>
+        <div class="text-black border py-2 w-full active px-5 pb-0">
+            <div
+                data-navLink
+                class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+            >
+                <h1 class="font-grosek text-black md:w-[75%]">Resources</h1>
+                <CaretDown />
+            </div>
+            <div class="link overflow-hidden">
+                <ul id="resource" class="p-3"></ul>
+            </div>
+        </div>
+        <div class="text-black py-2 w-full active px-5 pb-0">
+            <a href="https://www.retail.dot.ai/login">
+                <div
+                    data-faq
+                    class="flex justify-between cursor-pointer select-none w-full py-[16px] items-center"
+                >
+                    <h1 class="font-grosek text-black md:w-[75%]">Login</h1>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -110,7 +199,6 @@ const isOpen = !false;
     const navMenu = document.querySelector("[data-link]");
     const menu = [...document.querySelectorAll("[data-menu]")];
     menu.forEach((el) => {
-        console.log(el);
         el.addEventListener("click", () => {
             navMenu?.classList.toggle("hide");
             menu.forEach((k) => {
@@ -143,12 +231,121 @@ const isOpen = !false;
         color: black;
         box-shadow: 0 0 1px 0px black;
     }
+
+    .active > .link {
+        height: 0;
+    }
 </style>
 
 <script>
+    const data3: any[] = [
+        {
+            title: "POS Terminal",
+            body: "Become a Dot agent",
+            svg: "/svg/pos-terminal.svg",
+            link: "/pos-terminal",
+        },
+        {
+            title: "Collect Transfers",
+            body: "Accept payments on your POS",
+            svg: "/svg/transfer.svg",
+            link: "/pos-terminal#benefits",
+        },
+        {
+            title: "Bank Network Status",
+            body: "Know the network status of any bank",
+            svg: "/svg/network-status.svg",
+            link: "/pos-terminal#benefits",
+        },
+        {
+            title: "Cash and Terminal Insurance",
+            body: "Protect your money and terminal",
+            svg: "/svg/cash.svg",
+            link: "/pos-terminal#benefits",
+        },
+        {
+            title: "Cards(Issuance)",
+            body: "Give your customers a Dot card",
+            svg: "/svg/cards.svg",
+            link: "https://www.dot.ai/dot-card",
+        },
+    ];
+    const data5 = [
+        {
+            title: "Our Blog",
+            body: "Grow your heaalth",
+            svg: "/svg/cards.svg",
+            link: "https://www.dot.ai/blogs",
+        },
+    ];
+    const data4: any[] = [
+        {
+            title: "Why Dots?",
+            body: "It starts with you",
+            svg: "/svg/why-dots.svg",
+            link: "https://www.dot.ai/why-dot",
+        },
+        {
+            title: "About us",
+            body: "Read our story",
+            svg: "/svg/about-us.svg",
+            link: "https://www.dot.ai/about",
+        },
+        {
+            title: "Careers",
+            body: "Join the team",
+            svg: "/svg/career.svg",
+            link: "https://www.dot.ai/careers",
+        },
+    ];
+    const LinkComponent = ({
+        title,
+        body,
+        link,
+        svg,
+    }: {
+        title: string;
+        body: string;
+        link: string;
+        svg?: string;
+    }) => {
+        return ` <a  href="${link}" class="p-3 px-5 h-16 flex items-center hover:bg-blue-300/10 rounded-lg">
+                    <div class="flex text-sm gap-2">
+                        ${svg ? `<image src=${svg} width={40} height={20} alt="An svg"/>` : ""}
+                        <div class="flex flex-col">
+                            <h1>${title}</h1>
+                                <p class="text-slate-400 text-xs font-light">
+                                    ${body}
+                                </p>
+                        </div>
+                    </div>
+                </a>`;
+    };
+    const whyDot = document.getElementById("why-dot");
+    const agentListLink = document.getElementById("agents");
+    const resourceListLink = document.getElementById("resource");
+    const navLink = document.querySelectorAll("[data-navLink]");
     const containerel = document.querySelectorAll("[data-navnav]");
     const toggleel = [...document.querySelectorAll("[data-state]")];
 
+    navLink.forEach((el, index) => {
+        el.addEventListener("click", (event) => {
+            el.parentElement?.classList.toggle("active");
+        });
+    });
+
+    data3.forEach((item) => {
+        if (!agentListLink) return;
+        agentListLink.innerHTML += LinkComponent(item);
+    });
+    data5.map((item) => {
+        if (!resourceListLink) return;
+        resourceListLink.innerHTML += LinkComponent(item);
+    });
+    data4.map((item) => {
+        if (!whyDot) return;
+        whyDot.innerHTML += LinkComponent(item);
+    });
     containerel.forEach((el, index) => {
         el.addEventListener("click", (event) => {
             toggleel.map((e, i) => {
