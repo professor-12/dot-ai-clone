@@ -4,14 +4,14 @@ import CustomButton from "../CustomButton.astro";
 import InterestingButton from "../UI/InterestingButton.astro";
 ---
 
-<main class="bg-[#FDF9F4] pt-24 min-h-screen">
+<main class="bg-[#FDF9F4] lg:pt-24 min-h-screen">
     <div class="contain flex flex-col justify-center py-[60px]">
         <div class="flex justify-center">
             <InterestingButton text="Business made easy" variants="red" />
         </div>
         <div class="my-4 text-center space-y-4">
             <h1
-                class="font-grosek text-5xl text-balance font-medium leading-[3.8rem]"
+                class="font-grosek md:text-4xl text-3xl lg:text-5xl text-balance font-medium lg:leading-[3.8rem]"
             >
                 Discover Tailored Micro Insurance Plans for Comprehensive
                 Coverage
@@ -48,12 +48,12 @@ import InterestingButton from "../UI/InterestingButton.astro";
             >
         </div>
         <div
-            class="h-[150px] my-12 overflow-hidden mx-auto w-[70%] min-w-[200px] rounded-3xl relative"
+            class="lg:h-[150px] my-12 overflow-hidden mx-auto w-[70%] min-w-[200px] rounded-3xl relative"
         >
             <Image
                 src="/images/brokerage-hero.webp"
                 width={400}
-                class="object-cover w-full h-full absolute"
+                class="object-cover w-full h-full lg:absolute"
                 height={400}
                 alt=""
             />

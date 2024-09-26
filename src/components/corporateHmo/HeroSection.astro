@@ -4,10 +4,12 @@ import CustomButton from "../CustomButton.astro";
 import InterestingButton from "../UI/InterestingButton.astro";
 ---
 
-<main class="bg-[#F2F6FE] pt-24 min-h-screen">
-    <div class="contain relative justify-between py-24 flex">
+<main class="bg-[#F2F6FE] lg:pt-24 min-h-screen">
+    <div
+        class="contain relative justify-between py-24 flex max-lg:flex-col gap-6"
+    >
         <div
-            class="w-1/2 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
+            class="lg:w-1/2 w-full h-[400px] flex-1 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
         >
             <Image
                 style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
@@ -18,11 +20,11 @@ import InterestingButton from "../UI/InterestingButton.astro";
                 class="w-full h-full bg-cover absolute top-0 left-0 bottom-0 right-0"
             />
         </div>
-        <div class="w-1/2 relative h-[560px] max-w-[480px]">
+        <div class="lg:w-1/2 relative lg:h-[560px] max-w-[480px]">
             <InterestingButton text="Affordable Insurance" variants="green" />
             <h1
                 data-animate="fade-in"
-                class="font-grosek mt-6 animate-js font-medium text-5xl leading-[4rem]"
+                class="font-grosek mt-6 animate-js font-medium text-3xl md:text-4xl lg:text-5xl lg:leading-[4rem]"
             >
                 Budget-Friendly Health Insurance for Corporates & SMEs.
             </h1>

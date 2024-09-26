@@ -10,6 +10,7 @@ import InterestingButton from "../components/UI/InterestingButton.astro";
 import Testimonial from "../components/collect/Testimonial.astro";
 import SectionToggle from "../components/collect/SectionToggle.astro";
 import Footer from "../components/Footer.astro";
+import MobileViewHeader from "../components/MobileViewHeader.astro";
 ---
 
 <Layout title="Payment made easy for everyone">
@@ -26,19 +27,20 @@ import Footer from "../components/Footer.astro";
             <Logo color="black" />
         </Fragment>
     </Header>
+    <MobileViewHeader />
     <HeroSection />
     <section class="py-[104px]">
         <div class="contain">
             <div class="text-center">
                 <h1
                     data-animate="fade-in"
-                    class="font-grosek animate-js mb-2 text-[2.7rem] font-medium"
+                    class="font-grosek animate-js mb-2 md:text-[2.7rem] text-3xl font-medium"
                 >
                     Created for your global business
                 </h1>
                 <p
                     data-animate="fade-in"
-                    class="font-inter mx-auto animate-js text-muted text-lg w-[80%] max-w-[900px]"
+                    class="font-inter mx-auto animate-js text-muted md:text-lg w-[80%] max-w-[900px]"
                 >
                     Everything you need to grow your business and operate —
                     without the high fees, documents, and headache of your
@@ -46,33 +48,33 @@ import Footer from "../components/Footer.astro";
                 </p>
             </div>
 
-            <div class="grid grid-cols-6 gap-7 py-14">
+            <div class="grid lg:grid-cols-6 gap-7 py-14">
                 <Card
-                    className="col-span-2 bg-[#F3FCF1]"
+                    className="lg:col-span-2 bg-[#F3FCF1]"
                     title="Instant notifications"
                     subtitle="See your balance update instantly when customers send you money in real-time."
                     imageurl="/images/bulk-transfer.webp"
                 />
                 <Card
-                    className="col-span-2 bg-[#F3FCF1]"
+                    className="lg:col-span-2 bg-[#F3FCF1]"
                     title="Compatible with all cards"
                     subtitle="Accept your customers' favorite ways to pay as the POS terminal is compatible with all cards."
                     imageurl="/images/confetti.webp"
                 />
                 <Card
-                    className="col-span-2 px-4 bg-[#F3FCF1]"
+                    className="lg:col-span-2 px-4 bg-[#F3FCF1]"
                     title="Terminal & Cash insurance"
                     subtitle="Don't let uncertainties affect your business. Conduct your business with confidence with the terminal and cash insurance."
                     imageurl="/images/scheduled.webp"
                 />
                 <Card
-                    className="col-span-3 px-4 bg-[#F3FCF1]"
+                    className="lg:col-span-3 px-4 bg-[#F3FCF1]"
                     title="Daily transaction report"
                     subtitle="Stay in control of your finances with a daily report on transactions at the end of each day."
                     imageurl="/images/network2.webp"
                 />
                 <Card
-                    className="col-span-3 bg-[#F3FCF1] px-4"
+                    className="lg:col-span-3 bg-[#F3FCF1] px-4"
                     title="Bank network status"
                     subtitle="Know the best times for transferring money to different banks."
                     imageurl="/images/network2.webp"
@@ -84,7 +86,7 @@ import Footer from "../components/Footer.astro";
     <section class="bg-black py-[104px]">
         <div class="contain text-center text-white">
             <div>
-                <h1 class="font-grosek text-4xl font-medium mb-3">
+                <h1 class="font-grosek text-3xl md:text-4xl font-medium mb-3">
                     Built for businesses. Built for you.
                 </h1>
                 <p class="font-inter max-w-[825px] mx-auto">
@@ -94,9 +96,11 @@ import Footer from "../components/Footer.astro";
                     happen.
                 </p>
             </div>
-            <div class="grid grid-cols-3 gap-6 pt-12">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12"
+            >
                 <div
-                    class="col-span-3 relative rounded-3xl overflow-hidden h-[400px]"
+                    class="lg:col-span-3 relative rounded-3xl overflow-hidden h-[400px]"
                 >
                     <Image
                         style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;object-position:top center;color:transparent"
@@ -108,7 +112,7 @@ import Footer from "../components/Footer.astro";
                     />
                 </div>
                 <div
-                    class="col-span-2 text-black text-left font-grosek text-2xl rounded-3xl bg-white lg:p-10"
+                    class="lg:col-span-2 text-black text-left font-grosek p-7 text-2xl rounded-3xl bg-white lg:p-10"
                 >
                     <h1
                         class="text-[#4F555F] lg:leading-10 text-2xl lg:text-[28px]"
@@ -136,7 +140,7 @@ import Footer from "../components/Footer.astro";
                     </div>
                 </div>
                 <div
-                    class="bg-[#212225] items-center rounded-3xl flex flex-col py-6 justify-between"
+                    class="bg-[#212225] p-5 items-center rounded-3xl flex flex-col py-6 max-md:space-y-6 lg:justify-between"
                 >
                     <InterestingButton
                         text="Businesses using Dot Collect"
@@ -157,10 +161,10 @@ import Footer from "../components/Footer.astro";
     <section class="bg-black py-[104px]">
         <div class="contain">
             <div
-                class="bg-[#212225] p-10 rounded-3xl flex items-center justify-between space-x-[6rem]"
+                class="bg-[#212225] p-10 rounded-3xl flex max-md:flex-col items-center justify-between lg:space-x-[6rem]"
             >
                 <div
-                    class="relative h-[570px] w-1/2 rounded-2xl overflow-hidden"
+                    class="relative lg:h-[570px] lg:w-1/2 rounded-2xl overflow-hidden"
                 >
                     <Image
                         loading="lazy"
@@ -171,7 +175,7 @@ import Footer from "../components/Footer.astro";
                         style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent"
                     />
                 </div>
-                <div class="w-1/2">
+                <div class="lg:w-1/2">
                     <div class="text-white">
                         <h1 class="font-medium m4-3 font-grosek text-4xl">
                             Feel safe with your terminal & cash insured

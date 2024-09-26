@@ -5,8 +5,8 @@ import InterestingButton from "../UI/InterestingButton.astro";
 ---
 
 <main class="bg-[#F2F6FE] pt-24 min-h-screen">
-    <div class="contain relative justify-between py-24 flex">
-        <div class="w-1/2 relative h-[560px] max-w-[480px]">
+    <div class="contain relative justify-between lg:py-24 flex max-lg:flex-col">
+        <div class="lg:w-1/2 relative h-[560px] max-w-[480px]">
             <InterestingButton text="Fund your business" variants="blue" />
             <h1
                 data-animate="fade-in"
@@ -66,7 +66,7 @@ import InterestingButton from "../UI/InterestingButton.astro";
             </div>
         </div>
         <div
-            class="w-1/2 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
+            class="lg:w-1/2 overflow-hidden rounded-2xl max-w-[cal(1fr-30px)] relative backdrop-blur-sm bg-[url('/images/blur.webp')] bg-cover"
         >
             <Image
                 src="/images/asset-finance-hero.webp"
