@@ -17,7 +17,9 @@ const { styles = "", id } = Astro.props;
 >
     <div class="flex justify-between items-center contain">
         <div class="flex items-center">
-            <slot name="logo" />
+            <a href="/">
+                <slot name="logo" />
+            </a>
             <nav class="ml-[2.5rem] flex justify-center items-center">
                 <ul class="flex w-full">
                     <li class="flex group relative gap-[.1rem] items-center">
@@ -200,7 +202,7 @@ const { styles = "", id } = Astro.props;
             {
                 title: "POS Terminal",
                 body: "Become a Dot agent",
-                link: "https://www.dot.ai/collect",
+                link: "/collect",
                 svg: "/svg/pos-terminal.svg",
             },
             {
@@ -224,13 +226,13 @@ const { styles = "", id } = Astro.props;
             {
                 title: "Collect Transfers",
                 body: "Accept payments on your POS",
-                link: "https://www.dot.ai/collect",
+                link: "/pos-terminal",
                 svg: "/svg/transfer.svg",
             },
             {
                 title: "Bank Network Status",
                 body: "Know the network status of any bank",
-                link: "https://www.dot.ai/collect",
+                link: "/pos-terminal",
                 svg: "/svg/network-status.svg",
             },
         ],

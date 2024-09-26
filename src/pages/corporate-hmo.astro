@@ -15,6 +15,7 @@ import InterestingButton from "../components/UI/InterestingButton.astro";
 import { Image } from "astro:assets";
 import HowItWorks from "../components/corporateHmo/HowItWorks.astro";
 import FAQ from "../components/UI/FAQ/FAQ.astro";
+import MobileViewHeader from "../components/MobileViewHeader.astro";
 ---
 
 <Layout title="Afordable insurance - Dot">
@@ -31,15 +32,18 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
             <Logo color="black" />
         </Fragment>
     </Header>
+    <MobileViewHeader />
     <HeroSection />
     <Feature />
     <div class="contain py-7">
-        <h1 class="text-center font-grosek font-medium my-7 text-4xl">
+        <h1
+            class="text-center font-grosek font-medium my-7 md:text-3xl text-2xl lg:text-4xl"
+        >
             What are businesses saying about us?
         </h1>
-        <div class="grid grid-cols-3 gap-6 pt-12">
+        <div class="grid lg:grid-cols-3 gap-6 pt-12">
             <div
-                class="bg-[#F9FAFB] items-center rounded-3xl flex flex-col py-6 justify-between"
+                class="bg-[#F9FAFB] items-center rounded-3xl flex flex-col py-6 max-md:space-y-6 lg:justify-between"
             >
                 <InterestingButton text="Lives covered" variants="green" />
                 <h1 class="text-6xl font-medium font-grosek">
@@ -51,7 +55,7 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
                 </p>
             </div>
             <div
-                class="col-span-2 relative rounded-3xl overflow-hidden h-[400px]"
+                class="lg:col-span-2 relative rounded-3xl overflow-hidden h-[400px]"
             >
                 <Image
                     style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;object-position:top center;color:transparent"
@@ -63,9 +67,11 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
                 />
             </div>
             <div
-                class="col-span-2 text-black text-left font-grosek text-2xl rounded-3xl bg-[#F3FCF1] lg:p-10"
+                class="lg:col-span-2 text-black text-left font-grosek text-2xl rounded-3xl bg-[#F3FCF1] p-5 lg:p-10"
             >
-                <h1 class="text-[#4F555F] lg:leading-10 text-[2.3rem]">
+                <h1
+                    class="text-[#4F555F] lg:leading-10 text-2xl lg:text-[2.3rem]"
+                >
                     Your quick response to costumers when they need attention, I
                     love that,
                     <span class="text-[#3FB12C]"
@@ -100,7 +106,7 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
                 </div>
             </div>
             <div
-                class="bg-[#F2F6FE] items-center rounded-3xl flex flex-col py-6 justify-between"
+                class="bg-[#F2F6FE] items-center rounded-3xl flex flex-col py-6 max-md:space-y-6 md:justify-between"
             >
                 <InterestingButton text="Companies Insured" variants="blue" />
                 <h1 class="text-6xl font-medium font-grosek">
@@ -114,10 +120,10 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
     </div>
 
     <HowItWorks />
-    <section class="bg-[black]">
-        <div class="contain items-center flex gap-8">
+    <section class="bg-[black] p-10">
+        <div class="contain items-center max-md:flex-col flex gap-8">
             <div
-                class="bg-[#212225] h-[550px] w-1/2 px-[5rem] flex items-center rounded-3xl"
+                class="bg-[#212225] lg:h-[550px] lg:w-1/2 p-10 lg:px-[5rem] flex items-center rounded-3xl"
             >
                 <div class="">
                     <h1
@@ -134,7 +140,7 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
                     </p>
                 </div>
             </div>
-            <div class="w-1/2 h-[700px]">
+            <div class="w-1/2 max-md:hidden lg:h-[700px]">
                 <Image
                     src="/images/corporatehmo-collage.webp"
                     class="w-full object-cover"
@@ -145,9 +151,9 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
             </div>
         </div>
     </section>
-    <div class="bg-black text-white py-[200px]">
-        <div class="contain flex">
-            <div class="md:w-1/2">
+    <div class="bg-black text-white py-20 lg:py-[200px]">
+        <div class="contain flex max-md:flex-col gap-10">
+            <div class="lg:w-1/2">
                 <h1 class="md:text-5xl font-grosek">
                     Frequently asked questions, <span class="font-medium"
                         >answered.</span
@@ -161,7 +167,7 @@ import FAQ from "../components/UI/FAQ/FAQ.astro";
                     >
                 </p>
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2">
                 <FAQ />
             </div>
         </div>

@@ -11,6 +11,7 @@ import Footer from "../components/Footer.astro";
 import Testimonials from "../components/loans/Testimonials.astro";
 import { Image } from "astro:assets";
 import FAQ from "../components/micro-insurance/FAQ.astro";
+import MobileViewHeader from "../components/MobileViewHeader.astro";
 ---
 
 <Layout title="Get instant Loans - Dot">
@@ -27,6 +28,7 @@ import FAQ from "../components/micro-insurance/FAQ.astro";
             <Logo color="black" />
         </Fragment>
     </Header>
+    <MobileViewHeader />
     <HeroSection />
     <SectionToggle />
     <section class="bg-black mt-12">
@@ -61,9 +63,9 @@ import FAQ from "../components/micro-insurance/FAQ.astro";
             </div>
         </div>
     </section>
-    <div class="py-[200px]">
-        <div class="contain flex gap-16">
-            <div class="md:w-1/2">
+    <div class="py-20 lg:py-[200px]">
+        <div class="contain flex max-md:flex-col gap-16">
+            <div class="lg:w-1/2">
                 <h1 class="md:text-5xl font-grosek">
                     Frequently asked questions, <span class="font-medium"
                         >answered.</span
@@ -77,7 +79,7 @@ import FAQ from "../components/micro-insurance/FAQ.astro";
                     >
                 </p>
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2">
                 <FAQ />
             </div>
         </div>
